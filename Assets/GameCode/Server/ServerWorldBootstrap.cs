@@ -66,36 +66,7 @@ namespace FNZ.Server
 			simulationSystemGroup.SortSystemUpdateList();
 			presentationSystemGroup.SortSystemUpdateList();
 			WorldCreator.UpdatePlayerLoop(ServerWorld);
-			//ScriptBehaviourUpdateOrder.UpdatePlayerLoop(ServerWorld);
 		}
-
-		
-
-		//public void Update()
-		//{
-		//	passedTime += Time.deltaTime;
-		//	frameCounter += Time.deltaTime;
-
-
-
-		//	if (passedTime >= 0.2f)
-		//	{
-		//		foreach (var system in m_Systems)
-		//		{
-		//			//system.Update();
-		//		}
-
-		//		tickCounter++;
-		//		passedTime = 0;
-		//	}
-
-		//	if (frameCounter >= 1.0f)
-		//	{
-		//		//UnityEngine.Debug.Log("Ticks per second: " + tickCounter);
-		//		frameCounter = 0;
-		//		tickCounter = 0;
-		//	}
-		//}
 
 		public void OnApplicationQuit()
 		{
