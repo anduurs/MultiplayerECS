@@ -44,7 +44,7 @@ namespace FNZ.Client.Systems
 
 		protected override void OnUpdate()
 		{
-			//Debug.LogWarning("NetworkClientSystem OnUpdate");
+			Debug.LogWarning("NetworkClientSystem OnUpdate");
 			NetIncomingMessage incMsg;
 
 			while ((incMsg = m_Client.ReadMessage()) != null)

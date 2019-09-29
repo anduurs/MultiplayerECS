@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace FNZ.Server.Systems
 {
-	[DisableAutoCreation]
+	[UpdateInGroup(typeof(SimulationSystemGroup))]
 	public class ServerMainSystem : ComponentSystem
 	{
 		private NetworkServerSystem m_NetworkServerSystem;
@@ -19,7 +19,7 @@ namespace FNZ.Server.Systems
 
 		protected override void OnUpdate()
 		{
-			//Debug.Log("ServerSystem Updating");
+			Debug.Log("ServerMainSystem Updating");
 
 			m_NetworkServerSystem.Update();
 		}

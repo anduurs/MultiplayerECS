@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Unity.Entities;
 using UnityEngine;
+using UnityEngine.Experimental.LowLevel;
 
 namespace FNZ.Server
 {
 	public class ServerWorldBootstrap : MonoBehaviour
 	{
 		public static World ServerWorld;
-		private List<ComponentSystemBase> m_Systems;
 
 		public static double TICKS_PER_SECOND = 5;
 
@@ -32,34 +32,70 @@ namespace FNZ.Server
 		public void Start()
 		{
 			ServerWorld = new World("ServerWorld");
-			m_Systems = WorldCreator.CreateWorldAndSystemsFromAssemblies(ServerWorld, "FNZ.Server", "FNZ.Shared");
-			World.Active = null;
-			ScriptBehaviourUpdateOrder.UpdatePlayerLoop(ServerWorld);
-		}
+			var systems = WorldCreator.GetSystemsFromAssemblies(ServerWorld, "FNZ.Server", "FNZ.Shared");
 
-		public void Update()
-		{
-			passedTime += Time.deltaTime;
-			frameCounter += Time.deltaTime;
-
-			if (passedTime >= 0.2f)
+			var initializationSystemGroup = ServerWorld.GetOrCreateSystem<InitializationSystemGroup>();
+			var simulationSystemGroup = ServerWorld.GetOrCreateSystem<SimulationSystemGroup>();
+			var presentationSystemGroup = ServerWorld.GetOrCreateSystem<PresentationSystemGroup>();
+			
+			foreach (var type in systems)
 			{
-				foreach (var system in m_Systems)
+				var groups = type.GetCustomAttributes(typeof(UpdateInGroupAttribute), true);
+
+				if (groups.Length == 0)
 				{
-					system.Update();
+					simulationSystemGroup.AddSystemToUpdateList(ServerWorld.GetOrCreateSystem(type) as ComponentSystemBase);
 				}
 
-				tickCounter++;
-				passedTime = 0;
+				foreach (var g in groups)
+				{
+					var group = g as UpdateInGroupAttribute;
+
+					if (group == null) continue;
+					var groupMgr = ServerWorld.GetOrCreateSystem(group.GroupType);
+					var groupSys = groupMgr as ComponentSystemGroup;
+
+					if (groupSys != null)
+					{
+						groupSys.AddSystemToUpdateList(ServerWorld.GetOrCreateSystem(type) as ComponentSystemBase);
+					}
+				}
 			}
 
-			if (frameCounter >= 1.0f)
-			{
-				UnityEngine.Debug.Log("Ticks per second: " + tickCounter);
-				frameCounter = 0;
-				tickCounter = 0;
-			}
+			initializationSystemGroup.SortSystemUpdateList();
+			simulationSystemGroup.SortSystemUpdateList();
+			presentationSystemGroup.SortSystemUpdateList();
+			WorldCreator.UpdatePlayerLoop(ServerWorld);
+			//ScriptBehaviourUpdateOrder.UpdatePlayerLoop(ServerWorld);
 		}
+
+		
+
+		//public void Update()
+		//{
+		//	passedTime += Time.deltaTime;
+		//	frameCounter += Time.deltaTime;
+
+
+
+		//	if (passedTime >= 0.2f)
+		//	{
+		//		foreach (var system in m_Systems)
+		//		{
+		//			//system.Update();
+		//		}
+
+		//		tickCounter++;
+		//		passedTime = 0;
+		//	}
+
+		//	if (frameCounter >= 1.0f)
+		//	{
+		//		//UnityEngine.Debug.Log("Ticks per second: " + tickCounter);
+		//		frameCounter = 0;
+		//		tickCounter = 0;
+		//	}
+		//}
 
 		public void OnApplicationQuit()
 		{

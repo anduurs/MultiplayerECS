@@ -5,7 +5,8 @@ using UnityEngine;
 
 namespace FNZ.Server.Systems
 {
-	[DisableAutoCreation]
+	[UpdateInGroup(typeof(SimulationSystemGroup))]
+	[UpdateAfter(typeof(ServerMainSystem))]
 	public class WorldSimulationSystem : ComponentSystem
 	{
 		protected override void OnCreate()
@@ -15,7 +16,7 @@ namespace FNZ.Server.Systems
 
 		protected override void OnUpdate()
 		{
-
+			Debug.Log("WorldSimulationSystem OnUpdate");
 		}
 
 		protected override void OnDestroy()
