@@ -6,18 +6,18 @@ using UnityEngine.Experimental.LowLevel;
 
 namespace FNZ.Client
 {
-	public class ClientWorldBootstrap : MonoBehaviour
+	public class ClientApp : MonoBehaviour
 	{
-		public static World ClientWorld;
+		public static World ECS_ClientWorld;
 
 		public void Start()
 		{
-			ClientWorld = new World("ClientWorld");
-			var systems = WorldCreator.GetSystemsFromAssemblies(ClientWorld, "FNZ.Client", "FNZ.Shared");
+			ECS_ClientWorld = new World("ClientWorld");
+			var systems = WorldCreator.GetSystemsFromAssemblies(ECS_ClientWorld, "FNZ.Client", "FNZ.Shared");
 
-			var initializationSystemGroup = ClientWorld.GetOrCreateSystem<InitializationSystemGroup>();
-			var simulationSystemGroup = ClientWorld.GetOrCreateSystem<SimulationSystemGroup>();
-			var presentationSystemGroup = ClientWorld.GetOrCreateSystem<PresentationSystemGroup>();
+			var initializationSystemGroup = ECS_ClientWorld.GetOrCreateSystem<InitializationSystemGroup>();
+			var simulationSystemGroup = ECS_ClientWorld.GetOrCreateSystem<SimulationSystemGroup>();
+			var presentationSystemGroup = ECS_ClientWorld.GetOrCreateSystem<PresentationSystemGroup>();
 
 			foreach (var type in systems)
 			{
@@ -25,7 +25,7 @@ namespace FNZ.Client
 
 				if (groups.Length == 0)
 				{
-					simulationSystemGroup.AddSystemToUpdateList(WorldCreator.GetBehaviourManagerAndLogException(ClientWorld, type) as ComponentSystemBase);
+					simulationSystemGroup.AddSystemToUpdateList(WorldCreator.GetBehaviourManagerAndLogException(ECS_ClientWorld, type) as ComponentSystemBase);
 				}
 
 				foreach (var g in groups)
@@ -40,7 +40,7 @@ namespace FNZ.Client
 						continue;
 					}
 
-					var groupMgr = WorldCreator.GetBehaviourManagerAndLogException(ClientWorld, group.GroupType);
+					var groupMgr = WorldCreator.GetBehaviourManagerAndLogException(ECS_ClientWorld, group.GroupType);
 
 					if (groupMgr == null)
 					{
@@ -53,7 +53,7 @@ namespace FNZ.Client
 
 					if (groupSys != null)
 					{
-						groupSys.AddSystemToUpdateList(WorldCreator.GetBehaviourManagerAndLogException(ClientWorld, type) as ComponentSystemBase);
+						groupSys.AddSystemToUpdateList(WorldCreator.GetBehaviourManagerAndLogException(ECS_ClientWorld, type) as ComponentSystemBase);
 					}
 				}
 			}
@@ -62,16 +62,16 @@ namespace FNZ.Client
 			simulationSystemGroup.SortSystemUpdateList();
 			presentationSystemGroup.SortSystemUpdateList();
 
-			WorldCreator.UpdatePlayerLoop(ClientWorld);
+			WorldCreator.UpdatePlayerLoop(ECS_ClientWorld);
 		}
 
 		public void OnApplicationQuit()
 		{
-			if (ClientWorld != null)
+			if (ECS_ClientWorld != null)
 			{
-				ClientWorld.QuitUpdate = true;
+				ECS_ClientWorld.QuitUpdate = true;
 				ScriptBehaviourUpdateOrder.UpdatePlayerLoop(null);
-				ClientWorld.Dispose();
+				ECS_ClientWorld.Dispose();
 			}
 			else
 			{

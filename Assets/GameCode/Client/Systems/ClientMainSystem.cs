@@ -13,13 +13,13 @@ namespace FNZ.Client.Systems
 		{
 			Debug.LogWarning("ClientSystem Created");
 
-			m_NetClientSystem = ClientWorldBootstrap.ClientWorld.GetOrCreateSystem<NetworkClientSystem>();
+			m_NetClientSystem = ClientApp.ECS_ClientWorld.GetOrCreateSystem<NetworkClientSystem>();
 			m_NetClientSystem.InitializeClient(SharedConfigs.AppIdentifier, "127.0.0.1", 7676);
 		}
 
 		protected override void OnUpdate()
 		{
-			Debug.LogWarning("ClientSystem Updating");
+			//Debug.LogWarning("ClientSystem Updating");
 			m_NetClientSystem.Update();
 		}
 

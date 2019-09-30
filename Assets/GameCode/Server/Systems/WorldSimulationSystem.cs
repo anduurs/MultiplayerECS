@@ -16,7 +16,7 @@ namespace FNZ.Server.Systems
 
 		protected override void OnUpdate()
 		{
-			Debug.Log("WorldSimulationSystem OnUpdate");
+			//Debug.Log("WorldSimulationSystem OnUpdate");
 		}
 
 		protected override void OnDestroy()

@@ -6,7 +6,7 @@ public class WorldBootstrap : MonoBehaviour
 {
 	public void Start()
 	{
-		gameObject.AddComponent<ServerWorldBootstrap>();
-		gameObject.AddComponent<ClientWorldBootstrap>();
+		gameObject.AddComponent<ServerApp>();
+		gameObject.AddComponent<ClientApp>();
 	}
 }

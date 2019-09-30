@@ -36,7 +36,7 @@ namespace FNZ.Server.Systems
 		protected override void OnUpdate()
 		{
 			NetIncomingMessage msg;
-			Debug.Log("NetworkServerSystem OnUpdate");
+			//Debug.Log("NetworkServerSystem OnUpdate");
 
 			while ((msg = m_Server.ReadMessage()) != null)
 			{
@@ -82,6 +82,7 @@ namespace FNZ.Server.Systems
 		private void OnClientConnected(NetConnection clientConnection)
 		{
 			Debug.Log("Client: " + clientConnection.ToString() + " connected to server!");
+
 		}
 
 		private void OnClientDisconnected(NetConnection clientConnection)

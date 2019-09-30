@@ -13,13 +13,13 @@ namespace FNZ.Server.Systems
 		{
 			Debug.Log("ServerSystem Created");
 
-			m_NetworkServerSystem = ServerWorldBootstrap.ServerWorld.GetOrCreateSystem<NetworkServerSystem>();
+			m_NetworkServerSystem = ServerApp.ECS_ServerWorld.GetOrCreateSystem<NetworkServerSystem>();
 			m_NetworkServerSystem.InitializeServer(SharedConfigs.AppIdentifier, 7676, 5);
 		}
 
 		protected override void OnUpdate()
 		{
-			Debug.Log("ServerMainSystem Updating");
+			//Debug.Log("ServerMainSystem Updating");
 
 			m_NetworkServerSystem.Update();
 		}

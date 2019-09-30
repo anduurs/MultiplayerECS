@@ -44,7 +44,7 @@ namespace FNZ.Client.Systems
 
 		protected override void OnUpdate()
 		{
-			Debug.LogWarning("NetworkClientSystem OnUpdate");
+			//Debug.LogWarning("NetworkClientSystem OnUpdate");
 			NetIncomingMessage incMsg;
 
 			while ((incMsg = m_Client.ReadMessage()) != null)
@@ -89,7 +89,7 @@ namespace FNZ.Client.Systems
 
 		private void OnConnected()
 		{
-			Debug.LogWarning("Client Connected To Server!");
+			Debug.Log("Client Connected To Server!");
 		}
 	}
 }
