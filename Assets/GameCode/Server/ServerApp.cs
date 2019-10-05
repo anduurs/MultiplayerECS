@@ -1,4 +1,5 @@
 ﻿using FNZ.Server.Model.World;
+using FNZ.Server.Net;
 using FNZ.Shared;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,17 +11,18 @@ namespace FNZ.Server
 {
 	public class ServerApp : MonoBehaviour
 	{
-		public static World ECS_ServerWorld;
+		public static World ECS_World;
 		public static ServerWorld World;
+		public static ServerNetworkAPI NetAPI;
 
 		public void Start()
 		{
-			ECS_ServerWorld = new World("ServerWorld");
-			var systems = WorldCreator.GetSystemsFromAssemblies(ECS_ServerWorld, "FNZ.Server", "FNZ.Shared");
+			ECS_World = new World("ServerWorld");
+			var systems = WorldCreator.GetSystemsFromAssemblies(ECS_World, "FNZ.Server", "FNZ.Shared");
 
-			var initializationSystemGroup = ECS_ServerWorld.GetOrCreateSystem<InitializationSystemGroup>();
-			var simulationSystemGroup = ECS_ServerWorld.GetOrCreateSystem<SimulationSystemGroup>();
-			var presentationSystemGroup = ECS_ServerWorld.GetOrCreateSystem<PresentationSystemGroup>();
+			var initializationSystemGroup = ECS_World.GetOrCreateSystem<InitializationSystemGroup>();
+			var simulationSystemGroup = ECS_World.GetOrCreateSystem<SimulationSystemGroup>();
+			var presentationSystemGroup = ECS_World.GetOrCreateSystem<PresentationSystemGroup>();
 			
 			foreach (var type in systems)
 			{
@@ -28,7 +30,7 @@ namespace FNZ.Server
 
 				if (groups.Length == 0)
 				{
-					simulationSystemGroup.AddSystemToUpdateList(ECS_ServerWorld.GetOrCreateSystem(type) as ComponentSystemBase);
+					simulationSystemGroup.AddSystemToUpdateList(ECS_World.GetOrCreateSystem(type) as ComponentSystemBase);
 				}
 
 				foreach (var g in groups)
@@ -36,12 +38,12 @@ namespace FNZ.Server
 					var group = g as UpdateInGroupAttribute;
 
 					if (group == null) continue;
-					var groupMgr = ECS_ServerWorld.GetOrCreateSystem(group.GroupType);
+					var groupMgr = ECS_World.GetOrCreateSystem(group.GroupType);
 					var groupSys = groupMgr as ComponentSystemGroup;
 
 					if (groupSys != null)
 					{
-						groupSys.AddSystemToUpdateList(ECS_ServerWorld.GetOrCreateSystem(type) as ComponentSystemBase);
+						groupSys.AddSystemToUpdateList(ECS_World.GetOrCreateSystem(type) as ComponentSystemBase);
 					}
 				}
 			}
@@ -49,16 +51,16 @@ namespace FNZ.Server
 			initializationSystemGroup.SortSystemUpdateList();
 			simulationSystemGroup.SortSystemUpdateList();
 			presentationSystemGroup.SortSystemUpdateList();
-			WorldCreator.UpdatePlayerLoop(ECS_ServerWorld);
+			WorldCreator.UpdatePlayerLoop(ECS_World);
 		}
 
 		public void OnApplicationQuit()
 		{
-			if (ECS_ServerWorld != null)
+			if (ECS_World != null)
 			{
-				ECS_ServerWorld.QuitUpdate = true;
+				ECS_World.QuitUpdate = true;
 				ScriptBehaviourUpdateOrder.UpdatePlayerLoop(null);
-				ECS_ServerWorld.Dispose();
+				ECS_World.Dispose();
 			}
 			else
 			{

@@ -1,4 +1,5 @@
-﻿using Lidgren.Network;
+﻿using FNZ.Server.Net;
+using Lidgren.Network;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Entities;
@@ -23,6 +24,7 @@ namespace FNZ.Server.Systems
 			};
 
 			m_Server = new NetServer(config);
+			ServerApp.NetAPI = new ServerNetworkAPI(m_Server);
 			m_Server.Start();
 
 			Debug.Log("Lidgren NetServer initialized and started");
