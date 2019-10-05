@@ -2,7 +2,7 @@
 using FNZ.Server;
 using FNZ.Client;
 
-public class WorldBootstrap : MonoBehaviour
+public class GameApplication : MonoBehaviour
 {
 	public void Start()
 	{
