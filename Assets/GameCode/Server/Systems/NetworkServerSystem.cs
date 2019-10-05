@@ -1,4 +1,5 @@
 ﻿using FNZ.Server.Net;
+using FNZ.Shared.Net;
 using Lidgren.Network;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ namespace FNZ.Server.Systems
 
 			m_Server = new NetServer(config);
 			ServerApp.NetAPI = new ServerNetworkAPI(m_Server);
+			ServerApp.NetChannel = new ServerNetworkReceiver();
 			m_Server.Start();
 
 			Debug.Log("Lidgren NetServer initialized and started");
@@ -77,7 +79,7 @@ namespace FNZ.Server.Systems
 
 		private void ParsePacket(NetIncomingMessage incMsg)
 		{
-
+			ServerApp.NetChannel.Execute((PacketType)incMsg.ReadByte(), incMsg);
 			m_Server.Recycle(incMsg);
 		}
 

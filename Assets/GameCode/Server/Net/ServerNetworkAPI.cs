@@ -1,4 +1,5 @@
 ﻿using FNZ.Shared.Model;
+using FNZ.Shared.Net;
 using Lidgren.Network;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace FNZ.Server.Net
 		public void SendWorldSetupDataToClient(int widthInTiles, int heightInTiles, byte chunkSize, NetConnection clientConnection)
 		{
 			var sendBuffer = m_NetPeer.CreateMessage();
-			sendBuffer.Write((byte)1);
+			sendBuffer.Write((byte)PacketType.WORLD_SETUP);
 
 			IdTranslator.Instance.Serialize(sendBuffer);
 
@@ -27,7 +28,7 @@ namespace FNZ.Server.Net
 			sendBuffer.Write(heightInTiles);
 			sendBuffer.Write(chunkSize);
 
-			clientConnection.SendMessage(sendBuffer, NetDeliveryMethod.ReliableOrdered, 0);
+			clientConnection.SendMessage(sendBuffer, NetDeliveryMethod.ReliableOrdered, (int)SequenceChannel.WORLD_SETUP);
 		}
 		
 

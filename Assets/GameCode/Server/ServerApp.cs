@@ -14,6 +14,7 @@ namespace FNZ.Server
 		public static World ECS_World;
 		public static ServerWorld World;
 		public static ServerNetworkAPI NetAPI;
+		public static ServerNetworkReceiver NetChannel;
 
 		public void Start()
 		{
