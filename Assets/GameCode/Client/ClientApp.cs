@@ -3,12 +3,18 @@ using Unity.Entities;
 using System.Collections.Generic;
 using FNZ.Shared;
 using UnityEngine.Experimental.LowLevel;
+using FNZ.Client.Net;
+using FNZ.Shared.Net;
+using FNZ.Client.Model.World;
 
 namespace FNZ.Client
 {
 	public class ClientApp : MonoBehaviour
 	{
 		public static World ECS_ClientWorld;
+		public static ClientWorld World;
+		public static ClientNetworkAPI NetAPI;
+		public static NetworkConnector NetConnector;
 
 		public void Start()
 		{

@@ -15,6 +15,7 @@ namespace FNZ.Server.Systems
 	public class NetworkServerSystem : ComponentSystem
 	{
 		private NetServer m_Server;
+		private NetworkConnector m_NetConnector;
 
 		public void InitializeServer(string appIdentifier, int port, int maxConnections)
 		{
@@ -26,7 +27,8 @@ namespace FNZ.Server.Systems
 
 			m_Server = new NetServer(config);
 			ServerApp.NetAPI = new ServerNetworkAPI(m_Server);
-			ServerApp.NetChannel = new ServerNetworkReceiver();
+			ServerApp.NetConnector = new NetworkConnector();
+			m_NetConnector = ServerApp.NetConnector;
 			m_Server.Start();
 
 			Debug.Log("Lidgren NetServer initialized and started");
@@ -79,7 +81,7 @@ namespace FNZ.Server.Systems
 
 		private void ParsePacket(NetIncomingMessage incMsg)
 		{
-			ServerApp.NetChannel.Execute((PacketType)incMsg.ReadByte(), incMsg);
+			m_NetConnector.Dispatch((PacketType)incMsg.ReadByte(), incMsg);
 			m_Server.Recycle(incMsg);
 		}
 
@@ -87,6 +89,12 @@ namespace FNZ.Server.Systems
 		{
 			Debug.Log("Client: " + clientConnection.ToString() + " connected to server!");
 
+			ServerApp.NetAPI.SendWorldSetupDataToClient(
+				ServerApp.World.WIDTH, 
+				ServerApp.World.HEIGHT, 
+				ServerApp.World.CHUNK_SIZE, 
+				clientConnection
+			);
 		}
 
 		private void OnClientDisconnected(NetConnection clientConnection)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace FNZ.Server.Systems
 {
-	[UpdateInGroup(typeof(SimulationSystemGroup))]
+	[UpdateInGroup(typeof(PresentationSystemGroup))]
 	public class ServerMainSystem : ComponentSystem
 	{
 		private NetworkServerSystem m_NetworkServerSystem;

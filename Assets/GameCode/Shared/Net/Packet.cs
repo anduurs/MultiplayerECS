@@ -18,11 +18,7 @@ namespace FNZ.Shared.Net
 	public enum PacketType
 	{
 		WORLD_SETUP = 0,
-	}
-
-	public class Packet
-	{
-
+		REQUEST_WORLD_SPAWN = 1,
 	}
 }
 

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using FNZ.Server.Model.World;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
@@ -6,9 +7,10 @@ using UnityEngine;
 namespace FNZ.Server.Systems
 {
 	[UpdateInGroup(typeof(SimulationSystemGroup))]
-	[UpdateAfter(typeof(ServerMainSystem))]
 	public class WorldSimulationSystem : ComponentSystem
 	{
+		private ServerWorld m_World;
+
 		protected override void OnCreate()
 		{
 			base.OnCreate();

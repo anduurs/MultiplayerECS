@@ -1,4 +1,7 @@
-﻿using Lidgren.Network;
+﻿using FNZ.Client.Model.World;
+using FNZ.Client.Net;
+using FNZ.Shared.Net;
+using Lidgren.Network;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Entities;
@@ -13,11 +16,18 @@ namespace FNZ.Client.Systems
 	public class NetworkClientSystem : ComponentSystem
 	{
 		private NetClient m_Client;
+		private NetworkConnector m_NetConnector;
 
 		public void InitializeClient(string appIdentifier, string ip, int port)
 		{
-			NetPeerConfiguration config = new NetPeerConfiguration(appIdentifier);
+			var config = new NetPeerConfiguration(appIdentifier);
 			m_Client = new NetClient(config);
+
+			ClientApp.NetAPI = new ClientNetworkAPI(m_Client);
+			ClientApp.NetConnector = new NetworkConnector();
+			m_NetConnector = ClientApp.NetConnector;
+			ClientApp.World = new ClientWorld();
+
 			m_Client.Start();
 
 			NetOutgoingMessage approval = m_Client.CreateMessage();
@@ -83,13 +93,14 @@ namespace FNZ.Client.Systems
 
 		private void ParsePacket(NetIncomingMessage incMsg)
 		{
-
+			m_NetConnector.Dispatch((PacketType)incMsg.ReadByte(), incMsg);
 			m_Client.Recycle(incMsg);
 		}
 
 		private void OnConnected()
 		{
 			Debug.Log("Client Connected To Server!");
+
 		}
 	}
 }
