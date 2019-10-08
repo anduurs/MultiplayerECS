@@ -20,6 +20,7 @@ namespace FNZ.Server
 		public void Start()
 		{
 			ECS_World = new World("ServerWorld");
+			World = new ServerWorld(256 * 32, 256 * 32, 32);
 			var systems = WorldCreator.GetSystemsFromAssemblies(ECS_World, "FNZ.Server", "FNZ.Shared");
 
 			var initializationSystemGroup = ECS_World.GetOrCreateSystem<InitializationSystemGroup>();

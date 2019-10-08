@@ -8,10 +8,7 @@ using UnityEngine;
 
 namespace FNZ.Server.Systems
 {
-	public class NetworkServerSystemGroup : ComponentSystemGroup { }
-
 	[DisableAutoCreation]
-	[UpdateInGroup(typeof(NetworkServerSystemGroup))]
 	public class NetworkServerSystem : ComponentSystem
 	{
 		private NetServer m_Server;
@@ -90,11 +87,13 @@ namespace FNZ.Server.Systems
 			Debug.Log("Client: " + clientConnection.ToString() + " connected to server!");
 
 			ServerApp.NetAPI.SendWorldSetupDataToClient(
-				ServerApp.World.WIDTH, 
-				ServerApp.World.HEIGHT, 
-				ServerApp.World.CHUNK_SIZE, 
+				ServerApp.World.WIDTH,
+				ServerApp.World.HEIGHT,
+				ServerApp.World.CHUNK_SIZE,
 				clientConnection
 			);
+
+			Debug.Log("Sent world setup packet to client");
 		}
 
 		private void OnClientDisconnected(NetConnection clientConnection)

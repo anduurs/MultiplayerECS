@@ -19,8 +19,6 @@ namespace FNZ.Server.Systems
 
 		protected override void OnUpdate()
 		{
-			//Debug.Log("ServerMainSystem Updating");
-
 			m_NetworkServerSystem.Update();
 		}
 

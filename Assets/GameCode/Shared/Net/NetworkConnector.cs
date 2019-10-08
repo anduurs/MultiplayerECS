@@ -1,7 +1,6 @@
 ﻿using FNZ.Shared.Model.Entity;
 using Lidgren.Network;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,30 +14,49 @@ namespace FNZ.Shared.Net
 	public class NetworkConnector
 	{
 		private NetEntityList m_NetEntities;
-		private Dictionary<PacketType, INetworkListener> m_PacketReceivedMap;
-	
+
+		private Dictionary<PacketType, INetworkListener> m_PacketListenerTable;
+		private Dictionary<PacketType, Action<NetworkConnector, NetIncomingMessage>> m_PacketListenFuncTable;
+
 		public NetworkConnector()
 		{
-			m_NetEntities = new NetEntityList(1000);
-			m_PacketReceivedMap = new Dictionary<PacketType, INetworkListener>();
+			m_NetEntities		    = new NetEntityList(1000);
+			m_PacketListenerTable   = new Dictionary<PacketType, INetworkListener>();
+			m_PacketListenFuncTable = new Dictionary<PacketType, Action<NetworkConnector, NetIncomingMessage>>();
 		}
 
 		public void Register(PacketType packetType, INetworkListener listener)
 		{
-			if (m_PacketReceivedMap.ContainsKey(packetType))
+			if (m_PacketListenerTable.ContainsKey(packetType))
 			{
 				Debug.LogError("Listener for packet type: " + packetType.ToString() + " has already been added");
 				return;
 			}
 
-			m_PacketReceivedMap.Add(packetType, listener);
+			m_PacketListenerTable.Add(packetType, listener);
+		}
+
+		public void Register(PacketType packetType, Action<NetworkConnector, NetIncomingMessage> listenerFunc)
+		{
+			if (m_PacketListenFuncTable.ContainsKey(packetType))
+			{
+				Debug.LogError("Listener function for packet type: " + packetType.ToString() + " has already been added");
+				return;
+			}
+
+			m_PacketListenFuncTable.Add(packetType, listenerFunc);
 		}
 
 		public void Dispatch(PacketType packetType, NetIncomingMessage incMsg)
 		{
-			if (m_PacketReceivedMap.ContainsKey(packetType))
+			if (m_PacketListenerTable.ContainsKey(packetType))
 			{
-				m_PacketReceivedMap[packetType].OnPacketReceived(this, incMsg);
+				m_PacketListenerTable[packetType].OnPacketReceived(this, incMsg);
+			}
+
+			if (m_PacketListenFuncTable.ContainsKey(packetType))
+			{
+				m_PacketListenFuncTable[packetType].Invoke(this, incMsg);
 			}
 		}
 

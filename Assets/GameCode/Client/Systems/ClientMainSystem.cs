@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace FNZ.Client.Systems
 {
-	[UpdateInGroup(typeof(SimulationSystemGroup))]
+	[UpdateInGroup(typeof(PresentationSystemGroup))]
 	public class ClientMainSystem : ComponentSystem
 	{
 		private NetworkClientSystem m_NetClientSystem;
@@ -19,7 +19,6 @@ namespace FNZ.Client.Systems
 
 		protected override void OnUpdate()
 		{
-			//Debug.LogWarning("ClientSystem Updating");
 			m_NetClientSystem.Update();
 		}
 

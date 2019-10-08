@@ -7,7 +7,6 @@ using UnityEngine;
 
 namespace FNZ.Server.Net
 {
-
 	public partial class ServerNetworkAPI
 	{
 		private readonly NetPeer m_NetPeer;
@@ -28,11 +27,24 @@ namespace FNZ.Server.Net
 			sendBuffer.Write(heightInTiles);
 			sendBuffer.Write(chunkSize);
 
-			clientConnection.SendMessage(sendBuffer, NetDeliveryMethod.ReliableOrdered, (int)SequenceChannel.WORLD_SETUP);
+			var result = clientConnection.SendMessage(sendBuffer, NetDeliveryMethod.ReliableOrdered, (int)SequenceChannel.WORLD_SETUP);
+			HandleSendResult(result);
 		}
-		
 
-
+		private void HandleSendResult(NetSendResult result)
+		{
+			switch (result)
+			{
+				case NetSendResult.FailedNotConnected:
+					break;
+				case NetSendResult.Sent:
+					break;
+				case NetSendResult.Queued:
+					break;
+				case NetSendResult.Dropped:
+					break;
+			}
+		}
 	}
 }
 

@@ -27,13 +27,14 @@ namespace FNZ.Client.Model.World
 
 		public void OnPacketReceived(NetworkConnector net, NetIncomingMessage incMsg)
 		{
+			Debug.LogWarning("WORLD_SETUP packet received in client world!");
 			IdTranslator.Instance.Deserialize(incMsg);
 
 			WIDTH = incMsg.ReadInt32();
 			HEIGHT = incMsg.ReadInt32();
 			CHUNK_SIZE = incMsg.ReadByte();
 
-			ClientApp.NetAPI.Cmd_RequestWorldSpawn("");
+			ClientApp.NetAPI.Cmd_RequestWorldSpawn("player");
 		}
 	}
 }
