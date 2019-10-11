@@ -5,13 +5,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace FNZ.Client.Net.Api
+namespace FNZ.Client.Net.API
 {
-	internal class EntityController
+	internal class EntityNetAPI
 	{
 		private readonly NetClient m_NetClient;
 
-		public EntityController(NetClient netClient)
+		public EntityNetAPI(NetClient netClient)
 		{
 			m_NetClient = netClient;
 		}

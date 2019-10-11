@@ -2,8 +2,6 @@
 using FNZ.Client.Net;
 using FNZ.Shared.Net;
 using Lidgren.Network;
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
 
@@ -16,7 +14,7 @@ namespace FNZ.Client.Systems
 	public class NetworkClientSystem : ComponentSystem
 	{
 		private NetClient m_Client;
-		private NetworkConnector m_NetConnector;
+		private ClientNetworkConnector m_NetConnector;
 
 		public void InitializeClient(string appIdentifier, string ip, int port)
 		{
@@ -24,7 +22,7 @@ namespace FNZ.Client.Systems
 			m_Client = new NetClient(config);
 
 			ClientApp.NetAPI = new ClientNetworkAPI(m_Client);
-			ClientApp.NetConnector = new NetworkConnector();
+			ClientApp.NetConnector = new ClientNetworkConnector();
 			m_NetConnector = ClientApp.NetConnector;
 			ClientApp.World = new ClientWorld();
 

@@ -1,4 +1,4 @@
-﻿using FNZ.Client.Net.Api;
+﻿using FNZ.Client.Net.API;
 using FNZ.Shared.Model.Components;
 using Lidgren.Network;
 using UnityEngine;
@@ -7,18 +7,14 @@ namespace FNZ.Client.Net
 {
 	public class ClientNetworkAPI
 	{
-		private readonly NetClient m_NetClient;
-
-		// Api Controllers
-		private readonly WorldController m_WorldController;
-		private readonly EntityController m_EntityController;
+		// All network modules 
+		private readonly WorldNetAPI m_WorldNetAPI;
+		private readonly EntityNetAPI m_EntityNetAPI;
 
 		public ClientNetworkAPI(NetClient netClient)
 		{
-			m_NetClient = netClient;
-
-			m_WorldController  = new WorldController(netClient);
-			m_EntityController = new EntityController(netClient); 
+			m_WorldNetAPI  = new WorldNetAPI(netClient);
+			m_EntityNetAPI = new EntityNetAPI(netClient); 
 		}
 
 		/// <summary>
@@ -27,7 +23,7 @@ namespace FNZ.Client.Net
 		/// <param name="playerName"></param>
 		public void Cmd_RequestWorldSpawn(string playerName)
 		{
-			var result = m_WorldController.RequestWorldSpawn(playerName);
+			var result = m_WorldNetAPI.RequestWorldSpawn(playerName);
 			HandleSendResult(result, "Cmd_RequestWorldSpawn");
 		}
 
@@ -37,7 +33,7 @@ namespace FNZ.Client.Net
 		/// <param name="components"></param>
 		public void Cmd_UpdateComponents(params FNEComponent[] components)
 		{
-			var result = m_EntityController.UpdateComponents(components);
+			var result = m_EntityNetAPI.UpdateComponents(components);
 			HandleSendResult(result, "Cmd_UpdateComponents");
 		}
 

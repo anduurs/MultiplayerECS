@@ -1,6 +1,7 @@
 ﻿using FNZ.Shared.Model.Components;
 using FNZ.Shared.Model.Interfaces;
 using Lidgren.Network;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -10,6 +11,7 @@ namespace FNZ.Shared.Model.Entity
 {
 	public static class EntityType
 	{
+		public const string PLAYER = "Player";
 		public const string TILE = "Tile";
 		public const string EDGE_OBJECT = "EdgeObject";
 		public const string FLOATING_POINT_OBJECT = "FloatpointObject";
@@ -31,9 +33,16 @@ namespace FNZ.Shared.Model.Entity
 
 		public int entityNetId = -1;
 
+		public bool enabled = true;
+
 		public List<FNEComponent> components = new List<FNEComponent>();
 
-		public void Init(Vector2 position, string entityType, string entityNameDef)
+		public FNEEntity()
+		{
+
+		}
+
+		public void Init(float2 position, string entityType, string entityNameDef)
 		{
 			//AddComponent<PositionComponent>();
 			//AddComponent<RotationComponent>();
@@ -67,6 +76,31 @@ namespace FNZ.Shared.Model.Entity
 
 			components.Add(newComp);
 			newComp.parent = this;
+
+			newComp.Init();
+
+			return newComp;
+		}
+
+		public FNEComponent AddComponent(Type newCompType, FNEComponentData data = null)
+		{
+			foreach (var comp in components)
+			{
+				if (comp.GetType() == newCompType)
+				{
+					Debug.LogError("COMPONENT ADDED TWICE TO ENTITY!");
+				}
+			}
+
+			var newComp = (FNEComponent)Activator.CreateInstance(newCompType);
+
+			components.Add(newComp);
+			newComp.parent = this;
+
+			if (data != null)
+			{
+				newComp.SetData(data);
+			}
 
 			newComp.Init();
 

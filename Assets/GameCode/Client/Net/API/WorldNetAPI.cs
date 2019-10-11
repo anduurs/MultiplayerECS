@@ -4,13 +4,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace FNZ.Client.Net.Api
+namespace FNZ.Client.Net.API
 {
-	internal class WorldController
+	internal class WorldNetAPI
 	{
 		private readonly NetClient m_NetClient;
 
-		public WorldController(NetClient netClient)
+		public WorldNetAPI(NetClient netClient)
 		{
 			m_NetClient = netClient;
 		}

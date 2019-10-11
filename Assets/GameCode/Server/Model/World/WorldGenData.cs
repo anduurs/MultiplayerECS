@@ -18,10 +18,10 @@ namespace FNZ.Server.Model.World
 	public class WorldGenData : DataDef
 	{
 		[XmlElement("heightInChunks")]
-		public ushort heightInChunks { get; set; }
+		public byte heightInChunks { get; set; }
 
 		[XmlElement("widthInChunks")]
-		public ushort widthInChunks { get; set; }
+		public byte widthInChunks { get; set; }
 
 		[XmlElement("chunkSize")]
 		public byte chunkSize { get; set; }

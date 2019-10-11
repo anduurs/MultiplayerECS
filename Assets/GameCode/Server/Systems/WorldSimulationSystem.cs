@@ -9,8 +9,6 @@ namespace FNZ.Server.Systems
 	[UpdateInGroup(typeof(SimulationSystemGroup))]
 	public class WorldSimulationSystem : ComponentSystem
 	{
-		private ServerWorld m_World;
-
 		protected override void OnCreate()
 		{
 			base.OnCreate();
@@ -19,6 +17,7 @@ namespace FNZ.Server.Systems
 		protected override void OnUpdate()
 		{
 			//Debug.Log("WorldSimulationSystem OnUpdate");
+			ServerApp.World.Tick();
 		}
 
 		protected override void OnDestroy()

@@ -9,7 +9,7 @@ using System.Reflection;
 
 namespace FNZ.Shared
 {
-	public class WorldCreator
+	public class ECSWorldCreator
 	{
 		public static List<Type> GetSystemsFromAssemblies(World world, params string[] assemblyNames)
 		{
@@ -35,9 +35,6 @@ namespace FNZ.Shared
 						foreach (var type in types)
 						{
 							systemTypes.Add(type);
-							//var system = GetBehaviourManagerAndLogException(world, type);
-							//if (system != null)
-							//	systemTypes.Add(system);
 						}
 					}
 				}

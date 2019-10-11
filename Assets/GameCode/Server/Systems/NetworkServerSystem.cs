@@ -12,7 +12,7 @@ namespace FNZ.Server.Systems
 	public class NetworkServerSystem : ComponentSystem
 	{
 		private NetServer m_Server;
-		private NetworkConnector m_NetConnector;
+		private ServerNetworkConnector m_NetConnector;
 
 		public void InitializeServer(string appIdentifier, int port, int maxConnections)
 		{
@@ -24,7 +24,7 @@ namespace FNZ.Server.Systems
 
 			m_Server = new NetServer(config);
 			ServerApp.NetAPI = new ServerNetworkAPI(m_Server);
-			ServerApp.NetConnector = new NetworkConnector();
+			ServerApp.NetConnector = new ServerNetworkConnector();
 			m_NetConnector = ServerApp.NetConnector;
 			m_Server.Start();
 
@@ -86,7 +86,7 @@ namespace FNZ.Server.Systems
 		{
 			Debug.Log("Client: " + clientConnection.ToString() + " connected to server!");
 
-			ServerApp.NetAPI.SendWorldSetupDataToClient(
+			ServerApp.NetAPI.SendToClient_WorldSetup(
 				ServerApp.World.WIDTH,
 				ServerApp.World.HEIGHT,
 				ServerApp.World.CHUNK_SIZE,

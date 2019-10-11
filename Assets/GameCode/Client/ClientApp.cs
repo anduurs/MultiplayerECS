@@ -14,12 +14,12 @@ namespace FNZ.Client
 		public static World ECS_ClientWorld;
 		public static ClientWorld World;
 		public static ClientNetworkAPI NetAPI;
-		public static NetworkConnector NetConnector;
+		public static ClientNetworkConnector NetConnector;
 
 		public void Start()
 		{
 			ECS_ClientWorld = new World("ClientWorld");
-			var systems = WorldCreator.GetSystemsFromAssemblies(ECS_ClientWorld, "FNZ.Client", "FNZ.Shared");
+			var systems = ECSWorldCreator.GetSystemsFromAssemblies(ECS_ClientWorld, "FNZ.Client", "FNZ.Shared");
 
 			var initializationSystemGroup = ECS_ClientWorld.GetOrCreateSystem<InitializationSystemGroup>();
 			var simulationSystemGroup = ECS_ClientWorld.GetOrCreateSystem<SimulationSystemGroup>();
@@ -31,7 +31,7 @@ namespace FNZ.Client
 
 				if (groups.Length == 0)
 				{
-					simulationSystemGroup.AddSystemToUpdateList(WorldCreator.GetBehaviourManagerAndLogException(ECS_ClientWorld, type) as ComponentSystemBase);
+					simulationSystemGroup.AddSystemToUpdateList(ECSWorldCreator.GetBehaviourManagerAndLogException(ECS_ClientWorld, type) as ComponentSystemBase);
 				}
 
 				foreach (var g in groups)
@@ -46,7 +46,7 @@ namespace FNZ.Client
 						continue;
 					}
 
-					var groupMgr = WorldCreator.GetBehaviourManagerAndLogException(ECS_ClientWorld, group.GroupType);
+					var groupMgr = ECSWorldCreator.GetBehaviourManagerAndLogException(ECS_ClientWorld, group.GroupType);
 
 					if (groupMgr == null)
 					{
@@ -59,7 +59,7 @@ namespace FNZ.Client
 
 					if (groupSys != null)
 					{
-						groupSys.AddSystemToUpdateList(WorldCreator.GetBehaviourManagerAndLogException(ECS_ClientWorld, type) as ComponentSystemBase);
+						groupSys.AddSystemToUpdateList(ECSWorldCreator.GetBehaviourManagerAndLogException(ECS_ClientWorld, type) as ComponentSystemBase);
 					}
 				}
 			}
@@ -68,7 +68,7 @@ namespace FNZ.Client
 			simulationSystemGroup.SortSystemUpdateList();
 			presentationSystemGroup.SortSystemUpdateList();
 
-			WorldCreator.UpdatePlayerLoop(ECS_ClientWorld);
+			ECSWorldCreator.UpdatePlayerLoop(ECS_ClientWorld);
 		}
 
 		public void OnApplicationQuit()

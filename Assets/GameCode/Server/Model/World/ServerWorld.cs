@@ -1,23 +1,25 @@
-﻿using System.Collections;
+﻿using FNZ.Shared.Model.Entity;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
 namespace FNZ.Server.Model.World
 {
-	public struct WorldChunk
+	public class WorldChunk
 	{
-		public byte chunkX;
-		public byte chunkY;
-		public byte size;
+		public byte ChunkX;
+		public byte ChunkY;
+		public byte Size;
 
-		public byte[] tileCosts;
-		public byte[] tileDangerLevels;
-		public bool[] tileBlockingList;
-		public bool[] tileSeeThroughList;
-		public int[] tilePositionsX;
-		public int[] tilePositionsY;
-		public float[] tileTemperatures;
+		public ushort[] TileIds;
+		public byte[] TileCosts;
+		public byte[] TileDangerLevels;
+		public bool[] TileBlockingList;
+		public bool[] TileSeeThroughList;
+		public int[] TilePositionsX;
+		public int[] TilePositionsY;
+		public float[] TileTemperatures;
 	}
 
 	public class ServerWorld
@@ -42,6 +44,8 @@ namespace FNZ.Server.Model.World
 		public List<WorldChunk> chunksToLoad = new List<WorldChunk>();
 		public List<WorldChunk> chunksToUnload = new List<WorldChunk>();
 
+		private List<FNEEntity> m_Players = new List<FNEEntity>();
+
 		public ServerWorld(int widthInTiles, int heightInTiles, byte chunkSize)
 		{
 			WIDTH = widthInTiles;
@@ -52,6 +56,26 @@ namespace FNZ.Server.Model.World
 			HEIGHT_IN_CHUNKS = HEIGHT / CHUNK_SIZE;
 
 			chunks = new WorldChunk[WIDTH_IN_CHUNKS, HEIGHT_IN_CHUNKS];
+		}
+
+		public void Tick()
+		{
+
+		}
+
+		public void AddPlayerEntity(FNEEntity playerEntity)
+		{
+			m_Players.Add(playerEntity);
+		}
+
+		public void RemovePlayerEntity(FNEEntity playerToRemove)
+		{
+			m_Players.Remove(playerToRemove);
+		}
+
+		public List<FNEEntity> GetAllPlayers()
+		{
+			return m_Players;
 		}
 
 		public WorldChunk GetWorldChunk(float2 position)
@@ -74,6 +98,17 @@ namespace FNZ.Server.Model.World
 			int chunkXnr = (worldX - chunkXpos) / CHUNK_SIZE;
 
 			return chunks[chunkXnr, chunkYnr];
+		}
+
+		public int2 GetChunkIndices(float2 position)
+		{
+			int worldX = (int)position.x;
+			int worldY = (int)position.y;
+			int chunkYpos = worldY % CHUNK_SIZE;
+			int chunkYnr = (worldY - chunkYpos) / CHUNK_SIZE;
+			int chunkXpos = worldX % CHUNK_SIZE;
+			int chunkXnr = (worldX - chunkXpos) / CHUNK_SIZE;
+			return new int2(chunkXnr, chunkYnr);
 		}
 	}
 }

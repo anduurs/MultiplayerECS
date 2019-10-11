@@ -1,12 +1,11 @@
-﻿using FNZ.Server.Model.World;
+﻿using FNZ.Server.Model;
+using FNZ.Server.Model.World;
 using FNZ.Server.Net;
 using FNZ.Shared;
-using FNZ.Shared.Net;
-using System.Collections.Generic;
-using System.Diagnostics;
+using FNZ.Shared.Model;
+using FNZ.Shared.Utils;
 using Unity.Entities;
 using UnityEngine;
-using UnityEngine.Experimental.LowLevel;
 
 namespace FNZ.Server
 {
@@ -15,13 +14,25 @@ namespace FNZ.Server
 		public static World ECS_World;
 		public static ServerWorld World;
 		public static ServerNetworkAPI NetAPI;
-		public static NetworkConnector NetConnector;
+		public static ServerNetworkConnector NetConnector;
+		public static ServerEntityFactory EntityFactory;
+		public static WorldChunkManager ChunkManager;
+		public static WorldGenerator WorldGen;
 
 		public void Start()
 		{
 			ECS_World = new World("ServerWorld");
-			World = new ServerWorld(256 * 32, 256 * 32, 32);
-			var systems = WorldCreator.GetSystemsFromAssemblies(ECS_World, "FNZ.Server", "FNZ.Shared");
+			WorldGen  = new WorldGenerator(DataBank.Instance.GetData<WorldGenData>("default_world"));
+
+			World = WorldGen.GenerateWorld(
+				FNERandom.GetRandomIntInRange(0, 1600000),
+				FNERandom.GetRandomIntInRange(0, 1600000)
+			);
+
+			ChunkManager  = new WorldChunkManager(World);
+			EntityFactory = new ServerEntityFactory(World);
+
+			var systems = ECSWorldCreator.GetSystemsFromAssemblies(ECS_World, "FNZ.Server", "FNZ.Shared");
 
 			var initializationSystemGroup = ECS_World.GetOrCreateSystem<InitializationSystemGroup>();
 			var simulationSystemGroup = ECS_World.GetOrCreateSystem<SimulationSystemGroup>();
@@ -54,7 +65,7 @@ namespace FNZ.Server
 			initializationSystemGroup.SortSystemUpdateList();
 			simulationSystemGroup.SortSystemUpdateList();
 			presentationSystemGroup.SortSystemUpdateList();
-			WorldCreator.UpdatePlayerLoop(ECS_World);
+			ECSWorldCreator.UpdatePlayerLoop(ECS_World);
 		}
 
 		public void OnApplicationQuit()

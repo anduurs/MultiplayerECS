@@ -1,4 +1,5 @@
-﻿using FNZ.Shared.Model;
+﻿using FNZ.Client.Net;
+using FNZ.Shared.Model;
 using FNZ.Shared.Net;
 using Lidgren.Network;
 using System.Collections;
@@ -7,7 +8,7 @@ using UnityEngine;
 
 namespace FNZ.Client.Model.World
 {
-	public class ClientWorld : INetworkListener
+	public class ClientWorld
 	{
 		// The size of a chunk in tiles (64 means the chunk is 64x64 tiles large)
 		public byte CHUNK_SIZE;
@@ -22,10 +23,10 @@ namespace FNZ.Client.Model.World
 
 		public ClientWorld()
 		{
-			ClientApp.NetConnector.Register(PacketType.WORLD_SETUP, this);
+			ClientApp.NetConnector.Register(PacketType.WORLD_SETUP, OnWorldSetupDataReceived);
 		}
 
-		public void OnPacketReceived(NetworkConnector net, NetIncomingMessage incMsg)
+		public void OnWorldSetupDataReceived(ClientNetworkConnector net, NetIncomingMessage incMsg)
 		{
 			Debug.LogWarning("WORLD_SETUP packet received in client world!");
 			IdTranslator.Instance.Deserialize(incMsg);
