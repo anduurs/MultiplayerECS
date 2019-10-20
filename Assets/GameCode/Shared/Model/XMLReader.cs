@@ -67,7 +67,7 @@ namespace FNZ.Shared.Model
 				Debug.LogError(ioe.Message);
 				Debug.LogError(ioe.StackTrace);
 
-				throw new InvalidOperationException("XML READ FAILED!");
+                return null;
 			}
 		}
 	}

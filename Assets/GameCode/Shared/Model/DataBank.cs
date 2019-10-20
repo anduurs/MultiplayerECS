@@ -30,6 +30,9 @@ namespace FNZ.Shared.Model
 			{
 				List<DataDef> input = XMLReader.Load<DataDef>(file);
 
+                if(input == null)
+                    continue;
+
 				foreach (var itemData in input)
 				{
 					if (!data.ContainsKey(itemData.GetType()))

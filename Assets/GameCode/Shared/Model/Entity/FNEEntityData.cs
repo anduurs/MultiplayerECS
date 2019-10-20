@@ -1,4 +1,4 @@
-﻿using FNZ.Shared.Model.Components;
+﻿using FNZ.Shared.Model.Entity.Components;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 

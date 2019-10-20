@@ -21,7 +21,7 @@ namespace FNZ.Server
 
 		public void Start()
 		{
-			ECS_World = new World("ServerWorld");
+            ECS_World = new World("ServerWorld");
 			WorldGen  = new WorldGenerator(DataBank.Instance.GetData<WorldGenData>("default_world"));
 
 			World = WorldGen.GenerateWorld(
@@ -30,9 +30,9 @@ namespace FNZ.Server
 			);
 
 			ChunkManager  = new WorldChunkManager(World);
-			EntityFactory = new ServerEntityFactory(World);
 
-			var systems = ECSWorldCreator.GetSystemsFromAssemblies(ECS_World, "FNZ.Server", "FNZ.Shared");
+            EntityFactory = new ServerEntityFactory(World);
+            var systems = ECSWorldCreator.GetSystemsFromAssemblies(ECS_World, "FNZ.Server", "FNZ.Shared");
 
 			var initializationSystemGroup = ECS_World.GetOrCreateSystem<InitializationSystemGroup>();
 			var simulationSystemGroup = ECS_World.GetOrCreateSystem<SimulationSystemGroup>();
@@ -81,5 +81,7 @@ namespace FNZ.Server
 				UnityEngine.Debug.LogError("World has already been destroyed");
 			}
 		}
+
+        
 	}
 }

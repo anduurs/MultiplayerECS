@@ -1,4 +1,5 @@
-﻿using FNZ.Client.Model.World;
+﻿using FNZ.Client.Model;
+using FNZ.Client.Model.World;
 using FNZ.Client.Net;
 using FNZ.Shared.Net;
 using Lidgren.Network;
@@ -26,7 +27,9 @@ namespace FNZ.Client.Systems
 			m_NetConnector = ClientApp.NetConnector;
 			ClientApp.World = new ClientWorld();
 
-			m_Client.Start();
+            ClientApp.EntityFactory = new ClientEntityFactory(ClientApp.World);
+
+            m_Client.Start();
 
 			NetOutgoingMessage approval = m_Client.CreateMessage();
 			approval.Write("secret");
@@ -98,7 +101,6 @@ namespace FNZ.Client.Systems
 		private void OnConnected()
 		{
 			Debug.Log("Client Connected To Server!");
-
 		}
 	}
 }

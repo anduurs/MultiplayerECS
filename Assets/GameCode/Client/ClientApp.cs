@@ -6,6 +6,7 @@ using UnityEngine.Experimental.LowLevel;
 using FNZ.Client.Net;
 using FNZ.Shared.Net;
 using FNZ.Client.Model.World;
+using FNZ.Client.Model;
 
 namespace FNZ.Client
 {
@@ -15,6 +16,7 @@ namespace FNZ.Client
 		public static ClientWorld World;
 		public static ClientNetworkAPI NetAPI;
 		public static ClientNetworkConnector NetConnector;
+        public static ClientEntityFactory EntityFactory;
 
 		public void Start()
 		{

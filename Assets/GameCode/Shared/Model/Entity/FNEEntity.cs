@@ -1,4 +1,4 @@
-﻿using FNZ.Shared.Model.Components;
+﻿using FNZ.Shared.Model.Entity.Components;
 using FNZ.Shared.Model.Interfaces;
 using Lidgren.Network;
 using System;
@@ -35,11 +35,11 @@ namespace FNZ.Shared.Model.Entity
 
 		public bool enabled = true;
 
-		public List<FNEComponent> components = new List<FNEComponent>();
+		public List<FNEComponent<FNEComponentData>> components = new List<FNEComponent<FNEComponentData>>();
 
 		public FNEEntity()
 		{
-
+            
 		}
 
 		public void Init(float2 position, string entityType, string entityNameDef)
@@ -62,7 +62,7 @@ namespace FNZ.Shared.Model.Entity
 			}
 		}
 
-		public T AddComponent<T>() where T : FNEComponent, new()
+		public T AddComponent<T>() where T : FNEComponent<FNEComponentData>, new()
 		{
 			T newComp = new T();
 
@@ -82,7 +82,7 @@ namespace FNZ.Shared.Model.Entity
 			return newComp;
 		}
 
-		public FNEComponent AddComponent(Type newCompType, FNEComponentData data = null)
+		public FNEComponent<FNEComponentData> AddComponent(Type newCompType, FNEComponentData data = null)
 		{
 			foreach (var comp in components)
 			{
@@ -92,17 +92,18 @@ namespace FNZ.Shared.Model.Entity
 				}
 			}
 
-			var newComp = (FNEComponent)Activator.CreateInstance(newCompType);
+			var newComp = (FNEComponent<FNEComponentData>)Activator.CreateInstance(newCompType);
 
 			components.Add(newComp);
 			newComp.parent = this;
 
-			if (data != null)
+			if (data == null)
 			{
-				newComp.SetData(data);
+                Debug.LogError("WARNING: " + newCompType + " Was added without any data!");
 			}
 
-			newComp.Init();
+            newComp.SetData(data);
+            newComp.Init();
 
 			return newComp;
 		}
@@ -112,8 +113,8 @@ namespace FNZ.Shared.Model.Entity
 			components.RemoveAll(c => c is T);
 		}
 
-		public T GetComponent<T>() where T : FNEComponent
-		{
+		public T GetComponent<T>() where T : FNEComponent<FNEComponentData>
+        {
 			foreach (var comp in components)
 			{
 				if (comp is T)

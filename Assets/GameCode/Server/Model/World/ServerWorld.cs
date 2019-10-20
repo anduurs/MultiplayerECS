@@ -110,6 +110,25 @@ namespace FNZ.Server.Model.World
 			int chunkXnr = (worldX - chunkXpos) / CHUNK_SIZE;
 			return new int2(chunkXnr, chunkYnr);
 		}
-	}
+
+        public int2 GetChunkTileIndices(WorldChunk chunk, float2 worldPosition)
+        {
+            int worldX = (int) worldPosition.x;
+            int worldY = (int) worldPosition.y;
+
+            int tileXnr = worldX - (chunk.ChunkX * CHUNK_SIZE);
+            int tileYnr = worldY - (chunk.ChunkY * CHUNK_SIZE);
+
+            return new int2(tileXnr, tileYnr);
+        }
+
+        public float GetTileTemperature(float2 position)
+        {
+            WorldChunk chunk = GetWorldChunk(position);
+            int2 tileIndices = GetChunkTileIndices(chunk, position);
+
+            return chunk.TileTemperatures[tileIndices.x + tileIndices.y * CHUNK_SIZE];
+        }
+    }
 }
 

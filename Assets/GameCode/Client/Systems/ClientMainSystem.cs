@@ -15,7 +15,7 @@ namespace FNZ.Client.Systems
 
 			m_NetClientSystem = ClientApp.ECS_ClientWorld.GetOrCreateSystem<NetworkClientSystem>();
 			m_NetClientSystem.InitializeClient(SharedConfigs.AppIdentifier, "127.0.0.1", 7676);
-		}
+        }
 
 		protected override void OnUpdate()
 		{

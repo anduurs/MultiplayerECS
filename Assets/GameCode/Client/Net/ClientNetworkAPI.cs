@@ -1,5 +1,5 @@
 ﻿using FNZ.Client.Net.API;
-using FNZ.Shared.Model.Components;
+using FNZ.Shared.Model.Entity.Components;
 using Lidgren.Network;
 using UnityEngine;
 
@@ -25,16 +25,6 @@ namespace FNZ.Client.Net
 		{
 			var result = m_WorldNetAPI.RequestWorldSpawn(playerName);
 			HandleSendResult(result, "Cmd_RequestWorldSpawn");
-		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="components"></param>
-		public void Cmd_UpdateComponents(params FNEComponent[] components)
-		{
-			var result = m_EntityNetAPI.UpdateComponents(components);
-			HandleSendResult(result, "Cmd_UpdateComponents");
 		}
 
 		private void HandleSendResult(NetSendResult result, string nameOfCommand)
