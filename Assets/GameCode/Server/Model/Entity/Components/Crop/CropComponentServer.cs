@@ -1,8 +1,6 @@
 ﻿using FNZ.Shared.Model.Entity;
 using FNZ.Shared.Model.Entity.Components;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using FNZ.Shared.Model.Entity.Components.Crop;
 
 namespace FNZ.Server.Model.Entity.Components
 {
@@ -31,9 +29,9 @@ namespace FNZ.Server.Model.Entity.Components
                     percent = 2f - percent;
 
                 if (percent > 0.75f)
-                    m_Data.growthStatus = CropComponentData.GrowthStatus.Optimal;
+                    m_Data.growthStatus = GrowthStatus.Optimal;
                 else
-                    m_Data.growthStatus = CropComponentData.GrowthStatus.Growing;
+                    m_Data.growthStatus = GrowthStatus.Growing;
 
                 m_Data.health += 0.2f;
 
@@ -44,29 +42,29 @@ namespace FNZ.Server.Model.Entity.Components
             else if (temperature < m_Data.deathTemperatureLow)
             {
                 m_Data.health -= (1 - (m_Data.enduranceInPercent / 100f));
-                m_Data.growthStatus = CropComponentData.GrowthStatus.Freezing;
+                m_Data.growthStatus = GrowthStatus.Freezing;
 
                 ServerApp.NetAPI.BAR_Entity_UpdateComponents(parent, m_Data);
             }
             else if (temperature > m_Data.deathTemperatureHigh)
             {
                 m_Data.health -= (1 - (m_Data.enduranceInPercent / 100f));
-                m_Data.growthStatus = CropComponentData.GrowthStatus.Overheating;
+                m_Data.growthStatus = GrowthStatus.Overheating;
 
                 ServerApp.NetAPI.BAR_Entity_UpdateComponents(parent, m_Data);
             }
             else if (temperature < m_Data.growthTemperatureMinimum)
             {
-                bool sendUpdate = m_Data.growthStatus != CropComponentData.GrowthStatus.ToCold;
-                m_Data.growthStatus = CropComponentData.GrowthStatus.ToCold;
+                bool sendUpdate = m_Data.growthStatus != GrowthStatus.ToCold;
+                m_Data.growthStatus = GrowthStatus.ToCold;
 
                 if (sendUpdate)
                     ServerApp.NetAPI.BAR_Entity_UpdateComponents(parent, m_Data);
             }
             else if (temperature > m_Data.growthTemperatureMaximum)
             {
-                bool sendUpdate = m_Data.growthStatus != CropComponentData.GrowthStatus.ToWarm;
-                m_Data.growthStatus = CropComponentData.GrowthStatus.ToWarm;
+                bool sendUpdate = m_Data.growthStatus != GrowthStatus.ToWarm;
+                m_Data.growthStatus = GrowthStatus.ToWarm;
 
                 if (sendUpdate)
                     ServerApp.NetAPI.BAR_Entity_UpdateComponents(parent, m_Data);
@@ -82,7 +80,7 @@ namespace FNZ.Server.Model.Entity.Components
         private void CropReady()
         {
             m_Data.cropReady = true;
-            m_Data.growthStatus = CropComponentData.GrowthStatus.Harvestable;
+            m_Data.growthStatus = GrowthStatus.Harvestable;
 
             ServerApp.NetAPI.BAR_Entity_UpdateComponents(parent, m_Data);
         }

@@ -1,7 +1,5 @@
 ﻿using FNZ.Shared.Model.Entity.Components;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using FNZ.Shared.Model.Entity.Components.Crop;
 
 namespace FNZ.Client.Model.Entity.Components
 {

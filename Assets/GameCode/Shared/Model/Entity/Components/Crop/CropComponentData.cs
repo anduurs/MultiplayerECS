@@ -1,7 +1,7 @@
 ﻿using System.Xml.Serialization;
 using Lidgren.Network;
 
-namespace FNZ.Shared.Model.Entity.Components
+namespace FNZ.Shared.Model.Entity.Components.Crop
 {
     [XmlType("CropComponentData")]
     public class CropComponentData : FNEComponentData
@@ -39,16 +39,6 @@ namespace FNZ.Shared.Model.Entity.Components
         [XmlElement("enduranceInPercent")]
         public float enduranceInPercent { get; set; }
 
-        public enum GrowthStatus
-        {
-            Optimal,
-            Growing,
-            ToCold,
-            ToWarm,
-            Freezing,
-            Overheating,
-            Harvestable
-        }
 
         public float health = 100f;
         public float growth = 0f;
@@ -58,10 +48,10 @@ namespace FNZ.Shared.Model.Entity.Components
 
         public override void Serialize(NetBuffer bw)
         {
-            bw.Write(growth);
-            bw.Write(health);
-            bw.Write((byte)growthStatus);
-            bw.Write(cropReady);
+            bw.Write(growth); // 4 bytes
+            bw.Write(health); // 4 bytes
+            bw.Write((byte)growthStatus); // 1 byte
+            bw.Write(cropReady); // 1 bit
         }
 
         public override void Deserialize(NetBuffer br)
@@ -74,7 +64,7 @@ namespace FNZ.Shared.Model.Entity.Components
 
         public override ushort GetSizeInBytes()
         {
-            return 0;
+            return sizeof(float) * 2 + sizeof(byte) + sizeof(bool);
         }
     }
 }
