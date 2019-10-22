@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef xsi:type="Loottable_Data">
+		<nameDef>test_lootTable_low</nameDef>
+		<numberOfRolls>1</numberOfRolls>
+		<lootEntries>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>metal_plate</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>5</sidesPerDie>
+			</DataDef>
+		</lootEntries>
+	</DataDef>
+
+	<DataDef xsi:type="Loottable_Data">
+		<nameDef>test_lootTable_medium</nameDef>
+		<numberOfRolls>1</numberOfRolls>
+		<lootEntries>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>metal_plate</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>30</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>chemicals</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>5</sidesPerDie>
+			</DataDef>
+		</lootEntries>
+	</DataDef>
+
+	<DataDef xsi:type="Loottable_Data">
+		<nameDef>test_lootTable_high</nameDef>
+		<numberOfRolls>1</numberOfRolls>
+		<lootEntries>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>metal_plate</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>100</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>chemicals</itemNameRef>
+				<diceCount>5</diceCount>
+				<sidesPerDie>20</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>grenade_gun_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+		</lootEntries>
+	</DataDef>
+
+	<DataDef xsi:type="Loottable_Data">
+		<nameDef>loottable_scrap_pile</nameDef>
+		<numberOfRolls>1</numberOfRolls>
+		<lootEntries>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>scrap_pile</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>scrap_pile</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>scrap_pile</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>scrap_pile</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>scrap_pile</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>scrap_pile</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>scrap_pile</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>scrap_pile</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>scrap_pile</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>wood_planks</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>4</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>scrap_lamp</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>5</sidesPerDie>
+			</DataDef>
+		</lootEntries>
+	</DataDef>
+
+	<DataDef xsi:type="Loottable_Data">
+		<nameDef>loottable_car_wreck</nameDef>
+		<numberOfRolls>1</numberOfRolls>
+		<lootEntries>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>scrap_pile</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>machine_parts</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>machine_parts</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>scrap_lamp</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>5</sidesPerDie>
+			</DataDef>
+		</lootEntries>
+	</DataDef>
+
+	<DataDef xsi:type="Loottable_Data">
+		<nameDef>loottable_low_tech_case</nameDef>
+		<numberOfRolls>1</numberOfRolls>
+		<lootEntries>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>machine_parts</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>machine_parts</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>machine_parts</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>machine_parts</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>drill</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>generator</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>nail_repeater_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>nail_swarm_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>nail_mine_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>nail_ammo_box_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>nail_ring_burst_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>acupuncture_blast_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>bfnl_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+		</lootEntries>
+	</DataDef>
+
+	<DataDef xsi:type="Loottable_Data">
+		<nameDef>loottable_low_tech_case_2</nameDef>
+		<numberOfRolls>4</numberOfRolls>
+		<lootEntries>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>machine_parts</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>machine_parts</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>machine_parts</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>machine_parts</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>drill</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>generator</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>nail_repeater_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>nail_swarm_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>nail_mine_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>nail_ammo_box_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>nail_ring_burst_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>acupuncture_blast_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>bfnl_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+		</lootEntries>
+	</DataDef>
+
+	<DataDef xsi:type="Loottable_Data">
+		<nameDef>loottable_medium_tech_case</nameDef>
+		<numberOfRolls>2</numberOfRolls>
+		<lootEntries>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>motherboard</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>generator</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>drill</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>pistol_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>rifle_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>uzi_blueprint</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>1</sidesPerDie>
+			</DataDef>
+		</lootEntries>
+	</DataDef>
+
+	<DataDef xsi:type="Loottable_Data">
+		<nameDef>loottable_wood_planks</nameDef>
+		<numberOfRolls>1</numberOfRolls>
+		<lootEntries>
+			<DataDef xsi:type="Loottable_Entry">
+				<itemNameRef>wood_planks</itemNameRef>
+				<diceCount>1</diceCount>
+				<sidesPerDie>2</sidesPerDie>
+			</DataDef>
+		</lootEntries>
+	</DataDef>
+	
+</Defs>

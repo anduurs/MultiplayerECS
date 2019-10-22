@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<DataDef xsi:type="BuildingBlueprint">
+		<nameDef>tile_soil</nameDef>
+		<requiredMaterials>
+			<MaterialDef>
+				<nameRef>soil</nameRef>
+				<amount>1</amount>
+			</MaterialDef>
+		</requiredMaterials>
+		<productRef>soil_tile</productRef>
+		<listPriority>80</listPriority>
+		<category>agriculture</category>
+		<displayName>Farming Tile</displayName>
+		<description>For growing crops!</description>
+		<iconSpriteName>Icon_Soil</iconSpriteName>
+	</DataDef>
+
+	<DataDef xsi:type="BuildingBlueprint">
+		<nameDef>potato_farm</nameDef>
+		<requiredMaterials>
+			<MaterialDef>
+				<nameRef>potato</nameRef>
+				<amount>1</amount>
+			</MaterialDef>
+		</requiredMaterials>
+		<productRef>potato_farm</productRef>
+		<listPriority>80</listPriority>
+		<category>agriculture</category>
+		<displayName>Potato Farm</displayName>
+		<description>Plant some potatoes!</description>
+		<iconSpriteName>Icon_Potato</iconSpriteName>
+		<validTiles>
+			<tileRef>soil_tile</tileRef>
+		</validTiles>
+	</DataDef>
+
+</Defs>

@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>nail_repeater_blueprint</nameDef>
+		<displayName>Nail Repeater Blueprint</displayName>
+		<itemIconSpriteName>Icon_Tech_Floppy_T1</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>A blueprint for a crappy rifle</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+		<Item_Blueprint_Data>
+			<weaponToUnlock>nail_repeater</weaponToUnlock>
+		</Item_Blueprint_Data>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>nail_swarm_blueprint</nameDef>
+		<displayName>Nail-Swarm 2000 Blueprint</displayName>
+		<itemIconSpriteName>Icon_Tech_Floppy_T1</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>A blueprint for a crappy shotgun</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+		<Item_Blueprint_Data>
+			<weaponToUnlock>nail_swarm</weaponToUnlock>
+		</Item_Blueprint_Data>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>pistol_blueprint</nameDef>
+		<displayName>Pistol Blueprint</displayName>
+		<itemIconSpriteName>Icon_Tech_Floppy_T2</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>A blueprint for a crappy pistol</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+		<Item_Blueprint_Data>
+			<weaponToUnlock>pistol</weaponToUnlock>
+		</Item_Blueprint_Data>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>uzi_blueprint</nameDef>
+		<displayName>Uzi Blueprint</displayName>
+		<itemIconSpriteName>Icon_Tech_Floppy_T2</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>A blueprint for an uzi</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+		<Item_Blueprint_Data>
+			<weaponToUnlock>uzi</weaponToUnlock>
+		</Item_Blueprint_Data>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>rifle_blueprint</nameDef>
+		<displayName>Rifle Blueprint</displayName>
+		<itemIconSpriteName>Icon_Tech_Floppy_T2</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview1x1</itemSizeIconSpriteName>
+		<info>A blueprint for a cool rifle</info>
+		<height>1</height>
+		<width>1</width>
+		<maxStackSize>1</maxStackSize>
+		<Item_Blueprint_Data>
+			<weaponToUnlock>semiautomatic_rifle</weaponToUnlock>
+		</Item_Blueprint_Data>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>grenade_gun_blueprint</nameDef>
+		<displayName>Grenade Gun Blueprint</displayName>
+		<itemIconSpriteName>Icon_Tech_Floppy_T3</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>A blueprint for a cool gun</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+		<Item_Blueprint_Data>
+			<weaponToUnlock>grenade_gun</weaponToUnlock>
+		</Item_Blueprint_Data>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>nail_mine_blueprint</nameDef>
+		<displayName>Nail Mine Blueprint</displayName>
+		<itemIconSpriteName>Icon_Tech_Floppy_T1</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>A blueprint for some explosive strategies</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+		<Item_Blueprint_Data>
+			<gadgetToUnlock>nail_mine</gadgetToUnlock>
+		</Item_Blueprint_Data>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>nail_ammo_box_blueprint</nameDef>
+		<displayName>Nail Ammo Box Blueprint</displayName>
+		<itemIconSpriteName>Icon_Tech_Floppy_T1</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>A blueprint for some utility in the field</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+		<Item_Blueprint_Data>
+			<gadgetToUnlock>nail_ammo_box</gadgetToUnlock>
+		</Item_Blueprint_Data>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>bfnl_blueprint</nameDef>
+		<displayName>BFNL Blueprint</displayName>
+		<itemIconSpriteName>Icon_Tech_Floppy_T1</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>A huge blueprint</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+		<Item_Blueprint_Data>
+			<gadgetToUnlock>bfnl</gadgetToUnlock>
+		</Item_Blueprint_Data>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>nail_ring_burst_blueprint</nameDef>
+		<displayName>Porcupine Burst Blueprint</displayName>
+		<itemIconSpriteName>Icon_Tech_Floppy_T1</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>Ohhh, pointy!</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+		<Item_Blueprint_Data>
+			<gadgetToUnlock>nail_ring_burst</gadgetToUnlock>
+		</Item_Blueprint_Data>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>acupuncture_blast_blueprint</nameDef>
+		<displayName>Acupuncture Blast Blueprint</displayName>
+		<itemIconSpriteName>Icon_Tech_Floppy_T1</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>Ohhh, healthy!</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+		<Item_Blueprint_Data>
+			<gadgetToUnlock>acupuncture_blast</gadgetToUnlock>
+		</Item_Blueprint_Data>
+	</DataDef>
+
+</Defs>

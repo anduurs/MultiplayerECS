@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>scrap_lamp</nameDef>
+		<displayName>Scrap Lamp</displayName>
+		<itemIconSpriteName>Icon_Build_Lamp_Standing</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>A Scrap Lamp!</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>5</maxStackSize>
+	</DataDef>
+
+</Defs>

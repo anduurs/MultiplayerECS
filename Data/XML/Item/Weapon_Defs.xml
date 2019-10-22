@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <!-- <DataDef xsi:type="WeaponData">
+        <nameDef>grenade_gun</nameDef>
+        <displayName>Pistol</displayName>
+        <mesh>Meshes/MeshBank/Weapons/Pistol/Pistol_Body</mesh>
+		<material>Materials/New_Materials/WeaponMaterials/M_Pistol_Body</material>
+        <ammoRef>bullet_small</ammoRef>
+		<stockpileResourceRef>small_munition</stockpileResourceRef>
+        <isAutomatic>false</isAutomatic>
+        <roundsPerMin>300</roundsPerMin>
+        <damage>50</damage>
+        <reloadTimeInSeconds>1</reloadTimeInSeconds>
+        <shootRange>20</shootRange>
+        <soundRange>10</soundRange>
+        <accuracyInDegrees>10</accuracyInDegrees>
+        <pelletsPerShot>1</pelletsPerShot>
+        <ammoClipSize>10</ammoClipSize>
+        <baseAmmoCount>4000</baseAmmoCount>
+        <ammoPerUpgrade>40</ammoPerUpgrade>
+        <ShootBehaviour xsi:type="RaycastShoot">
+			<effectRef>effect_explosion</effectRef>
+		</ShootBehaviour>
+        <ShootSound>Pistol_Fire</ShootSound>
+        <ReloadSound>Pistol_Reload</ReloadSound>
+        <stockpileResourceCost>0</stockpileResourceCost>
+    </DataDef>
+
+    <DataDef xsi:type="WeaponData">
+        <nameDef>tazer</nameDef>
+        <displayName>Tazer</displayName>
+        <mesh>Meshes/MeshBank/Weapons/Pistol/Pistol_Body</mesh>
+		<material>Materials/New_Materials/WeaponMaterials/M_Pistol_Body_Tazer</material>
+        <ammoRef>bullet_medium</ammoRef>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <isAutomatic>true</isAutomatic>
+        <roundsPerMin>500</roundsPerMin>
+        <damage>100</damage>
+        <reloadTimeInSeconds>1.5</reloadTimeInSeconds>
+        <shootRange>1.5</shootRange>
+        <soundRange>5</soundRange>
+        <accuracyInDegrees>5</accuracyInDegrees>
+        <pelletsPerShot>1</pelletsPerShot>
+        <ammoClipSize>1</ammoClipSize>
+        <baseAmmoCount>100000</baseAmmoCount>
+
+        <ammoPerUpgrade>20</ammoPerUpgrade>
+        <ammoUpgradeBaseCost>1</ammoUpgradeBaseCost>
+        <ammoUpgradeCostIncrement>1</ammoUpgradeCostIncrement>
+        <ammoUpgradeCostIncrementInterval>1</ammoUpgradeCostIncrementInterval>
+
+        <ShootBehaviour xsi:type="RaycastShoot">
+			<effectRef>effect_tazer</effectRef>
+		</ShootBehaviour>
+        <ShootSound>Tazer_Fire</ShootSound>
+        <ReloadSound>Pistol_Reload</ReloadSound>
+        <stockpileResourceCost>0</stockpileResourceCost>
+    </DataDef>
+
+    <DataDef xsi:type="WeaponData">
+        <nameDef>nail_gun</nameDef>
+        <displayName>Nail Gun</displayName>
+        <mesh>Meshes/MeshBank/Weapons/Pistol/Pistol_Body</mesh>
+		<material>Materials/New_Materials/WeaponMaterials/M_Pistol_Body_Scrap</material>
+        <ammoRef>bullet_medium</ammoRef>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <isAutomatic>false</isAutomatic>
+        <roundsPerMin>500</roundsPerMin>
+        <damage>40</damage>
+        <reloadTimeInSeconds>2</reloadTimeInSeconds>
+        <shootRange>40</shootRange>
+        <soundRange>10</soundRange>
+        <accuracyInDegrees>20</accuracyInDegrees>
+        <pelletsPerShot>1</pelletsPerShot>
+        <ammoClipSize>20</ammoClipSize>
+        <baseAmmoCount>50</baseAmmoCount>
+
+        <ammoPerUpgrade>50</ammoPerUpgrade>
+        <ammoUpgradeBaseCost>1</ammoUpgradeBaseCost>
+        <ammoUpgradeCostIncrement>1</ammoUpgradeCostIncrement>
+        <ammoUpgradeCostIncrementInterval>2</ammoUpgradeCostIncrementInterval>
+
+        <ShootBehaviour xsi:type="RaycastShoot">
+			<effectRef>effect_medium_bullet</effectRef>
+		</ShootBehaviour>
+        <ShootSound>Nail_Fire</ShootSound>
+        <ReloadSound>Pistol_Reload</ReloadSound>
+        <stockpileResourceCost>0</stockpileResourceCost>
+    </DataDef>
+
+    <DataDef xsi:type="WeaponData">
+        <nameDef>nail_repeater</nameDef>
+        <displayName>Nail Repeater</displayName>
+        <mesh>Meshes/MeshBank/Weapons/Rifle/Rifle_Body</mesh>
+		<material>Materials/New_Materials/WeaponMaterials/M_Rifle_Body_Mat_Scrap</material>
+        <ammoRef>bullet_medium</ammoRef>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <isAutomatic>true</isAutomatic>
+        <roundsPerMin>750</roundsPerMin>
+        <damage>30</damage>
+        <reloadTimeInSeconds>2</reloadTimeInSeconds>
+        <shootRange>40</shootRange>
+        <soundRange>10</soundRange>
+        <accuracyInDegrees>20</accuracyInDegrees>
+        <pelletsPerShot>1</pelletsPerShot>
+        <ammoClipSize>50</ammoClipSize>
+        <baseAmmoCount>50</baseAmmoCount>
+
+        <ammoPerUpgrade>50</ammoPerUpgrade>
+        <ammoUpgradeBaseCost>1</ammoUpgradeBaseCost>
+        <ammoUpgradeCostIncrement>1</ammoUpgradeCostIncrement>
+        <ammoUpgradeCostIncrementInterval>2</ammoUpgradeCostIncrementInterval>
+
+        <ShootBehaviour xsi:type="RaycastShoot">
+			<effectRef>effect_medium_bullet</effectRef>
+		</ShootBehaviour>
+        <ShootSound>Nail_Fire</ShootSound>
+        <ReloadSound>Pistol_Reload</ReloadSound>
+        <stockpileResourceCost>2</stockpileResourceCost>
+    </DataDef>
+
+    <DataDef xsi:type="WeaponData">
+        <nameDef>nail_swarm</nameDef>
+        <displayName>Nail-Swarm 2000</displayName>
+        <mesh>Meshes/MeshBank/Weapons/Shotgun/Shotgun_Body</mesh>
+		<material>Materials/New_Materials/WeaponMaterials/M_Shotgun_Body_Scrap</material>
+        <ammoRef>bullet_medium</ammoRef>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <isAutomatic>false</isAutomatic>
+        <roundsPerMin>400</roundsPerMin>
+        <damage>15</damage>
+        <reloadTimeInSeconds>3</reloadTimeInSeconds>
+        <shootRange>40</shootRange>
+        <soundRange>20</soundRange>
+        <accuracyInDegrees>30</accuracyInDegrees>
+        <pelletsPerShot>15</pelletsPerShot>
+        <ammoClipSize>10</ammoClipSize>
+        <baseAmmoCount>20</baseAmmoCount>
+
+        <ammoPerUpgrade>20</ammoPerUpgrade>
+        <ammoUpgradeBaseCost>1</ammoUpgradeBaseCost>
+        <ammoUpgradeCostIncrement>1</ammoUpgradeCostIncrement>
+        <ammoUpgradeCostIncrementInterval>1</ammoUpgradeCostIncrementInterval>
+
+        <ShootBehaviour xsi:type="RaycastShoot">
+			<effectRef>effect_medium_bullet</effectRef>
+		</ShootBehaviour>
+        <ShootSound>Shotgun_Fire</ShootSound>
+        <ReloadSound>Shotgun_Reload_Done</ReloadSound>
+        <stockpileResourceCost>3</stockpileResourceCost>
+    </DataDef>
+
+    <DataDef xsi:type="WeaponData">
+        <nameDef>pistol</nameDef>
+        <displayName>Pistol</displayName>
+        <mesh>Meshes/MeshBank/Weapons/Pistol/Pistol_Body</mesh>
+		<material>Materials/New_Materials/WeaponMaterials/M_Pistol_Body</material>
+        <ammoRef>bullet_small</ammoRef>
+		<stockpileResourceRef>small_munition</stockpileResourceRef>
+        <isAutomatic>false</isAutomatic>
+        <roundsPerMin>500</roundsPerMin>
+        <damage>150</damage>
+        <reloadTimeInSeconds>2</reloadTimeInSeconds>
+        <shootRange>40</shootRange>
+        <soundRange>15</soundRange>
+        <accuracyInDegrees>10</accuracyInDegrees>
+        <pelletsPerShot>1</pelletsPerShot>
+        <ammoClipSize>20</ammoClipSize>
+        <baseAmmoCount>50</baseAmmoCount>
+
+        <ammoPerUpgrade>50</ammoPerUpgrade>
+        <ammoUpgradeBaseCost>1</ammoUpgradeBaseCost>
+        <ammoUpgradeCostIncrement>1</ammoUpgradeCostIncrement>
+        <ammoUpgradeCostIncrementInterval>2</ammoUpgradeCostIncrementInterval>
+
+        <ShootBehaviour xsi:type="RaycastShoot">
+			<effectRef>effect_medium_bullet</effectRef>
+		</ShootBehaviour>
+        <ShootSound>Pistol_Fire</ShootSound>
+        <ReloadSound>Pistol_Reload</ReloadSound>
+        <stockpileResourceCost>0</stockpileResourceCost>
+    </DataDef>
+
+    <DataDef xsi:type="WeaponData">
+        <nameDef>uzi</nameDef>
+        <displayName>Uzi</displayName>
+        <mesh>Meshes/MeshBank/Weapons/Pistol/Pistol_Body</mesh>
+		<material>Materials/New_Materials/WeaponMaterials/M_Pistol_Body</material>
+        <ammoRef>bullet_small</ammoRef>
+		<stockpileResourceRef>small_munition</stockpileResourceRef>
+        <isAutomatic>true</isAutomatic>
+        <roundsPerMin>1000</roundsPerMin>
+        <damage>40</damage>
+        <reloadTimeInSeconds>1</reloadTimeInSeconds>
+        <shootRange>40</shootRange>
+        <soundRange>20</soundRange>
+        <accuracyInDegrees>20</accuracyInDegrees>
+        <pelletsPerShot>1</pelletsPerShot>
+        <ammoClipSize>50</ammoClipSize>
+        <baseAmmoCount>50</baseAmmoCount>
+
+        <ammoPerUpgrade>50</ammoPerUpgrade>
+        <ammoUpgradeBaseCost>1</ammoUpgradeBaseCost>
+        <ammoUpgradeCostIncrement>1</ammoUpgradeCostIncrement>
+        <ammoUpgradeCostIncrementInterval>2</ammoUpgradeCostIncrementInterval>
+
+        <ShootBehaviour xsi:type="RaycastShoot">
+			<effectRef>effect_medium_bullet</effectRef>
+		</ShootBehaviour>
+        <ShootSound>Pistol_Fire</ShootSound>
+        <ReloadSound>Pistol_Reload</ReloadSound>
+        <stockpileResourceCost>2</stockpileResourceCost>
+    </DataDef>
+
+    <DataDef xsi:type="WeaponData">
+        <nameDef>semiautomatic_rifle</nameDef>
+        <displayName>Semi-Automatic Rifle</displayName>
+        <mesh>Meshes/MeshBank/Weapons/Rifle/Rifle_Body</mesh>
+		<material>Materials/New_Materials/WeaponMaterials/M_Rifle_Body_Mat</material>
+        <ammoRef>bullet_medium</ammoRef>
+		<stockpileResourceRef>medium_munition</stockpileResourceRef>
+        <isAutomatic>true</isAutomatic>
+        <roundsPerMin>1000</roundsPerMin>
+        <damage>100</damage>
+        <reloadTimeInSeconds>2</reloadTimeInSeconds>
+        <shootRange>40</shootRange>
+        <soundRange>25</soundRange>
+        <accuracyInDegrees>20</accuracyInDegrees>
+        <pelletsPerShot>3</pelletsPerShot>
+        <ammoClipSize>40</ammoClipSize>
+        <baseAmmoCount>20000</baseAmmoCount>
+
+        <ammoPerUpgrade>50</ammoPerUpgrade>
+        <ammoUpgradeBaseCost>1</ammoUpgradeBaseCost>
+        <ammoUpgradeCostIncrement>1</ammoUpgradeCostIncrement>
+        <ammoUpgradeCostIncrementInterval>2</ammoUpgradeCostIncrementInterval>
+
+        <ShootBehaviour xsi:type="RaycastShoot">
+			<effectRef>effect_medium_bullet</effectRef>
+		</ShootBehaviour>
+        <ShootSound>Rifle_Fire</ShootSound>
+        <ReloadSound>Rifle_Reload</ReloadSound>
+        <stockpileResourceCost>0</stockpileResourceCost>
+    </DataDef>
+
+    <DataDef xsi:type="WeaponData">
+        <nameDef>bad_grenade_gun</nameDef>
+        <displayName>Bad Grenade Gun</displayName>
+        <mesh>Meshes/MeshBank/Weapons/Pistol/Pistol_Body</mesh>
+		<material>Materials/New_Materials/WeaponMaterials/M_Pistol_Body</material>
+        <ammoRef>bullet_medium</ammoRef>
+		<stockpileResourceRef>medium_munition</stockpileResourceRef>
+        <isAutomatic>false</isAutomatic>
+        <roundsPerMin>30</roundsPerMin>
+        <damage>100</damage>
+        <reloadTimeInSeconds>2</reloadTimeInSeconds>
+        <shootRange>40</shootRange>
+        <soundRange>25</soundRange>
+        <accuracyInDegrees>10</accuracyInDegrees>
+        <pelletsPerShot>1</pelletsPerShot>
+        <ammoClipSize>1</ammoClipSize>
+        <baseAmmoCount>2</baseAmmoCount>
+        <ammoPerUpgrade>1</ammoPerUpgrade>
+        <ShootBehaviour xsi:type="RaycastShoot">
+			<effectRef>effect_explosion</effectRef>
+		</ShootBehaviour>
+        <ShootSound>Pistol_Fire</ShootSound>
+        <ReloadSound>Pistol_Reload</ReloadSound>
+        <stockpileResourceCost>0</stockpileResourceCost>
+    </DataDef> -->
+
+</Defs>

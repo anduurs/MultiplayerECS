@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <DataDef xsi:type="ItemData">
+		<nameDef>thermometer</nameDef>
+		<displayName>Thermometer</displayName>
+		<info>A thermometer.</info>
+		<height>2</height>
+		<width>2</width>
+        <itemIconSpriteName>Icon_Chemicals</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<maxStackSize>1</maxStackSize>
+        <components>
+            <ItemComponentData xsi:type="GadgetItemComponentData">
+                <displayName>Measure heat</displayName>
+                <GadgetBehaviour xsi:type="MeasureTemperature">
+                </GadgetBehaviour>
+                <description>Measures the temperature of the player's position</description>
+                <isConsumed>false</isConsumed>
+            </ItemComponentData>
+        </components>
+	</DataDef>
+
+    <DataDef xsi:type="ItemData">
+		<nameDef>axe</nameDef>
+		<displayName>Axe</displayName>
+		<info>An axe.</info>
+		<height>3</height>
+		<width>2</width>
+        <itemIconSpriteName>Icon_Axe</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x3</itemSizeIconSpriteName>
+		<maxStackSize>1</maxStackSize>
+        <components>
+            <ItemComponentData xsi:type="GadgetItemComponentData">
+                <displayName>Cut Trees</displayName>
+                <GadgetBehaviour xsi:type="GadgetRaycastShootBehaviour">
+                    <applyEffectRef>effect_axe</applyEffectRef>
+                    <projectileWidthMultiplier>2</projectileWidthMultiplier>
+                    <shootRange>1</shootRange>
+                    <damage>100</damage>
+                    <damageTypeRef>cut</damageTypeRef>
+                </GadgetBehaviour>
+                <description>Cut down trees with this handy tool!</description>
+                <isConsumed>false</isConsumed>
+            </ItemComponentData>
+        </components>
+	</DataDef>
+
+</Defs>

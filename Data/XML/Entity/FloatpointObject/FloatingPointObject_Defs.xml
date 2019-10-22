@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>klegg_1</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/001_Klegg_1</prefabPath>
+		<seeThrough>false</seeThrough>
+		<displayName>Klegg_1</displayName>
+		<editorCategory>Klegg</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>huge_crane</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Crane</prefabPath>
+		<seeThrough>false</seeThrough>
+		<displayName>Crane</displayName>
+		<editorCategory>Large Props</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>container_full_1</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Container_Full</prefabPath>
+		<seeThrough>false</seeThrough>
+		<displayName>Container (full)</displayName>
+		<editorCategory>Large Props</editorCategory>
+		<description></description>
+	</DataDef>
+		<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>container_broken_1</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Container_Broken_1</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Container (broken and open)</displayName>
+		<editorCategory>Large Props</editorCategory>
+		<description></description>
+	</DataDef>
+		<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>container_broken_2</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Container_Broken_2</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Container (double broken)</displayName>
+		<editorCategory>Large Props</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>metal_fence_pole</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Fence_Pole</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Metal Fence Pole</displayName>
+		<editorCategory>Walls</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>storehouse_shelves_1</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Storage_Shelves</prefabPath>
+		<seeThrough>true</seeThrough>
+		<editorCategory>Props</editorCategory>
+		<displayName>Storehouse Shelves</displayName>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>large_port</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Port_4_Open</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Metal Port (4)(open)</displayName>
+		<editorCategory>Large Props</editorCategory>
+		<description></description>
+	</DataDef>
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>large_port_four_closed</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Port_4_Closed</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Metal Port (4)(closed)</displayName>
+		<editorCategory>Large Props</editorCategory>
+		<description></description>
+	</DataDef>
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>large_port_five_blown</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Port_5_Blown</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Metal Port (5)(blown)</displayName>
+		<editorCategory>Large Props</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>fuel_tank_connectors</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Fuel_Tank_Connector</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Fuel Tank Connector</displayName>
+		<editorCategory>Props</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>underground_pipes</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Underground_Pipes</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Underground Pipes</displayName>
+		<editorCategory>Props</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>spark_trap_FPO</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Trap_FPO</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Spark trap top (visual)</displayName>
+		<editorCategory>Traps</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>underground_spawning_hole</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/Underground_Spawner</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Underground Spawning Point</displayName>
+		<editorCategory>Large Props</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>car_fpo</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/006_L_Car</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Car</displayName>
+		<editorCategory>Props</editorCategory>
+		<description></description>
+	</DataDef>
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>car_2_fpo</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/000_Car</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Car Awesome</displayName>
+		<editorCategory>Props</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>wall_corner</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/003_WallInnerCorner</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Wall Corner</displayName>
+		<editorCategory>Walls</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>lamp_post_fpo</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/009_Lamppost</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Lamp Post</displayName>
+		<editorCategory>Props</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>road_light_fpo</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/011_RoadLight</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Road Light</displayName>
+		<editorCategory>Props</editorCategory>
+		<description></description>
+	</DataDef>
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>huge_wind_generator</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<prefabPath>Prefabs/FPObject/032_Generator_Huge</prefabPath>
+		<seeThrough>true</seeThrough>
+		<displayName>Huge Wind Generator</displayName>
+		<editorCategory>Large Props</editorCategory>
+		<description></description>
+	</DataDef>
+
+	
+
+	<DataDef entityType="FloatpointObject" xsi:type="FNEEntityData">
+		<nameDef>standing_lamp</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<seeThrough>true</seeThrough>
+		<displayName>Lamp on pole</displayName>
+		<description>Shine a light on the issue</description>
+		<prefabPath>Prefabs/FPObject/019_StandingLamp</prefabPath>
+		<editorCategory>Props</editorCategory>
+	</DataDef>
+</Defs>

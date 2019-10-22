@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<DataDef xsi:type="BuildingCategoryData">
+		<nameDef>scrap_tech</nameDef>
+		<displayName>Scrap Technology</displayName>
+		<categoryIconSpriteName>Building_Category_Icon_LowTech</categoryIconSpriteName>
+	</DataDef>
+
+	<DataDef xsi:type="BuildingCategoryData">
+		<nameDef>special</nameDef>
+		<displayName>Special</displayName>
+		<categoryIconSpriteName>Building_Category_Icon_Special</categoryIconSpriteName>
+	</DataDef>
+
+	<DataDef xsi:type="BuildingCategoryData">
+		<nameDef>power_production</nameDef>
+		<displayName>Power Production</displayName>
+		<categoryIconSpriteName>Building_Category_Icon_Power</categoryIconSpriteName>
+	</DataDef>
+
+	<DataDef xsi:type="BuildingCategoryData">
+		<nameDef>resource_extraction</nameDef>
+		<displayName>Resource Extraction</displayName>
+		<categoryIconSpriteName>Building_Category_Icon_Extraction</categoryIconSpriteName>
+	</DataDef>
+
+	<DataDef xsi:type="BuildingCategoryData">
+		<nameDef>resource_refinement</nameDef>
+		<displayName>Resource Refinement</displayName>
+		<categoryIconSpriteName>Building_Category_Icon_Refinement</categoryIconSpriteName>
+	</DataDef>
+
+	<DataDef xsi:type="BuildingCategoryData">
+		<nameDef>asset_production</nameDef>
+		<displayName>Asset Production</displayName>
+		<categoryIconSpriteName>Building_Category_Icon_Assets</categoryIconSpriteName>
+	</DataDef>
+
+	<DataDef xsi:type="BuildingCategoryData">
+		<nameDef>architecture</nameDef>
+		<displayName>Architecture</displayName>
+		<categoryIconSpriteName>Building_Category_Icon_Architecture</categoryIconSpriteName>
+	</DataDef>
+
+	<DataDef xsi:type="BuildingCategoryData">
+		<nameDef>agriculture</nameDef>
+		<displayName>Agriculture</displayName>
+		<categoryIconSpriteName>Building_Category_Icon_Agriculture</categoryIconSpriteName>
+	</DataDef>
+
+</Defs>

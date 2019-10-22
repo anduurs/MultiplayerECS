@@ -1,5 +1,5 @@
 ﻿using FNZ.Client.Net.API;
-using FNZ.Shared.Model.Entity.Components;
+using FNZ.Shared.Net;
 using Lidgren.Network;
 using UnityEngine;
 
@@ -7,41 +7,54 @@ namespace FNZ.Client.Net
 {
 	public class ClientNetworkAPI
 	{
+		private readonly NetClient m_NetClient;
+
 		// All network modules 
-		private readonly WorldNetAPI m_WorldNetAPI;
-		private readonly EntityNetAPI m_EntityNetAPI;
+		private readonly ClientWorldMessagesAPI m_WorldAPI;
+		private readonly ClientEntityMessagesAPI m_EntityAPI;
 
 		public ClientNetworkAPI(NetClient netClient)
 		{
-			m_WorldNetAPI  = new WorldNetAPI(netClient);
-			m_EntityNetAPI = new EntityNetAPI(netClient); 
+			m_NetClient = netClient;
+
+			m_WorldAPI  = new ClientWorldMessagesAPI(netClient);
+			m_EntityAPI = new ClientEntityMessagesAPI(netClient); 
 		}
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="playerName"></param>
 		public void Cmd_RequestWorldSpawn(string playerName)
 		{
-			var result = m_WorldNetAPI.RequestWorldSpawn(playerName);
-			HandleSendResult(result, "Cmd_RequestWorldSpawn");
+			var message = m_WorldAPI.CreateRequestWorldSpawnMessage(playerName);
+			Command(message);
 		}
 
-		private void HandleSendResult(NetSendResult result, string nameOfCommand)
+		private void Command(NetMessage message)
 		{
+			var result = m_NetClient.SendMessage(
+				message.Buffer, 
+				message.DeliveryMethod, 
+				(int)message.Channel
+			);
+
+			HandleSendResult(result, message.Type);
+		}
+
+		private void HandleSendResult(NetSendResult result, NetMessageType messageType)
+		{
+			string messageTypeName = messageType.ToString();
+
 			switch (result)
 			{
 				case NetSendResult.FailedNotConnected:
-					Debug.LogError("Message failed to enqueue because there is no connection, Command: " + nameOfCommand);
+					Debug.LogError("[Client] Message failed to enqueue because there is no connection, CommandType: " + messageTypeName);
 					break;
 				case NetSendResult.Sent:
-					Debug.Log("Message was immediately sent, Command: " + nameOfCommand);
+					Debug.Log("[Client] Message was immediately sent, CommandType: " + messageTypeName);
 					break;
 				case NetSendResult.Queued:
-					Debug.Log("Message was queued for delivery, Command: " + nameOfCommand);
+					Debug.Log("[Client] Message was queued for delivery, CommandType: " + messageTypeName);
 					break;
 				case NetSendResult.Dropped:
-					Debug.LogWarning("Message was dropped immediately since too many message were queued, Command: " + nameOfCommand);
+					Debug.LogWarning("[Client] Message was dropped immediately since too many message were queued, CommandType: " + messageTypeName);
 					break;
 			}
 		}

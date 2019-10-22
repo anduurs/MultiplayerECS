@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef xsi:type="SiteData">
+		<nameDef>testSite</nameDef>
+		<minNrOfHordes>25</minNrOfHordes>
+		<maxNrOfHordes>50</maxNrOfHordes>
+		<minHordeSize>20</minHordeSize>
+		<maxHordeSize>500</maxHordeSize>
+		<sitePath>Data/Sites/site1</sitePath>
+		<siteEvents>
+			<SiteEventData>
+				<eventRef>event_small_horde_cluster_4</eventRef>
+				<dangerLevelTrigger>10</dangerLevelTrigger>
+				<iconPath>Building_Category_Icon_Special</iconPath>
+				<color>#00ff00</color>
+			</SiteEventData>
+			<SiteEventData>
+				<eventRef>event_small_horde_cluster_4</eventRef>
+				<dangerLevelTrigger>20</dangerLevelTrigger>
+				<iconPath>Building_Category_Icon_Special</iconPath>
+				<color>#ffff00</color>
+			</SiteEventData>
+		</siteEvents>
+		<finalEvent>
+			<eventRef>event_small_horde_cluster_4</eventRef>
+			<dangerLevelTrigger>30</dangerLevelTrigger>
+			<iconPath>Building_Category_Icon_Special</iconPath>
+			<color>#0000ff</color>
+		</finalEvent>
+		<SiteClearCriteria xsi:type="SiteEnemyDeathCriteriaData">
+			<enemyToKillNameDef>default_zombie</enemyToKillNameDef>
+			<amount>5000</amount>
+		</SiteClearCriteria>
+	</DataDef>
+
+	<DataDef xsi:type="SiteData">
+		<nameDef>demo_site_map_1</nameDef>
+		<displayName>Storage Depot (Easy)</displayName>
+		<minNrOfHordes>5</minNrOfHordes>
+		<maxNrOfHordes>10</maxNrOfHordes>
+		<minHordeSize>20</minHordeSize>
+		<maxHordeSize>50</maxHordeSize>
+		<sitePath>Data/Sites/demo_site_map_1</sitePath>
+		<siteEvents>
+			<SiteEventData>
+				<eventRef>event_tiny_scatter_1</eventRef>
+				<dangerLevelTrigger>10</dangerLevelTrigger>
+				<iconPath>Building_Category_Icon_Special</iconPath>
+				<color>#00ff00</color>
+				<rewardRef>low_tech_case</rewardRef>
+			</SiteEventData>
+			<SiteEventData>
+				<eventRef>event_tiny_scatter_1</eventRef>
+				<dangerLevelTrigger>20</dangerLevelTrigger>
+				<iconPath>Building_Category_Icon_Special</iconPath>
+				<color>#ffff00</color>
+				<rewardRef>low_tech_case</rewardRef>
+			</SiteEventData>
+		</siteEvents>
+		<finalEvent>
+			<eventRef>event_small_scatter_1</eventRef>
+			<dangerLevelTrigger>30</dangerLevelTrigger>
+			<iconPath>Building_Category_Icon_Special</iconPath>
+			<color>#0000ff</color>
+			<rewardRef>medium_tech_case</rewardRef>
+		</finalEvent>
+		<SiteClearCriteria xsi:type="SiteEnemyDeathCriteriaData">
+			<enemyToKillNameDef>default_zombie</enemyToKillNameDef>
+			<amount>100</amount>
+		</SiteClearCriteria>
+	</DataDef>
+
+	<DataDef xsi:type="SiteData">
+		<nameDef>demo_site_map_2</nameDef>
+		<displayName>Refinery (Medium)</displayName>
+		<minNrOfHordes>10</minNrOfHordes>
+		<maxNrOfHordes>20</maxNrOfHordes>
+		<minHordeSize>20</minHordeSize>
+		<maxHordeSize>120</maxHordeSize>
+		<sitePath>Data/Sites/demo_site_map_2</sitePath>
+		<siteEvents>
+			<SiteEventData>
+				<eventRef>event_small_scatter_1</eventRef>
+				<dangerLevelTrigger>10</dangerLevelTrigger>
+				<iconPath>Building_Category_Icon_Special</iconPath>
+				<color>#00ff00</color>
+				<rewardRef>low_tech_case</rewardRef>
+			</SiteEventData>
+			<SiteEventData>
+				<eventRef>event_small_scatter_1</eventRef>
+				<dangerLevelTrigger>20</dangerLevelTrigger>
+				<iconPath>Building_Category_Icon_Special</iconPath>
+				<color>#ffff00</color>
+				<rewardRef>low_tech_case</rewardRef>
+			</SiteEventData>
+			<SiteEventData>
+				<eventRef>event_small_horde_cluster_1</eventRef>
+				<dangerLevelTrigger>30</dangerLevelTrigger>
+				<iconPath>Building_Category_Icon_Special</iconPath>
+				<color>#ff00ff</color>
+				<rewardRef>medium_tech_case</rewardRef>
+			</SiteEventData>
+		</siteEvents>
+		<finalEvent>
+			<eventRef>event_small_horde_cluster_2</eventRef>
+			<dangerLevelTrigger>40</dangerLevelTrigger>
+			<iconPath>Building_Category_Icon_Special</iconPath>
+			<color>#0000ff</color>
+			<rewardRef>medium_tech_case</rewardRef>
+		</finalEvent>
+		<SiteClearCriteria xsi:type="SiteEnemyDeathCriteriaData">
+			<enemyToKillNameDef>default_zombie</enemyToKillNameDef>
+			<amount>500</amount>
+		</SiteClearCriteria>
+	</DataDef>
+
+	<DataDef xsi:type="SiteData">
+		<nameDef>demo_site_map_3</nameDef>
+		<displayName>Power Plant (Hard)</displayName>
+		<minNrOfHordes>10</minNrOfHordes>
+		<maxNrOfHordes>20</maxNrOfHordes>
+		<minHordeSize>20</minHordeSize>
+		<maxHordeSize>120</maxHordeSize>
+		<sitePath>Data/Sites/demo_site_map_3</sitePath>
+		<siteEvents>
+			<SiteEventData>
+				<eventRef>event_small_scatter_1</eventRef>
+				<dangerLevelTrigger>10</dangerLevelTrigger>
+				<iconPath>Building_Category_Icon_Special</iconPath>
+				<color>#00ff00</color>
+				<rewardRef>low_tech_case</rewardRef>
+			</SiteEventData>
+			<SiteEventData>
+				<eventRef>event_small_horde_cluster_1</eventRef>
+				<dangerLevelTrigger>20</dangerLevelTrigger>
+				<iconPath>Building_Category_Icon_Special</iconPath>
+				<color>#ffff00</color>
+				<rewardRef>low_tech_case</rewardRef>
+			</SiteEventData>
+			<SiteEventData>
+				<eventRef>event_small_horde_cluster_2</eventRef>
+				<dangerLevelTrigger>30</dangerLevelTrigger>
+				<iconPath>Building_Category_Icon_Special</iconPath>
+				<color>#ff00ff</color>
+				<rewardRef>medium_tech_case</rewardRef>
+			</SiteEventData>
+			<SiteEventData>
+				<eventRef>event_small_horde_cluster_3</eventRef>
+				<dangerLevelTrigger>40</dangerLevelTrigger>
+				<iconPath>Building_Category_Icon_Special</iconPath>
+				<color>#00ffff</color>
+				<rewardRef>medium_tech_case</rewardRef>
+			</SiteEventData>
+		</siteEvents>
+		<finalEvent>
+			<eventRef>event_small_horde_cluster_5</eventRef>
+			<dangerLevelTrigger>50</dangerLevelTrigger>
+			<iconPath>Building_Category_Icon_Special</iconPath>
+			<color>#0000ff</color>
+			<rewardRef>medium_tech_case</rewardRef>
+		</finalEvent>
+		<SiteClearCriteria xsi:type="SiteEnemyDeathCriteriaData">
+			<enemyToKillNameDef>default_zombie</enemyToKillNameDef>
+			<amount>1500</amount>
+		</SiteClearCriteria>
+	</DataDef>
+	
+</Defs>

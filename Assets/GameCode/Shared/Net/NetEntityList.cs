@@ -38,7 +38,7 @@ namespace FNZ.Shared.Net
 				if (list[i] == null)
 				{
 					list[i] = e;
-					e.entityNetId = i;
+					e.NetId = i;
 					foundEmptySlot = true;
 					break;
 				}
@@ -54,11 +54,11 @@ namespace FNZ.Shared.Net
 				}
 
 				newList[list.Length] = e;
-				e.entityNetId = list.Length;
+				e.NetId = list.Length;
 				list = newList;
 			}
 
-			if (e.entityNetId == 0)
+			if (e.NetId == 0)
 			{
 				Debug.LogError("WAT");
 			}
@@ -78,16 +78,16 @@ namespace FNZ.Shared.Net
 				}
 
 				newList[NetEntityId] = e;
-				e.entityNetId = NetEntityId;
+				e.NetId = NetEntityId;
 				list = newList;
 			}
 			else
 			{
 				list[NetEntityId] = e;
-				e.entityNetId = NetEntityId;
+				e.NetId = NetEntityId;
 			}
 
-			if (e.entityNetId == 0)
+			if (e.NetId == 0)
 			{
 				Debug.LogError("WAT AGAIN");
 			}

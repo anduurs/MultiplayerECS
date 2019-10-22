@@ -1,6 +1,6 @@
 ﻿namespace FNZ.Shared.Net
 {
-	public enum PacketType
+	public enum NetMessageType
 	{
 		WORLD_SETUP = 0,
 		REQUEST_WORLD_SPAWN = 1,

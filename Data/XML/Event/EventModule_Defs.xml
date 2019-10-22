@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<DataDef xsi:type="WorldEventModuleData">
+        <nameDef>spawn_a_couple_of_dudes</nameDef>
+        <modules>
+            <agentSpawnModule>
+                <initialBudgetMin>10</initialBudgetMin>
+                <initialBudgetMax>25</initialBudgetMax>
+                <numberOfGroupsMin>1</numberOfGroupsMin>
+                <numberOfGroupsMax>1</numberOfGroupsMax>
+            </agentSpawnModule>
+        </modules>
+	</DataDef>
+    
+    <DataDef xsi:type="WorldEventModuleData">
+        <nameDef>spawn_small_horde_cluster_5</nameDef>
+        <modules>
+            <agentSpawnModule>
+                <initialBudgetMin>2500</initialBudgetMin>
+                <initialBudgetMax>10000</initialBudgetMax>
+                <numberOfGroupsMin>20</numberOfGroupsMin>
+                <numberOfGroupsMax>60</numberOfGroupsMax>
+            </agentSpawnModule>
+        </modules>
+	</DataDef>
+
+    <DataDef xsi:type="WorldEventModuleData">
+        <nameDef>spawn_small_horde_cluster_4</nameDef>
+        <modules>
+            <agentSpawnModule>
+                <initialBudgetMin>2000</initialBudgetMin>
+                <initialBudgetMax>7500</initialBudgetMax>
+                <numberOfGroupsMin>20</numberOfGroupsMin>
+                <numberOfGroupsMax>50</numberOfGroupsMax>
+            </agentSpawnModule>
+        </modules>
+	</DataDef>
+
+    <DataDef xsi:type="WorldEventModuleData">
+        <nameDef>spawn_small_horde_cluster_3</nameDef>
+        <modules>
+            <agentSpawnModule>
+                <initialBudgetMin>1500</initialBudgetMin>
+                <initialBudgetMax>5000</initialBudgetMax>
+                <numberOfGroupsMin>20</numberOfGroupsMin>
+                <numberOfGroupsMax>40</numberOfGroupsMax>
+            </agentSpawnModule>
+        </modules>
+	</DataDef>
+
+    <DataDef xsi:type="WorldEventModuleData">
+        <nameDef>spawn_small_horde_cluster_2</nameDef>
+        <modules>
+            <agentSpawnModule>
+                <initialBudgetMin>1000</initialBudgetMin>
+                <initialBudgetMax>2500</initialBudgetMax>
+                <numberOfGroupsMin>20</numberOfGroupsMin>
+                <numberOfGroupsMax>30</numberOfGroupsMax>
+            </agentSpawnModule>
+        </modules>
+	</DataDef>
+
+    <DataDef xsi:type="WorldEventModuleData">
+        <nameDef>spawn_small_horde_cluster_1</nameDef>
+        <modules>
+            <agentSpawnModule>
+                <initialBudgetMin>500</initialBudgetMin>
+                <initialBudgetMax>1500</initialBudgetMax>
+                <numberOfGroupsMin>10</numberOfGroupsMin>
+                <numberOfGroupsMax>20</numberOfGroupsMax>
+            </agentSpawnModule>
+        </modules>
+	</DataDef>
+
+    <DataDef xsi:type="WorldEventModuleData">
+        <nameDef>spawn_small_scatter_1</nameDef>
+        <modules>
+            <agentSpawnModule>
+                <initialBudgetMin>1000</initialBudgetMin>
+                <initialBudgetMax>2500</initialBudgetMax>
+                <numberOfGroupsMin>100</numberOfGroupsMin>
+                <numberOfGroupsMax>200</numberOfGroupsMax>
+            </agentSpawnModule>
+        </modules>
+	</DataDef>
+
+    <DataDef xsi:type="WorldEventModuleData">
+        <nameDef>spawn_tiny_scatter_1</nameDef>
+        <modules>
+            <agentSpawnModule>
+                <initialBudgetMin>150</initialBudgetMin>
+                <initialBudgetMax>250</initialBudgetMax>
+                <numberOfGroupsMin>10</numberOfGroupsMin>
+                <numberOfGroupsMax>25</numberOfGroupsMax>
+            </agentSpawnModule>
+        </modules>
+	</DataDef>
+
+    <DataDef xsi:type="WorldEventModuleData">
+        <nameDef>spawn_tiny_scatter_2</nameDef>
+        <modules>
+            <agentSpawnModule>
+                <initialBudgetMin>300</initialBudgetMin>
+                <initialBudgetMax>500</initialBudgetMax>
+                <numberOfGroupsMin>20</numberOfGroupsMin>
+                <numberOfGroupsMax>35</numberOfGroupsMax>
+            </agentSpawnModule>
+        </modules>
+	</DataDef>
+
+    <DataDef xsi:type="WorldEventModuleData">
+        <nameDef>spawn_tiny_horde_cluster_1</nameDef>
+        <modules>
+            <agentSpawnModule>
+                <initialBudgetMin>300</initialBudgetMin>
+                <initialBudgetMax>500</initialBudgetMax>
+                <numberOfGroupsMin>4</numberOfGroupsMin>
+                <numberOfGroupsMax>10</numberOfGroupsMax>
+            </agentSpawnModule>
+        </modules>
+	</DataDef>
+</Defs>

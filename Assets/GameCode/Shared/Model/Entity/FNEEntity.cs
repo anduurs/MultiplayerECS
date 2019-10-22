@@ -2,7 +2,6 @@
 using FNZ.Shared.Model.Interfaces;
 using Lidgren.Network;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -27,13 +26,13 @@ namespace FNZ.Shared.Model.Entity
 		public string entityNameDef;
 		public string entityType;
 
-		public float2 position;
-		public float3 scale;
-		public float rotationZdegrees;
+		public float2 Position;
+		public float3 Scale;
+		public float RotationZdegrees;
 
-		public int entityNetId = -1;
+		public int NetId = -1;
 
-		public bool enabled = true;
+		public bool Enabled = true;
 
 		public List<FNEComponent<FNEComponentData>> components = new List<FNEComponent<FNEComponentData>>();
 
@@ -49,7 +48,7 @@ namespace FNZ.Shared.Model.Entity
 
 			this.entityType = entityType;
 			this.entityNameDef = entityNameDef;
-			this.position = position;
+			this.Position = position;
 
 			data = DataBank.Instance.GetData<FNEEntityData>(entityNameDef);
 		}

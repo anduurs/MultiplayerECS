@@ -30,7 +30,7 @@ namespace FNZ.Server.Model
 
 			playerEntity.Init(position, EntityType.PLAYER, "player");
 
-			playerEntity.enabled = false;
+			playerEntity.Enabled = false;
 
 			var componentsFromXML = DataBank.Instance.GetData<FNEEntityData>(playerEntity.entityNameDef).components;
 

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <DataDef entityType="Vehicle" xsi:type="FNEEntityData">
+		<nameDef>car</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Chest</displayName>
+		<description>Captain Chest Rug</description>
+		<components>
+			<IFNEComponentData xsi:type="VehicleComponentData">
+			</IFNEComponentData>
+		</components>
+		<prefabPath>Prefabs/FPObject/000_Car</prefabPath>
+		<uiManager>VehicleUiManager</uiManager>
+	</DataDef>
+	
+</Defs>

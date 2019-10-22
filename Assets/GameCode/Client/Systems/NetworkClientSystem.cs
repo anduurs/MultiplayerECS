@@ -94,7 +94,7 @@ namespace FNZ.Client.Systems
 
 		private void ParsePacket(NetIncomingMessage incMsg)
 		{
-			m_NetConnector.Dispatch((PacketType)incMsg.ReadByte(), incMsg);
+			m_NetConnector.Dispatch((NetMessageType)incMsg.ReadByte(), incMsg);
 			m_Client.Recycle(incMsg);
 		}
 

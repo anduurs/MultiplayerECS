@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>rock_1_walkable</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>false</blocking>
+		<displayName>Small rock</displayName>
+		<description>A fucking rock</description>
+		<prefabPath>Prefabs/TileObject/Rock_1_walkable</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/NatureDeath/RockDeath_VFX</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="SimpleInteractionComponentData">¨
+				<hoverBoxDescription>
+					<![CDATA[<color=#00ff00ff>[E]:</color> Pick up rocks]]>
+				</hoverBoxDescription>
+				<simpleInteractionModules>
+					<InstantLootModule xsi:type="InstantLootModule">
+						<itemToLootList>
+							<itemToLootRef>rock</itemToLootRef>
+						</itemToLootList>
+						<itemMaximumAmount>3</itemMaximumAmount>
+						<destroyObjectOnLoot>true</destroyObjectOnLoot>
+					</InstantLootModule>
+				</simpleInteractionModules>
+			</IFNEComponentData>
+		</components>
+		<uiManager>SimpleInteractionUIManager</uiManager>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>rock_2_walkable</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>false</blocking>
+		<displayName>Small rock</displayName>
+		<description>A fucking rock</description>
+		<prefabPath>Prefabs/TileObject/Rock_6_walkable</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/NatureDeath/RockDeath_VFX</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="SimpleInteractionComponentData">¨
+				<hoverBoxDescription>
+					<![CDATA[<color=#00ff00ff>[E]:</color> Pick up rocks]]>
+				</hoverBoxDescription>
+				<simpleInteractionModules>
+					<InstantLootModule xsi:type="InstantLootModule">
+						<itemToLootList>
+							<itemToLootRef>rock</itemToLootRef>
+						</itemToLootList>
+						<itemMaximumAmount>3</itemMaximumAmount>
+						<destroyObjectOnLoot>true</destroyObjectOnLoot>
+					</InstantLootModule>
+				</simpleInteractionModules>
+			</IFNEComponentData>
+		</components>
+		<uiManager>SimpleInteractionUIManager</uiManager>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>foliage</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>false</blocking>
+		<displayName>Dense Foliage</displayName>
+		<description>A fucking grass stuff</description>
+		<prefabPath>Prefabs/TileObject/Foliage</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/NatureDeath/FoliageDeath_VFX</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="SimpleInteractionComponentData">¨
+				<hoverBoxDescription>
+					<![CDATA[<color=#00ff00ff>[E]:</color> Search]]>
+				</hoverBoxDescription>
+				<simpleInteractionModules>
+					<InstantLootModule xsi:type="InstantLootModule">
+						<itemToLootList>
+							<itemToLootRef>potato</itemToLootRef>
+							<itemToLootRef>stick</itemToLootRef>
+							<itemToLootRef>kotte</itemToLootRef>
+							<itemToLootRef>soil</itemToLootRef>
+						</itemToLootList>
+						<itemMaximumAmount>1</itemMaximumAmount>
+						<destroyObjectOnLoot>true</destroyObjectOnLoot>
+					</InstantLootModule>
+				</simpleInteractionModules>
+			</IFNEComponentData>
+		</components>
+		<uiManager>SimpleInteractionUIManager</uiManager>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>foliage_fern</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>false</blocking>
+		<displayName>Fern</displayName>
+		<description>A fucking fern</description>
+		<prefabPath>Prefabs/TileObject/Foliage_fern</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/NatureDeath/FoliageDeath_VFX</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="SimpleInteractionComponentData">¨
+				<hoverBoxDescription>
+					<![CDATA[<color=#00ff00ff>[E]:</color> Search]]>
+				</hoverBoxDescription>
+				<simpleInteractionModules>
+					<InstantLootModule xsi:type="InstantLootModule">
+						<itemToLootList>
+							<itemToLootRef>potato</itemToLootRef>
+							<itemToLootRef>stick</itemToLootRef>
+							<itemToLootRef>kotte</itemToLootRef>
+							<itemToLootRef>soil</itemToLootRef>
+						</itemToLootList>
+						<itemMaximumAmount>1</itemMaximumAmount>
+						<destroyObjectOnLoot>true</destroyObjectOnLoot>
+					</InstantLootModule>
+				</simpleInteractionModules>
+			</IFNEComponentData>
+		</components>
+		<uiManager>SimpleInteractionUIManager</uiManager>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>scrap_pile</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>250</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Scrap Pile</displayName>
+		<description>A pile of scrap</description>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<components>
+			<IFNEComponentData xsi:type="GridInventoryComponentData">
+				<destroyWhenEmpty>true</destroyWhenEmpty>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="LoottableComponentData">
+				<lootTableRef>loottable_scrap_pile</lootTableRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>1000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+		<uiManager>LootUiManager</uiManager>
+		<prefabPath>Prefabs/TileObject/014_L_ScrapPile</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>car_wreck</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>250</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Drone Wreck</displayName>
+		<description>A wrecked drone</description>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<components>
+			<IFNEComponentData xsi:type="GridInventoryComponentData">
+				<destroyWhenEmpty>true</destroyWhenEmpty>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="LoottableComponentData">
+				<lootTableRef>loottable_car_wreck</lootTableRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>1000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+		<uiManager>LootUiManager</uiManager>
+		<prefabPath>Prefabs/TileObject/Crashed_Robot</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>rusty_pod</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>250</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Rusty Pod</displayName>
+		<description>A lost container of some sort</description>
+		<components>
+			<IFNEComponentData xsi:type="MapMarkerComponentData">
+				<iconName>Loot_Icon</iconName>
+				<iconColor>#ff8000</iconColor>
+				<iconScale>0.75</iconScale>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="SimpleInteractionComponentData">¨
+				<hoverBoxDescription>
+					<![CDATA[<color=#ff0000ff>Warning:</color> The pod is still secured!]]>
+				</hoverBoxDescription>
+				<simpleInteractionModules>
+					<TriggerEventModule xsi:type="TriggerEventModule">
+						<eventRef>event_tiny_scatter_1</eventRef>
+					</TriggerEventModule>
+					<PlayEffectModule xsi:type="PlayEffectModule">
+						<effectRef>nail_ring_burst</effectRef>
+					</PlayEffectModule>
+					<PlayEffectModule xsi:type="PlayEffectModule">
+						<effectRef>effect_alarm</effectRef>
+					</PlayEffectModule>
+					<ReplaceStaticEntityModule xsi:type="ReplaceStaticEntityModule">
+						<objectRef>rusty_pod_opened</objectRef>
+					</ReplaceStaticEntityModule>
+					<CreateNoiseModule xsi:type="CreateNoiseModule">
+						<noiseRange>50</noiseRange>
+					</CreateNoiseModule>
+				</simpleInteractionModules>
+			</IFNEComponentData>
+		</components>
+		<uiManager>SimpleInteractionUIManager</uiManager>
+		<prefabPath>Prefabs/TileObject/Crashed_Pod</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>rusty_pod_opened</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>250</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Rusty Pod</displayName>
+		<description>A lost container of some sort</description>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<components>
+			<IFNEComponentData xsi:type="GridInventoryComponentData">
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="LoottableComponentData">
+				<lootTableRef>loottable_low_tech_case</lootTableRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>1000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+		<uiManager>LootUiManager</uiManager>
+		<prefabPath>Prefabs/TileObject/Crashed_Pod</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>wild_safe</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>250</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Lost Air Drop</displayName>
+		<description>A lost safe of some sort</description>
+		<components>
+			<IFNEComponentData xsi:type="MapMarkerComponentData">
+				<iconName>Loot_Icon</iconName>
+				<iconColor>#ff0000</iconColor>
+				<iconScale>0.75</iconScale>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="SimpleInteractionComponentData">
+				<hoverBoxDescription>
+					<![CDATA[<color=#ff0000ff>Warning:</color> Will cause trouble!]]>
+				</hoverBoxDescription>
+				<simpleInteractionModules>
+					<TriggerEventModule xsi:type="TriggerEventModule">
+						<eventRef>event_tiny_scatter_2</eventRef>
+					</TriggerEventModule>
+					<PlayEffectModule xsi:type="PlayEffectModule">
+						<effectRef>nail_ring_burst</effectRef>
+					</PlayEffectModule>
+					<PlayEffectModule xsi:type="PlayEffectModule">
+						<effectRef>effect_flare</effectRef>
+					</PlayEffectModule>
+					<ReplaceStaticEntityModule xsi:type="ReplaceStaticEntityModule">
+						<objectRef>wild_safe_opened</objectRef>
+					</ReplaceStaticEntityModule>
+					<CreateNoiseModule xsi:type="CreateNoiseModule">
+						<noiseRange>50</noiseRange>
+					</CreateNoiseModule>
+				</simpleInteractionModules>
+			</IFNEComponentData>
+		</components>
+		<uiManager>SimpleInteractionUIManager</uiManager>
+		<prefabPath>Prefabs/TileObject/Crashed_Airdrop</prefabPath>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>wild_safe_opened</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>250</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Wild Safe</displayName>
+		<description>A lost safe of some sort</description>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<components>
+			<IFNEComponentData xsi:type="GridInventoryComponentData">
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="LoottableComponentData">
+				<lootTableRef>loottable_low_tech_case_2</lootTableRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>100000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+		<uiManager>LootUiManager</uiManager>
+		<prefabPath>Prefabs/TileObject/Crashed_Airdrop_Opened</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>wood_planks_loot</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>2</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Building Materials Pile</displayName>
+		<description>A pile of buildstuff</description>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<components>
+			<IFNEComponentData xsi:type="GridInventoryComponentData">
+				<destroyWhenEmpty>true</destroyWhenEmpty>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="LoottableComponentData">
+				<lootTableRef>loottable_wood_planks</lootTableRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>10</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+		<uiManager>LootUiManager</uiManager>
+		<prefabPath>Prefabs/TileObject/014_L_ScrapPile</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+	</DataDef>
+</Defs>

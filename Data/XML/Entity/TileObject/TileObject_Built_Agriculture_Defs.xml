@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>potato_farm</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<prefabPath>Prefabs/TileObject/Foliage_fern</prefabPath>
+		<pathingCost>0</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Potato Farm</displayName>
+		<description>A fucking potato farm</description>
+		<uiManager>CropUIManager</uiManager>
+		<blocking>false</blocking>
+		<components>
+			<IFNEComponentData xsi:type="CropComponentData">
+				<produceRef>potato</produceRef>
+				<produceDice>1</produceDice>
+				<produceDieSize>3</produceDieSize>
+				<additionalSeedChance>0</additionalSeedChance>
+				<consumedOnHarvest>true</consumedOnHarvest>
+				<growthTimeTicks>2000</growthTimeTicks>
+				<growthTemperatureMinimum>5</growthTemperatureMinimum>
+				<growthTemperatureMaximum>25</growthTemperatureMaximum>
+				<deathTemperatureLow>-5</deathTemperatureLow>
+				<deathTemperatureHigh>35</deathTemperatureHigh>
+				<enduranceInPercent>75</enduranceInPercent>
+			</IFNEComponentData>
+		</components>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+	</DataDef>
+</Defs>

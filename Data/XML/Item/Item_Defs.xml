@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<DataDef xsi:type="ItemData">
+		<nameDef>ammo_bolt</nameDef>
+		<displayName>Bolts</displayName>
+		<itemIconSpriteName>Icon_Arrow</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview1x2</itemSizeIconSpriteName>
+		<info>Bolts are fired from crossbow weapons.</info>
+		<height>2</height>
+		<width>1</width>
+		<maxStackSize>10</maxStackSize>
+	</DataDef>
+	
+    <DataDef xsi:type="ItemData">
+		<nameDef>bullet_small</nameDef>
+		<displayName>Small bullets</displayName>
+		<itemIconSpriteName>Icon_Bullets_Small</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview1x1</itemSizeIconSpriteName>
+		<info>Small bullets. Used in sidearms such as pistols.</info>
+		<height>1</height>
+		<width>1</width>
+		<maxStackSize>100</maxStackSize>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>bullet_medium</nameDef>
+		<displayName>Medium bullets</displayName>
+		<itemIconSpriteName>Icon_Bullets</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview1x1</itemSizeIconSpriteName>
+		<info>Medium sized bullets. Fits rifle weapons.</info>
+		<height>1</height>
+		<width>1</width>
+		<maxStackSize>100</maxStackSize>
+	</DataDef>
+	
+	<DataDef xsi:type="ItemData">
+		<nameDef>metal_plate</nameDef>
+		<displayName>Metal Plate</displayName>
+		<itemIconSpriteName>Icon_Metal_Plates</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview1x1</itemSizeIconSpriteName>
+		<info>A plate of metal. Death Metal! \,,/</info>
+		<height>1</height>
+		<width>1</width>
+		<maxStackSize>100</maxStackSize>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>chemicals</nameDef>
+		<displayName>Chemicals</displayName>
+		<itemIconSpriteName>Icon_Chemical_Waste</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview1x1</itemSizeIconSpriteName>
+		<info>A plate of metal. Death Metal! \,,/</info>
+		<height>1</height>
+		<width>1</width>
+		<maxStackSize>100</maxStackSize>
+	</DataDef>
+	
+	<DataDef xsi:type="ItemData">
+		<nameDef>grenade</nameDef>
+		<displayName>metal grenade</displayName>
+		<itemIconSpriteName>icon_grenade</itemIconSpriteName>
+		<itemSizeIconSpriteName>sizepreview1x1</itemSizeIconSpriteName>
+		<info>boom baby</info>
+		<height>1</height>
+		<width>1</width>
+		<maxStackSize>5</maxStackSize>
+		<ItemUseData xsi:type="ThrowItemUseData">
+			<maxRange>10</maxRange>
+			<projectileRef>grenade_projectile</projectileRef>
+		</ItemUseData>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>base_pillar</nameDef>
+		<displayName>Loadout Station</displayName>
+		<itemIconSpriteName>Icon_Build_Loadout_Station</itemIconSpriteName>
+		<itemSizeIconSpriteName>Icon_2x2_Backplate</itemSizeIconSpriteName>
+		<info>Build your base here!</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>wood_planks</nameDef>
+		<displayName>Wood Planks</displayName>
+		<itemIconSpriteName>Icon_Wood</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>What wood Jesus do!</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>10</maxStackSize>
+		<components>
+            <ItemComponentData xsi:type="BurnableItemComponentData">
+                <burnTimeInSeconds>10</burnTimeInSeconds>
+            </ItemComponentData>
+        </components>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>rock</nameDef>
+		<displayName>Rock</displayName>
+		<itemIconSpriteName>Icon_Rock</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>Rock around the block!</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>5</maxStackSize>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>stick</nameDef>
+		<displayName>Sturdy Stick</displayName>
+		<itemIconSpriteName>Icon_Stick</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview1x2</itemSizeIconSpriteName>
+		<info>Stick together!</info>
+		<height>2</height>
+		<width>1</width>
+		<maxStackSize>5</maxStackSize>
+		<components>
+            <ItemComponentData xsi:type="BurnableItemComponentData">
+                <burnTimeInSeconds>2</burnTimeInSeconds>
+            </ItemComponentData>
+        </components>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>scrap_pile</nameDef>
+		<displayName>Pile of Scrap</displayName>
+		<itemIconSpriteName>Icon_Metal_Scrap</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>Pile of Scrap! \,,/</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>soil</nameDef>
+		<displayName>Soil</displayName>
+		<itemIconSpriteName>Icon_Soil</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x1</itemSizeIconSpriteName>
+		<info>Some fertile soil</info>
+		<height>1</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>generator</nameDef>
+		<displayName>Generator</displayName>
+		<itemIconSpriteName>Icon_Power_Cell</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>A General Generator</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>machine_parts</nameDef>
+		<displayName>Machine Parts</displayName>
+		<itemIconSpriteName>SemiAutomaticLoader_Inv</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>Parts of machine</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>drill</nameDef>
+		<displayName>Drill</displayName>
+		<itemIconSpriteName>Icon_Siren</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x3</itemSizeIconSpriteName>
+		<info>A drill</info>
+		<height>3</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+	</DataDef>
+
+	<DataDef xsi:type="ItemData">
+		<nameDef>motherboard</nameDef>
+		<displayName>Motherboard</displayName>
+		<itemIconSpriteName>Icon_Laptop</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<info>Mother of boards!</info>
+		<height>2</height>
+		<width>2</width>
+		<maxStackSize>1</maxStackSize>
+	</DataDef>
+	
+	
+	
+	<!-- <DataDef xsi:type="ItemData"> -->
+		<!-- <nameDef>healthpack</nameDef> -->
+		<!-- <displayName>hp</displayName> -->
+		<!-- <itemIconSpriteName>Icon_Metal_Plates</itemIconSpriteName> -->
+		<!-- <itemSizeIconSpriteName>SizePreview1x1</itemSizeIconSpriteName> -->
+		<!-- <info>A plate of metal. Death Metal! \,,/</info> -->
+		<!-- <height>1</height> -->
+		<!-- <width>1</width> -->
+		<!-- <maxStackSize>5</maxStackSize> -->
+		<!-- <OnUseComps> -->
+		<!-- <ItemUse xsi:type="ItemUse_Self"> -->
+			<!-- <TriggerEvent xsi:type="Trigger_Instant"> -->
+				<!-- <Effect xsi:type="Effect_Heal"> -->
+					<!-- <amount>3</amount> -->
+				<!-- </Effect> -->
+			<!-- </TriggerEvent> -->
+		<!-- </ItemUse> -->
+	<!-- </DataDef> -->
+	
+</Defs>

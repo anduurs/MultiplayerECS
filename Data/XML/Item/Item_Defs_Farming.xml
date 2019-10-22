@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<DataDef xsi:type="ItemData">
+		<nameDef>potato</nameDef>
+		<displayName>Potato</displayName>
+		<itemIconSpriteName>Icon_Potato</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview1x1</itemSizeIconSpriteName>
+		<info>Enduring, simple and nutritious. Perfect first crop for an aspiring farmer!</info>
+		<height>1</height>
+		<width>1</width>
+		<maxStackSize>20</maxStackSize>
+		<components>
+            <ItemComponentData xsi:type="EdibleItemComponentData">
+                <hungerSaturation>2</hungerSaturation>
+                <effectRef>effect_eat</effectRef>
+            </ItemComponentData>
+			<ItemComponentData xsi:type="CookableItemComponentData">
+                <processTime>10</processTime>
+                <productRef>potato_baked</productRef>
+				<productAmount>1</productAmount>
+            </ItemComponentData>
+        </components>
+	</DataDef>
+	
+</Defs>

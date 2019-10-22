@@ -23,7 +23,7 @@ namespace FNZ.Client.Model.World
 
 		public ClientWorld()
 		{
-			ClientApp.NetConnector.Register(PacketType.WORLD_SETUP, OnWorldSetupDataReceived);
+			ClientApp.NetConnector.Register(NetMessageType.WORLD_SETUP, OnWorldSetupDataReceived);
 		}
 
 		public void OnWorldSetupDataReceived(ClientNetworkConnector net, NetIncomingMessage incMsg)

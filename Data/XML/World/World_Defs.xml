@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <DataDef xsi:type="WorldGenData">
+		<nameDef>default_world</nameDef>
+        <heightInChunks>18</heightInChunks>
+        <widthInChunks>18</widthInChunks>
+        <chunkSize>32</chunkSize>
+        <octaves>2</octaves>
+        <roughness>0.1</roughness>
+        <layerFrequency>0.009</layerFrequency>
+        <layerWeight>1.0</layerWeight>
+        <siteRefs>
+            <string>demo_site_map_1</string>
+            <string>demo_site_map_1</string>
+            <string>demo_site_map_1</string>
+            <string>demo_site_map_1</string>
+            <string>demo_site_map_2</string>
+            <string>demo_site_map_2</string>
+            <string>demo_site_map_2</string>
+            <string>demo_site_map_3</string>
+            <string>demo_site_map_3</string>
+        </siteRefs>
+        <tilesInBiome>
+            <BiomeTileData>
+                <tileRef>stone_outdoor</tileRef>
+                <height>-0.7</height>
+            </BiomeTileData>
+            <BiomeTileData>
+                <tileRef>dirt_outdoor</tileRef>
+                <height>-0.3</height>
+            </BiomeTileData>
+            <BiomeTileData>
+                <tileRef>grass_outdoor</tileRef>
+                <height>0.2</height>
+            </BiomeTileData>
+            <BiomeTileData>
+                <tileRef>grass_outdoor_dark</tileRef>
+                <height>0.5</height>
+            </BiomeTileData>
+            <BiomeTileData>
+                <tileRef>grass_outdoor_dark</tileRef>
+                <height>1.0</height>
+            </BiomeTileData>
+        </tilesInBiome>
+	</DataDef>
+
+</Defs>

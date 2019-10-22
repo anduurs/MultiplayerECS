@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef xsi:type="TileData">
+		<nameDef>default_tile</nameDef>
+		<textureSheet>floor_tilemap</textureSheet>
+		<textureSheetIndex>0</textureSheetIndex>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>concrete_tile</nameDef>
+		<textureSheet>floor_tilemap</textureSheet>
+		<textureSheetIndex>1</textureSheetIndex>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>metal_tile</nameDef>
+		<textureSheet>floor_tilemap</textureSheet>
+		<textureSheetIndex>2</textureSheetIndex>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>metal_tile_cross</nameDef>
+		<textureSheet>floor_tilemap</textureSheet>
+		<textureSheetIndex>3</textureSheetIndex>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>tarmac_tile</nameDef>
+		<textureSheet>floor_tilemap</textureSheet>
+		<textureSheetIndex>4</textureSheetIndex>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>tarmac_tile_dark</nameDef>
+		<textureSheet>floor_tilemap</textureSheet>
+		<textureSheetIndex>5</textureSheetIndex>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>clinker_tile</nameDef>
+		<textureSheet>floor_tilemap</textureSheet>
+		<textureSheetIndex>6</textureSheetIndex>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>grass_tile</nameDef>
+		<textureSheet>wilderness_tilemap</textureSheet>
+		<textureSheetIndex>0</textureSheetIndex>
+		<chanceToSpawnTileObject>10</chanceToSpawnTileObject>
+		<tileObjectRefs>
+			<string>tree</string>
+			<string>conifer_1</string>
+			<string>conifer_2</string>
+			<string>conifer_3</string>
+			<string>conifer_4</string>
+		</tileObjectRefs>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>metal_ore_tile</nameDef>
+		<textureSheet>floor_tilemap</textureSheet>
+		<textureSheetIndex>8</textureSheetIndex>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>oil_tile</nameDef>
+		<textureSheet>floor_tilemap</textureSheet>
+		<textureSheetIndex>9</textureSheetIndex>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>scrap_tile</nameDef>
+		<textureSheet>floor_tilemap</textureSheet>
+		<textureSheetIndex>10</textureSheetIndex>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>wood_tile</nameDef>
+		<textureSheet>floor_tilemap</textureSheet>
+		<textureSheetIndex>11</textureSheetIndex>
+		<weatherInsulation>0.5</weatherInsulation>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>soil_tile</nameDef>
+		<textureSheet>floor_tilemap</textureSheet>
+		<textureSheetIndex>12</textureSheetIndex>
+	</DataDef>
+
+	<!--- Next Tilemap: Outdoor floor -->
+
+	<DataDef xsi:type="TileData">
+		<nameDef>grass_outdoor</nameDef>
+		<textureSheet>wilderness_tilemap</textureSheet>
+		<textureSheetIndex>0</textureSheetIndex>
+		<chanceToSpawnTileObject>10</chanceToSpawnTileObject>
+		<mapColor>#577a50</mapColor>
+		<tileObjectRefs>
+			<string>tree</string>
+			<string>conifer_1</string>
+			<string>conifer_2</string>
+			<string>conifer_3</string>
+			<string>conifer_4</string>
+			<string>rock_1</string>
+			<string>rock_1_walkable</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage_fern</string>
+			<string>foliage_fern</string>
+		</tileObjectRefs>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>grass_outdoor_light</nameDef>
+		<textureSheet>wilderness_tilemap</textureSheet>
+		<textureSheetIndex>1</textureSheetIndex>
+		<chanceToSpawnTileObject>20</chanceToSpawnTileObject>
+		<mapColor>#7ca274</mapColor>
+		<tileObjectRefs>
+			<string>tree</string>
+			<string>conifer_1</string>
+			<string>conifer_2</string>
+			<string>conifer_3</string>
+			<string>conifer_4</string>
+			<string>rock_2</string>
+			<string>rock_1</string>
+			<string>rock_1_walkable</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage_fern</string>
+			<string>foliage_fern</string>
+		</tileObjectRefs>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>grass_outdoor_dark</nameDef>
+		<textureSheet>wilderness_tilemap</textureSheet>
+		<textureSheetIndex>2</textureSheetIndex>
+		<chanceToSpawnTileObject>40</chanceToSpawnTileObject>
+		<mapColor>#4c6747</mapColor>
+		<tileObjectRefs>
+			<string>tree</string>
+			<string>conifer_1</string>
+			<string>conifer_2</string>
+			<string>conifer_3</string>
+			<string>conifer_4</string>
+			<string>rock_5</string>
+			<string>rock_2_walkable</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage</string>
+			<string>foliage_fern</string>
+			<string>foliage_fern</string>
+		</tileObjectRefs>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>dirt_outdoor</nameDef>
+		<textureSheet>wilderness_tilemap</textureSheet>
+		<textureSheetIndex>3</textureSheetIndex>
+		<chanceToSpawnTileObject>5</chanceToSpawnTileObject>
+		<mapColor>#7d6b5e</mapColor>
+		<tileObjectRefs>
+			<string>conifer_1</string>
+			<string>conifer_2</string>
+			<string>conifer_3</string>
+			<string>conifer_4</string>
+			<string>rock_2</string>
+			<string>rock_3</string>
+			<string>rock_4</string>
+			<string>rock_5</string>
+			<string>foliage_fern</string>
+			<string>foliage_fern</string>
+		</tileObjectRefs>
+	</DataDef>
+
+	<DataDef xsi:type="TileData">
+		<nameDef>stone_outdoor</nameDef>
+		<textureSheet>wilderness_tilemap</textureSheet>
+		<textureSheetIndex>4</textureSheetIndex>
+		<chanceToSpawnTileObject>5</chanceToSpawnTileObject>
+		<mapColor>#bdb593</mapColor>
+		<tileObjectRefs>
+			<string>rock_1</string>
+			<string>rock_2</string>
+			<string>rock_3</string>
+			<string>rock_4</string>
+			<string>rock_5</string>
+			<string>rock_1_walkable</string>
+			<string>rock_2_walkable</string>
+		</tileObjectRefs>
+	</DataDef>
+
+</Defs>

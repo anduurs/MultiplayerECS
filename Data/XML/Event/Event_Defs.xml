@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<DataDef xsi:type="WorldEventData">
+		<nameDef>event_spawn_a_couple_of_dudes</nameDef>
+		<eventModules>
+			<moduleRef>spawn_a_couple_of_dudes</moduleRef>
+		</eventModules>
+	</DataDef>
+	
+	<DataDef xsi:type="WorldEventData">
+		<nameDef>event_small_horde_cluster_5</nameDef>
+		<eventModules>
+			<moduleRef>spawn_small_horde_cluster_5</moduleRef>
+		</eventModules>
+	</DataDef>
+
+	<DataDef xsi:type="WorldEventData">
+		<nameDef>event_small_horde_cluster_4</nameDef>
+		<eventModules>
+			<moduleRef>spawn_small_horde_cluster_4</moduleRef>
+		</eventModules>
+	</DataDef>
+
+	<DataDef xsi:type="WorldEventData">
+		<nameDef>event_small_horde_cluster_3</nameDef>
+		<eventModules>
+			<moduleRef>spawn_small_horde_cluster_3</moduleRef>
+		</eventModules>
+	</DataDef>
+
+	<DataDef xsi:type="WorldEventData">
+		<nameDef>event_small_horde_cluster_2</nameDef>
+		<eventModules>
+			<moduleRef>spawn_small_horde_cluster_2</moduleRef>
+		</eventModules>
+	</DataDef>
+
+	<DataDef xsi:type="WorldEventData">
+		<nameDef>event_small_horde_cluster_1</nameDef>
+		<eventModules>
+			<moduleRef>spawn_small_horde_cluster_1</moduleRef>
+		</eventModules>
+	</DataDef>
+
+	<DataDef xsi:type="WorldEventData">
+		<nameDef>event_small_scatter_1</nameDef>
+		<eventModules>
+			<moduleRef>spawn_small_scatter_1</moduleRef>
+		</eventModules>
+	</DataDef>
+
+	<DataDef xsi:type="WorldEventData">
+		<nameDef>event_tiny_scatter_1</nameDef>
+		<eventModules>
+			<moduleRef>spawn_tiny_scatter_1</moduleRef>
+		</eventModules>
+	</DataDef>
+
+	<DataDef xsi:type="WorldEventData">
+		<nameDef>event_tiny_scatter_2</nameDef>
+		<eventModules>
+			<moduleRef>spawn_tiny_scatter_2</moduleRef>
+		</eventModules>
+	</DataDef>
+
+	<DataDef xsi:type="WorldEventData">
+		<nameDef>event_tiny_horde_cluster_1</nameDef>
+		<eventModules>
+			<moduleRef>spawn_tiny_horde_cluster_1</moduleRef>
+		</eventModules>
+	</DataDef>
+</Defs>

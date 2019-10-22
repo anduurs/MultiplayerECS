@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef xsi:type="TileData">
+		<nameDef>null_tile</nameDef>
+		<textureSheet>editor_tilemap</textureSheet>
+		<textureSheetIndex>0</textureSheetIndex>
+	</DataDef>
+
+</Defs>

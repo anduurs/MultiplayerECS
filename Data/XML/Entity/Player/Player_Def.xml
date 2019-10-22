@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <DataDef entityType="Player" xsi:type="FNEEntityData">
+			<nameDef>player</nameDef>
+			<viewIsGameObject>true</viewIsGameObject>
+			<components>
+				<IFNEComponentData xsi:type="HealthComponentData">
+					<maxHealth>100</maxHealth>
+					<defenseTypeRef>defense_player</defenseTypeRef>
+				</IFNEComponentData>
+				<IFNEComponentData xsi:type="BodyTemperatureComponentData" />
+				<IFNEComponentData xsi:type="PlayerNeedsComponentData" />	
+				<IFNEComponentData xsi:type="CraftingComponentData">
+					<recipeList>
+						<recipeRef>recipe_axe</recipeRef>
+					</recipeList>
+				</IFNEComponentData>	
+			</components>
+			<uiManager>PlayerUiManager</uiManager>
+	  </DataDef>
+    
+</Defs>

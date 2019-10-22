@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <DataDef xsi:type="GadgetData">
+        <nameDef>thermometer</nameDef>
+        <displayName>Thermometer</displayName>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <baseCost>3</baseCost>
+        <baseUsesCount>5</baseUsesCount>
+        <costPerUseUpgrade>1</costPerUseUpgrade>
+        <usesPerUpgrade>5</usesPerUpgrade>
+        <GadgetBehaviour xsi:type="PlaceTileObject">
+			<tileObjectRef>nail_mine</tileObjectRef>
+		</GadgetBehaviour>
+        <gadgetIconSpriteName>Gadget_Icon_Nail_Mine</gadgetIconSpriteName>
+        <description>
+            Nail mines are placed on empty ground beneath the player when used.
+            The mines explode on contact with any entity, dealing damage in an area around it.
+        </description>
+    </DataDef>
+
+</Defs>

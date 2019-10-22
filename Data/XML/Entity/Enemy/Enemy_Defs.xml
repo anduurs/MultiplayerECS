@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef entityType="Enemy" xsi:type="FNEEntityData">
+		<nameDef>default_zombie</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<prefabPath>Prefabs/Enemies/000_ECS_DefaultZombie</prefabPath>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/DeathEffects/ZombieDeath</onDeathEffectPath>
+		<bodyPartEffectPaths>
+			<string>Prefabs/VFX/BodyParts/ZombieHead_PS</string>
+			<string>Prefabs/VFX/BodyParts/ZombieLeftArm_PS</string>
+			<string>Prefabs/VFX/BodyParts/ZombieLeftBoot_PS</string>
+			<string>Prefabs/VFX/BodyParts/ZombieRightArm_PS</string>
+			<string>Prefabs/VFX/BodyParts/ZombieRightBoot_PS</string>
+			<string>Prefabs/VFX/BodyParts/ZombieTorso_PS</string>
+		</bodyPartEffectPaths>
+		<components>
+			<IFNEComponentData xsi:type="EnemyStatsComponentData">
+				<agentRadius>0.1</agentRadius>
+				<hitRadius>0.1</hitRadius>
+				<scale>0.2</scale>
+				<minSpeed>1.5</minSpeed>
+				<maxSpeed>2.0</maxSpeed>
+				<damage>5.0</damage>
+				<attackCooldown>2.0</attackCooldown>
+				<attackRange>0.75</attackRange>
+				<attackTimestamp>1.0</attackTimestamp>
+				<slowFactor>0.2</slowFactor>
+				<slowTime>1.0</slowTime>
+				<stunTime>0.0</stunTime>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>100</maxHealth>
+				<defenseTypeRef>defense_flesh</defenseTypeRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="NPCPlayerAwareComponentData"></IFNEComponentData>
+			<IFNEComponentData xsi:type="FlowFieldComponentData"></IFNEComponentData>
+		</components>
+		<viewManager>EnemyViewManager</viewManager>
+		<animations>
+			<AnimationData>
+				<action>IDLE</action>
+				<speed>1.0</speed>
+				<animPath>Animations/Enemy/DefaultZombie/IdleAnim</animPath>
+			</AnimationData>
+			<AnimationData>
+				<action>WALK</action>
+				<speed>3.0</speed>
+				<animPath>Animations/Enemy/DefaultZombie/WalkAnim</animPath>
+			</AnimationData>
+			<AnimationData>
+				<action>RUN</action>
+				<speed>3.0</speed>
+				<animPath>Animations/Enemy/DefaultZombie/RunningAnim</animPath>
+			</AnimationData>
+			<AnimationData>
+				<action>ATTACK</action>
+				<speed>1.0</speed>
+				<animPath>Animations/Enemy/DefaultZombie/AttackAnim</animPath>
+			</AnimationData>
+		</animations>
+	</DataDef>
+
+	<DataDef entityType="Enemy" xsi:type="FNEEntityData">
+		<nameDef>big_zombie</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<prefabPath>Prefabs/Enemies/001_ECS_BigZombie</prefabPath>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/DeathEffects/ZombieDeath_BIG</onDeathEffectPath>
+		<bodyPartEffectPaths>
+			<string>Prefabs/VFX/BodyParts/ZombieHead_PS</string>
+			<string>Prefabs/VFX/BodyParts/ZombieLeftArm_PS</string>
+			<string>Prefabs/VFX/BodyParts/ZombieLeftBoot_PS</string>
+			<string>Prefabs/VFX/BodyParts/ZombieRightArm_PS</string>
+			<string>Prefabs/VFX/BodyParts/ZombieRightBoot_PS</string>
+			<string>Prefabs/VFX/BodyParts/ZombieTorso_PS</string>
+		</bodyPartEffectPaths>
+		<components>
+			<IFNEComponentData xsi:type="EnemyStatsComponentData">
+				<agentRadius>0.2</agentRadius>
+				<hitRadius>0.1</hitRadius>
+				<scale>0.3</scale>
+				<minSpeed>1.0</minSpeed>
+				<maxSpeed>1.2</maxSpeed>
+				<damage>10.0</damage>
+				<attackCooldown>3.0</attackCooldown>
+				<attackRange>1.2</attackRange>
+				<attackTimestamp>0.5</attackTimestamp>
+				<slowFactor>0.1</slowFactor>
+				<slowTime>1.5</slowTime>
+				<stunTime>0.0</stunTime>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>500</maxHealth>
+				<defenseTypeRef>defense_flesh</defenseTypeRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="NPCPlayerAwareComponentData"></IFNEComponentData>
+			<IFNEComponentData xsi:type="FlowFieldComponentData"></IFNEComponentData>
+		</components>
+		<viewManager>EnemyViewManager</viewManager>
+		<animations>
+			<AnimationData>
+				<action>IDLE</action>
+				<speed>1.0</speed>
+				<animPath>Animations/Enemy/BigZombie/BigZombie_IdleAnim</animPath>
+			</AnimationData>
+			<AnimationData>
+				<action>WALK</action>
+				<speed>0.5</speed>
+				<animPath>Animations/Enemy/BigZombie/BigZombie_WalkAnim</animPath>
+			</AnimationData>
+			<AnimationData>
+				<action>RUN</action>
+				<speed>0.5</speed>
+				<animPath>Animations/Enemy/BigZombie/BigZombie_WalkAnim</animPath>
+			</AnimationData>
+			<AnimationData>
+				<action>ATTACK</action>
+				<speed>1.0</speed>
+				<animPath>Animations/Enemy/BigZombie/BigZombie_AttackAnim</animPath>
+			</AnimationData>
+		</animations>
+	</DataDef>
+
+</Defs>

@@ -78,7 +78,7 @@ namespace FNZ.Server.Systems
 
 		private void ParsePacket(NetIncomingMessage incMsg)
 		{
-			m_NetConnector.Dispatch((PacketType)incMsg.ReadByte(), incMsg);
+			m_NetConnector.Dispatch((NetMessageType)incMsg.ReadByte(), incMsg);
 			m_Server.Recycle(incMsg);
 		}
 
@@ -86,7 +86,7 @@ namespace FNZ.Server.Systems
 		{
 			Debug.Log("Client: " + clientConnection.ToString() + " connected to server!");
 
-			ServerApp.NetAPI.SendToClient_WorldSetup(
+			ServerApp.NetAPI.STC_World_WorldSetup(
 				ServerApp.World.WIDTH,
 				ServerApp.World.HEIGHT,
 				ServerApp.World.CHUNK_SIZE,

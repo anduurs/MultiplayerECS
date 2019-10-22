@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<DataDef xsi:type="ResourceCategoryData">
+		<nameDef>raw_materials</nameDef>
+		<displayName>Raw Materials</displayName>
+		<categoryIconSpriteName>Resource_Category_Icon_Raw</categoryIconSpriteName>
+	</DataDef>
+
+    <DataDef xsi:type="ResourceCategoryData">
+		<nameDef>assets</nameDef>
+		<displayName>Assets</displayName>
+		<categoryIconSpriteName>Resource_Category_Icon_Assets</categoryIconSpriteName>
+	</DataDef>
+</Defs>

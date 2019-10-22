@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>test_crafting</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<prefabPath>Prefabs/TileObject/005_ResearchStation</prefabPath>
+		<pathingCost>1</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Test Crafting</displayName>
+		<description></description>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>10</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="CraftingComponentData">
+				<recipeList>
+					<recipeRef>bullet_medium_recipe</recipeRef>
+					<recipeRef>bolt_recipe</recipeRef>
+				</recipeList>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="CraftingStationComponentData">
+
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="HeatGeneratorComponentData">
+				<targetTemperature>50</targetTemperature>
+			</IFNEComponentData>
+		</components>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<uiManager>CraftingBenchUiManager</uiManager>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>base_bed</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<prefabPath>Prefabs/TileObject/Nail_Shelf</prefabPath>
+		<pathingCost>100</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Bed</displayName>
+		<description>A fucking bed</description>
+		<uiManager>SimpleInteractionUIManager</uiManager>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>100</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="SimpleInteractionComponentData">¨
+				<hoverBoxDescription>
+					<![CDATA[<color=#ff0000ff>[E]:</color> Sleep]]>
+				</hoverBoxDescription>
+				<simpleInteractionModules>
+					<PlayerSleepModule xsi:type="PlayerSleepModule" />
+				</simpleInteractionModules>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="BedComponentData" />
+		</components>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>stone_furnace</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<prefabPath>Prefabs/TileObject/004_FuelcellGenerator</prefabPath>
+		<pathingCost>1</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>A Furnace</displayName>
+		<description>Creates heat and processes items!</description>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>10</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="HeatGeneratorComponentData">
+				<targetTemperature>50</targetTemperature>
+				<effectPerTick>0.5</effectPerTick>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="FurnaceComponentData">
+				
+			</IFNEComponentData>
+		</components>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<uiManager>FurnaceUIManager</uiManager>
+	</DataDef>
+</Defs>

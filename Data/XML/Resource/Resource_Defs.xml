@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<DataDef xsi:type="ResourceData">
+		<nameDef>scrap</nameDef>
+		<displayName>Scrap</displayName>
+		<info>If you're happy and you know it, scrap your hands!</info>
+		<itemIconSpriteName>Icon_Scrap</itemIconSpriteName>
+		<categoryRef>raw_materials</categoryRef>
+	</DataDef>
+
+	<DataDef xsi:type="ResourceData">
+		<nameDef>nails</nameDef>
+		<displayName>Nails</displayName>
+		<info>Nailed it!</info>
+		<itemIconSpriteName>Icon_Nails</itemIconSpriteName>
+		<isAsset>true</isAsset>
+		<categoryRef>assets</categoryRef>
+	</DataDef>
+	
+	<DataDef xsi:type="ResourceData">
+		<nameDef>power</nameDef>
+		<displayName>Power</displayName>
+		<info>Power to the people!</info>
+		<itemIconSpriteName>Icon_Power</itemIconSpriteName>
+		<categoryRef>raw_materials</categoryRef>
+	</DataDef>
+	
+	<DataDef xsi:type="ResourceData">
+		<nameDef>metal_ore</nameDef>
+		<displayName>Metal Ore</displayName>
+		<info>Used to produce metal!</info>
+		<itemIconSpriteName>Icon_Metal_Ore</itemIconSpriteName>
+		<categoryRef>raw_materials</categoryRef>
+	</DataDef>
+
+	<DataDef xsi:type="ResourceData">
+		<nameDef>steel</nameDef>
+		<displayName>Steel</displayName>
+		<info>Steel!</info>
+		<itemIconSpriteName>Icon_Steel</itemIconSpriteName>
+		<categoryRef>raw_materials</categoryRef>
+	</DataDef>
+
+	<DataDef xsi:type="ResourceData">
+		<nameDef>oil</nameDef>
+		<displayName>Oil</displayName>
+		<info>Oil never give you up!</info>
+		<itemIconSpriteName>Icon_Oil</itemIconSpriteName>
+		<categoryRef>raw_materials</categoryRef>
+	</DataDef>
+
+	<DataDef xsi:type="ResourceData">
+		<nameDef>small_munition</nameDef>
+		<displayName>Small Munition</displayName>
+		<info>Pew pew!</info>
+		<isAsset>true</isAsset>
+		<itemIconSpriteName>Icon_Small_Munition</itemIconSpriteName>
+		<categoryRef>assets</categoryRef>
+	</DataDef>
+
+	<DataDef xsi:type="ResourceData">
+		<nameDef>medium_munition</nameDef>
+		<displayName>Medium Munition</displayName>
+		<info>BAMBAMBAMBAM!</info>
+		<isAsset>true</isAsset>
+		<itemIconSpriteName>Icon_Medium_Munition</itemIconSpriteName>
+		<categoryRef>assets</categoryRef>
+	</DataDef>
+</Defs>

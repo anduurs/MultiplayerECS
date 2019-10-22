@@ -100,6 +100,29 @@ namespace FNZ.Server.Model.World
 			return chunks[chunkXnr, chunkYnr];
 		}
 
+		public List<WorldChunk> GetNeighbouringChunks(WorldChunk chunk)
+		{
+			var neighbors = new List<WorldChunk>();
+
+			for (int y = -1; y <= 1; y++)
+			{
+				for (int x = -1; x <= 1; x++)
+				{
+					byte cx = (byte)(chunk.ChunkX + x);
+					byte cy = (byte)(chunk.ChunkY + y);
+
+					if (cx < 0 || cy < 0 || cx >= WIDTH_IN_CHUNKS
+						|| cy >= HEIGHT_IN_CHUNKS) continue;
+
+					if (chunks[cx, cy] == null) continue;
+
+					neighbors.Add(chunks[cx, cy]);
+				}
+			}
+
+			return neighbors;
+		}
+
 		public int2 GetChunkIndices(float2 position)
 		{
 			int worldX = (int)position.x;
@@ -124,7 +147,7 @@ namespace FNZ.Server.Model.World
 
         public float GetTileTemperature(float2 position)
         {
-            WorldChunk chunk = GetWorldChunk(position);
+            var chunk = GetWorldChunk(position);
             int2 tileIndices = GetChunkTileIndices(chunk, position);
 
             return chunk.TileTemperatures[tileIndices.x + tileIndices.y * CHUNK_SIZE];

@@ -18,7 +18,7 @@ namespace FNZ.Server.Model.Entity.Components
             if (m_Data.cropReady)
                 return;
 
-            float temperature = ServerApp.World.GetTileTemperature(parent.position);
+            float temperature = ServerApp.World.GetTileTemperature(parent.Position);
 
             if (temperature > m_Data.growthTemperatureMinimum && temperature < m_Data.growthTemperatureMaximum)
             {
@@ -39,21 +39,21 @@ namespace FNZ.Server.Model.Entity.Components
 
                 m_Data.growth += percent;
 
-                ServerApp.NetAPI.BR_UpdateComponents(parent, m_Data);
+                ServerApp.NetAPI.BAR_Entity_UpdateComponents(parent, m_Data);
             }
             else if (temperature < m_Data.deathTemperatureLow)
             {
                 m_Data.health -= (1 - (m_Data.enduranceInPercent / 100f));
                 m_Data.growthStatus = CropComponentData.GrowthStatus.Freezing;
 
-                ServerApp.NetAPI.BR_UpdateComponents(parent, m_Data);
+                ServerApp.NetAPI.BAR_Entity_UpdateComponents(parent, m_Data);
             }
             else if (temperature > m_Data.deathTemperatureHigh)
             {
                 m_Data.health -= (1 - (m_Data.enduranceInPercent / 100f));
                 m_Data.growthStatus = CropComponentData.GrowthStatus.Overheating;
 
-                ServerApp.NetAPI.BR_UpdateComponents(parent, m_Data);
+                ServerApp.NetAPI.BAR_Entity_UpdateComponents(parent, m_Data);
             }
             else if (temperature < m_Data.growthTemperatureMinimum)
             {
@@ -61,7 +61,7 @@ namespace FNZ.Server.Model.Entity.Components
                 m_Data.growthStatus = CropComponentData.GrowthStatus.ToCold;
 
                 if (sendUpdate)
-                    ServerApp.NetAPI.BR_UpdateComponents(parent, m_Data);
+                    ServerApp.NetAPI.BAR_Entity_UpdateComponents(parent, m_Data);
             }
             else if (temperature > m_Data.growthTemperatureMaximum)
             {
@@ -69,7 +69,7 @@ namespace FNZ.Server.Model.Entity.Components
                 m_Data.growthStatus = CropComponentData.GrowthStatus.ToWarm;
 
                 if (sendUpdate)
-                    ServerApp.NetAPI.BR_UpdateComponents(parent, m_Data);
+                    ServerApp.NetAPI.BAR_Entity_UpdateComponents(parent, m_Data);
             }
 
             if (m_Data.health > 100)
@@ -84,7 +84,7 @@ namespace FNZ.Server.Model.Entity.Components
             m_Data.cropReady = true;
             m_Data.growthStatus = CropComponentData.GrowthStatus.Harvestable;
 
-            ServerApp.NetAPI.BR_UpdateComponents(parent, m_Data);
+            ServerApp.NetAPI.BAR_Entity_UpdateComponents(parent, m_Data);
         }
 
         public void HarvestCrop(FNEEntity harvsestingPlayer)

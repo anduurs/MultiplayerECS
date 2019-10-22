@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<DataDef entityType="EdgeObject" xsi:type="FNEEntityData">
+		<nameDef>base_wall</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>20</pathingCost>
+		<heatTransferFactor>0.95</heatTransferFactor>
+		<seeThrough>false</seeThrough>
+		<displayName>Base Wall</displayName>
+		<editorCategory>Walls</editorCategory>
+		<description>A wall for keeping the hordes out...</description>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<prefabPath>Prefabs/EdgeObject/500_Wall</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>1000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="EdgeObject" xsi:type="FNEEntityData">
+		<nameDef>base_wall_door_opened</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>true</seeThrough>
+		<heatTransferFactor>0.0</heatTransferFactor>
+		<displayName>Door Opened</displayName>
+		<editorCategory>Walls</editorCategory>
+		<description></description>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<prefabPath>Prefabs/EdgeObject/501_Wall_Door</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<uiManager>SimpleInteractionUIManager</uiManager>
+		<components>
+			<IFNEComponentData xsi:type="DoorComponentData" />
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>1000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="SimpleInteractionComponentData">¨
+				<hoverBoxDescription>
+					<![CDATA[<color=#ff0000ff>[E]:</color> Close]]>
+				</hoverBoxDescription>
+				<simpleInteractionModules>
+					<BlockIfPlayerIsNearModule xsi:type="BlockIfPlayerIsNearModule" />
+					<ReplaceStaticEntityModule xsi:type="ReplaceStaticEntityModule">
+						<objectRef>base_wall_door_closed</objectRef>
+					</ReplaceStaticEntityModule>
+				</simpleInteractionModules>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="EdgeObject" xsi:type="FNEEntityData">
+		<nameDef>base_wall_door_closed</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>20</pathingCost>
+		<heatTransferFactor>0.8</heatTransferFactor>
+		<seeThrough>false</seeThrough>
+		<displayName>Door Closed</displayName>
+		<editorCategory>Walls</editorCategory>
+		<description></description>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<prefabPath>Prefabs/EdgeObject/500_Wall</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<uiManager>SimpleInteractionUIManager</uiManager>
+		<components>
+			<IFNEComponentData xsi:type="DoorComponentData" />
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>1000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="SimpleInteractionComponentData">¨
+				<hoverBoxDescription>
+					<![CDATA[<color=#00ff00ff>[E]:</color> Open]]>
+				</hoverBoxDescription>
+				<simpleInteractionModules>
+					<BlockIfPlayerIsNearModule xsi:type="BlockIfPlayerIsNearModule" />
+					<ReplaceStaticEntityModule xsi:type="ReplaceStaticEntityModule">
+						<objectRef>base_wall_door_opened</objectRef>
+					</ReplaceStaticEntityModule>
+				</simpleInteractionModules>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+</Defs>

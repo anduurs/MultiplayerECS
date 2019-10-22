@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <DataDef xsi:type="GadgetData">
+        <nameDef>nail_mine</nameDef>
+        <displayName>Nail Mines</displayName>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <baseCost>3</baseCost>
+        <baseUsesCount>5</baseUsesCount>
+        <costPerUseUpgrade>1</costPerUseUpgrade>
+        <usesPerUpgrade>5</usesPerUpgrade>
+        <GadgetBehaviour xsi:type="PlaceTileObject">
+			<tileObjectRef>nail_mine</tileObjectRef>
+		</GadgetBehaviour>
+        <gadgetIconSpriteName>Gadget_Icon_Nail_Mine</gadgetIconSpriteName>
+        <description>
+            Nail mines are placed on empty ground beneath the player when used.
+            The mines explode on contact with any entity, dealing damage in an area around it.
+        </description>
+    </DataDef>
+
+    <DataDef xsi:type="GadgetData">
+        <nameDef>nail_ammo_box</nameDef>
+        <displayName>Nail Ammo Box</displayName>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <baseCost>5</baseCost>
+        <baseUsesCount>1</baseUsesCount>
+        <costPerUseUpgrade>3</costPerUseUpgrade>
+        <usesPerUpgrade>1</usesPerUpgrade>
+        <GadgetBehaviour xsi:type="PlaceTileObject">
+			<tileObjectRef>nail_ammo_box</tileObjectRef>
+		</GadgetBehaviour>
+        <gadgetIconSpriteName>Gadget_Icon_Nail_Ammo_Box</gadgetIconSpriteName>
+        <description>
+            The nail ammo box can be placed beneath the user on empty ground.
+            The box allows all friendly players to resupply any nail based weapon with 100 nails.
+            The box is destroyed after 5 uses.
+        </description>
+    </DataDef>
+
+    <DataDef xsi:type="GadgetData">
+        <nameDef>bfnl</nameDef>
+        <displayName>The BFNL</displayName>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <baseCost>3</baseCost>
+        <baseUsesCount>1</baseUsesCount>
+        <costPerUseUpgrade>1</costPerUseUpgrade>
+        <usesPerUpgrade>1</usesPerUpgrade>
+        <GadgetBehaviour xsi:type="GadgetRaycastShootBehaviour">
+            <applyEffectRef>effect_bfnl</applyEffectRef>
+            <projectileWidthMultiplier>2</projectileWidthMultiplier>
+			<shootRange>8</shootRange>
+            <damage>500</damage>
+		</GadgetBehaviour>
+        <gadgetIconSpriteName>Gadget_Icon_BFNL</gadgetIconSpriteName>
+        <description>
+            The BFNL fires a huge nail harpoon towards the players aim direction.
+            The Harpoon deals 500 damage to everything it touches.
+        </description>
+    </DataDef>
+
+    <DataDef xsi:type="GadgetData">
+        <nameDef>nail_ring_burst</nameDef>
+        <displayName>Porcupine Burst</displayName>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <baseCost>3</baseCost>
+        <baseUsesCount>1</baseUsesCount>
+        <costPerUseUpgrade>1</costPerUseUpgrade>
+        <usesPerUpgrade>1</usesPerUpgrade>
+        <GadgetBehaviour xsi:type="GadgetPlayEffectBehaviour">
+            <effectRef>nail_ring_burst</effectRef>
+		</GadgetBehaviour>
+        <gadgetIconSpriteName>Gadget_Icon_Porcupine_Burst</gadgetIconSpriteName>
+        <description>
+            Causes an explosion of nails to erupt from the user which damage nearby enemies.
+        </description>
+    </DataDef>
+
+    <DataDef xsi:type="GadgetData">
+        <nameDef>acupuncture_blast</nameDef>
+        <displayName>Acupuncture Blast</displayName>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <baseCost>2</baseCost>
+        <baseUsesCount>1</baseUsesCount>
+        <costPerUseUpgrade>2</costPerUseUpgrade>
+        <usesPerUpgrade>1</usesPerUpgrade>
+        <GadgetBehaviour xsi:type="GadgetPlayEffectBehaviour">
+            <effectRef>acupuncture_blast</effectRef>
+		</GadgetBehaviour>
+        <gadgetIconSpriteName>Gadget_Icon_Acupuncture_Blast</gadgetIconSpriteName>
+        <description>
+            Activate to create an explosion of highly trustworthy and beneficial acupuncture nails which heal all nearby entities.
+        </description>
+    </DataDef>
+
+    <DataDef xsi:type="GadgetData">
+        <nameDef>shout_scream</nameDef>
+        <displayName>Shout: Scream</displayName>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <baseCost>0</baseCost>
+        <baseUsesCount>100</baseUsesCount>
+        <GadgetBehaviour xsi:type="GadgetPlayEffectBehaviour">
+            <effectRef>effect_shout_scream</effectRef>
+		</GadgetBehaviour>
+        <gadgetIconSpriteName>Gadget_Icon_Acupuncture_Blast</gadgetIconSpriteName>
+        <description>
+            Fear!
+        </description>
+    </DataDef>
+
+    <DataDef xsi:type="GadgetData">
+        <nameDef>shout_no</nameDef>
+        <displayName>Shout: No!</displayName>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <baseCost>0</baseCost>
+        <baseUsesCount>100</baseUsesCount>
+        <GadgetBehaviour xsi:type="GadgetPlayEffectBehaviour">
+            <effectRef>effect_shout_no</effectRef>
+		</GadgetBehaviour>
+        <gadgetIconSpriteName>Gadget_Icon_Acupuncture_Blast</gadgetIconSpriteName>
+        <description>
+            Despair!
+        </description>
+    </DataDef>
+
+    <DataDef xsi:type="GadgetData">
+        <nameDef>shout_laugh</nameDef>
+        <displayName>Shout: Laugh!</displayName>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <baseCost>0</baseCost>
+        <baseUsesCount>100</baseUsesCount>
+        <GadgetBehaviour xsi:type="GadgetPlayEffectBehaviour">
+            <effectRef>effect_shout_laugh</effectRef>
+		</GadgetBehaviour>
+        <gadgetIconSpriteName>Gadget_Icon_Acupuncture_Blast</gadgetIconSpriteName>
+        <description>
+            Triumph!
+        </description>
+    </DataDef>
+
+    <DataDef xsi:type="GadgetData">
+        <nameDef>shout_come</nameDef>
+        <displayName>Shout: Come to me!</displayName>
+		<stockpileResourceRef>nails</stockpileResourceRef>
+        <baseCost>0</baseCost>
+        <baseUsesCount>100</baseUsesCount>
+        <GadgetBehaviour xsi:type="GadgetPlayEffectBehaviour">
+            <effectRef>effect_shout_come</effectRef>
+		</GadgetBehaviour>
+        <gadgetIconSpriteName>Gadget_Icon_Acupuncture_Blast</gadgetIconSpriteName>
+        <description>
+            Love!
+        </description>
+    </DataDef>
+
+</Defs>

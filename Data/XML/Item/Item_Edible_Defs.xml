@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <DataDef xsi:type="ItemData">
+		<nameDef>kotte</nameDef>
+		<displayName>Kotte</displayName>
+		<info>Snaska Kotte.</info>
+		<height>1</height>
+		<width>1</width>
+        <itemIconSpriteName>Icon_Kotte</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview1x1</itemSizeIconSpriteName>
+		<maxStackSize>1</maxStackSize>
+        <components>
+            <ItemComponentData xsi:type="EdibleItemComponentData">
+                <hungerSaturation>15</hungerSaturation>
+                <effectRef>effect_eat</effectRef>
+            </ItemComponentData>
+            <ItemComponentData xsi:type="BurnableItemComponentData">
+                <burnTimeInSeconds>1</burnTimeInSeconds>
+            </ItemComponentData>
+        </components>
+	</DataDef>
+
+    <DataDef xsi:type="ItemData">
+		<nameDef>potato_baked</nameDef>
+		<displayName>Baked Potato</displayName>
+		<itemIconSpriteName>Icon_Potato_Baked</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview1x1</itemSizeIconSpriteName>
+		<info>Will not grow anymore, but oh, so yummy!</info>
+		<height>1</height>
+		<width>1</width>
+		<maxStackSize>20</maxStackSize>
+		<components>
+            <ItemComponentData xsi:type="EdibleItemComponentData">
+                <hungerSaturation>15</hungerSaturation>
+                <effectRef>effect_eat</effectRef>
+            </ItemComponentData>
+        </components>
+	</DataDef>
+
+</Defs>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<DataDef xsi:type="BuildingBlueprint">
+		<nameDef>wall_buildable</nameDef>
+		<requiredMaterials>
+			<MaterialDef>
+				<nameRef>wood_planks</nameRef>
+				<amount>1</amount>
+			</MaterialDef>
+		</requiredMaterials>
+		<productRef>base_wall</productRef>
+		<listPriority>80</listPriority>
+		<category>architecture</category>
+		<displayName>Base Wall</displayName>
+		<description>Let's try to wall in Anders!</description>
+		<iconSpriteName>Icon_Build_Wall</iconSpriteName>
+		<validTiles>
+			<tileRef>wood_tile</tileRef>
+		</validTiles>
+	</DataDef>
+
+	<DataDef xsi:type="BuildingBlueprint">
+		<nameDef>bed_buildable</nameDef>
+		<requiredMaterials>
+			<MaterialDef>
+				<nameRef>wood_planks</nameRef>
+				<amount>1</amount>
+			</MaterialDef>
+		</requiredMaterials>
+		<productRef>base_bed</productRef>
+		<listPriority>80</listPriority>
+		<category>architecture</category>
+		<displayName>Base Bed</displayName>
+		<description>Let's try to get Anders in bed!</description>
+		<iconSpriteName>Icon_Build_Nail_Shelf</iconSpriteName>
+		<validTiles>
+			<tileRef>wood_tile</tileRef>
+		</validTiles>
+	</DataDef>
+
+	<DataDef xsi:type="BuildingBlueprint">
+		<nameDef>door_buildable</nameDef>
+		<requiredMaterials>
+			<MaterialDef>
+				<nameRef>wood_planks</nameRef>
+				<amount>1</amount>
+			</MaterialDef>
+		</requiredMaterials>
+		<productRef>base_wall_door_opened</productRef>
+		<listPriority>80</listPriority>
+		<category>architecture</category>
+		<displayName>Base Door</displayName>
+		<description>Let's try to door in Anders!</description>
+		<iconSpriteName>Icon_Build_Wall_Door</iconSpriteName>
+		<validTiles>
+			<tileRef>wood_tile</tileRef>
+		</validTiles>
+	</DataDef>
+
+	<DataDef xsi:type="BuildingBlueprint">
+		<nameDef>tile_buildable</nameDef>
+		<requiredMaterials>
+			<MaterialDef>
+				<nameRef>wood_planks</nameRef>
+				<amount>1</amount>
+			</MaterialDef>
+		</requiredMaterials>
+		<productRef>wood_tile</productRef>
+		<listPriority>80</listPriority>
+		<category>architecture</category>
+		<displayName>Base Wall</displayName>
+		<description>We need floors!</description>
+		<iconSpriteName>Icon_Build_Floor_Wood</iconSpriteName>
+	</DataDef>
+
+</Defs>

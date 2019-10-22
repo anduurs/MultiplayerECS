@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_spawn_wood_planks</nameDef>
+        <EffectBehaviour xsi:type="SpawnEntity_EffectData">
+            <entityRef>wood_planks_loot</entityRef>
+        </EffectBehaviour>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_explosion</nameDef>
+        <prefabPath>Prefabs/VFX/Explosions/GrenadeExplosion</prefabPath>
+        <EffectBehaviour xsi:type="Explosion_EffectData">
+            <radius>2</radius>
+            <damage>1000</damage>
+            <damageTypeRef>explosive</damageTypeRef>
+            <soundRange>10</soundRange>
+        </EffectBehaviour>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_explosion_port_with_barrel</nameDef>
+        <prefabPath>Prefabs/VFX/Explosions/GrenadeExplosion</prefabPath>
+        <EffectBehaviour xsi:type="Explosion_EffectData">
+            <radius>2</radius>
+            <damage>1000</damage>
+            <damageTypeRef>explosive</damageTypeRef>
+            <soundRange>10</soundRange>
+        </EffectBehaviour>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_explosion_small</nameDef>
+        <prefabPath>Prefabs/VFX/Explosions/GrenadeExplosion</prefabPath>
+        <EffectBehaviour xsi:type="Explosion_EffectData">
+            <radius>0.7</radius>
+            <damage>1000</damage>
+            <damageTypeRef>explosive</damageTypeRef>
+            <soundRange>10</soundRange>
+        </EffectBehaviour>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>nail_explosion</nameDef>
+        <prefabPath>Prefabs/VFX/Explosions/NailExplosion</prefabPath>
+        <EffectBehaviour xsi:type="Explosion_EffectData">
+            <radius>2</radius>
+            <damage>200</damage>
+            <damageTypeRef>explosive</damageTypeRef>
+            <soundRange>35</soundRange>
+        </EffectBehaviour>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>nail_trap_trigger</nameDef>
+        <prefabPath>Prefabs/VFX/Gadgets/Nail_Mine_Trigger_VFX</prefabPath>
+        <EffectBehaviour xsi:type="Explosion_EffectData">
+            <radius>0</radius>
+            <damage>0</damage>
+            <soundRange>0</soundRange>
+        </EffectBehaviour>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>nail_ring_burst</nameDef>
+        <prefabPath>Prefabs/VFX/Gadgets/Nail_Ring_Burst</prefabPath>
+        <EffectBehaviour xsi:type="Explosion_EffectData">
+            <radius>1.5</radius>
+            <damage>200</damage>
+            <damageTypeRef>explosive</damageTypeRef>
+            <soundRange>15</soundRange>
+            <damagesPlayers>false</damagesPlayers>
+        </EffectBehaviour>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>acupuncture_blast</nameDef>
+        <prefabPath>Prefabs/VFX/Gadgets/Acupuncture_Blast_VFX</prefabPath>
+        <EffectBehaviour xsi:type="Explosion_EffectData">
+            <radius>1.5</radius>
+            <healing>50</healing>
+            <soundRange>15</soundRange>
+        </EffectBehaviour>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>spark_trap_3x3</nameDef>
+        <prefabPath>Prefabs/VFX/Traps/Spark_Trap_3x3</prefabPath>
+        <EffectBehaviour xsi:type="Explosion_EffectData">
+            <radius>1.49</radius>
+            <damage>30</damage>
+            <damageTypeRef>explosive</damageTypeRef>
+            <soundRange>15</soundRange>
+            <isSilent>true</isSilent>
+        </EffectBehaviour>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_bfnl</nameDef>
+        <prefabPath>Prefabs/VFX/Gadgets/BFNLVFX</prefabPath>
+        <EffectBehaviour xsi:type="Damage_EffectData">
+            <damageModifier>1</damageModifier>
+        </EffectBehaviour>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_axe</nameDef>
+        <prefabPath>Prefabs/VFX/Gadgets/Axe_VFX</prefabPath>
+        <EffectBehaviour xsi:type="Damage_EffectData">
+            <damageModifier>1</damageModifier>
+        </EffectBehaviour>
+    </DataDef>
+    
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_ammo_box</nameDef>
+        <prefabPath>Prefabs/VFX/Gadgets/Ammo_Box_VFX</prefabPath>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_flare</nameDef>
+        <prefabPath>Prefabs/VFX/Misc/Flare</prefabPath>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_alarm</nameDef>
+        <prefabPath>Prefabs/VFX/Misc/Alarm</prefabPath>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_shout_scream</nameDef>
+        <prefabPath>Prefabs/VFX/Shouts/Shout_Scream</prefabPath>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_shout_no</nameDef>
+        <prefabPath>Prefabs/VFX/Shouts/Shout_No</prefabPath>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_shout_laugh</nameDef>
+        <prefabPath>Prefabs/VFX/Shouts/Shout_Laugh</prefabPath>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_shout_come</nameDef>
+        <prefabPath>Prefabs/VFX/Shouts/Shout_Come</prefabPath>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_build</nameDef>
+        <prefabPath>Prefabs/VFX/Misc/Build_VFX</prefabPath>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_eat</nameDef>
+        <prefabPath>Prefabs/VFX/Misc/Eat_VFX</prefabPath>
+    </DataDef>
+    
+</Defs>

@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using FNZ.Shared.Model.Entity.Components;
-using System.Xml.Serialization;
-using System;
+﻿using System.Xml.Serialization;
 using Lidgren.Network;
 
 namespace FNZ.Shared.Model.Entity.Components

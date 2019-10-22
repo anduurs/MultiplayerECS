@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <DataDef xsi:type="ItemData">
+		<nameDef>simple_hat</nameDef>
+		<displayName>Simple Hat</displayName>
+		<info>Simple Hat.</info>
+		<height>2</height>
+		<width>2</width>
+        <itemIconSpriteName>Icon_Metal_Pot</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<maxStackSize>1</maxStackSize>
+        <components>
+            <ItemComponentData xsi:type="ClothingItemComponentData">
+                <heatInsulation>0</heatInsulation>
+                <coldInsulation>2</coldInsulation>
+                <clothingType>Head</clothingType>
+            </ItemComponentData>
+        </components>
+	</DataDef>
+
+    <DataDef xsi:type="ItemData">
+		<nameDef>tshirt</nameDef>
+		<displayName>Simple T-shirt</displayName>
+		<info>Simple T-shirt.</info>
+		<height>3</height>
+		<width>2</width>
+        <itemIconSpriteName>Icon_T_Shirt</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x3</itemSizeIconSpriteName>
+		<maxStackSize>1</maxStackSize>
+        <components>
+            <ItemComponentData xsi:type="ClothingItemComponentData">
+                <heatInsulation>0</heatInsulation>
+                <coldInsulation>10</coldInsulation>
+                <clothingType>Torso</clothingType>
+            </ItemComponentData>
+        </components>
+	</DataDef>
+
+    <DataDef xsi:type="ItemData">
+		<nameDef>simple_pants</nameDef>
+		<displayName>Simple Pants</displayName>
+		<info>Simple Pants.</info>
+		<height>2</height>
+		<width>2</width>
+        <itemIconSpriteName>Icon_Textile_Scraps</itemIconSpriteName>
+		<itemSizeIconSpriteName>SizePreview2x2</itemSizeIconSpriteName>
+		<maxStackSize>1</maxStackSize>
+        <components>
+            <ItemComponentData xsi:type="ClothingItemComponentData">
+                <heatInsulation>0</heatInsulation>
+                <coldInsulation>5</coldInsulation>
+                <clothingType>Legs</clothingType>
+            </ItemComponentData>
+        </components>
+	</DataDef>
+
+</Defs>

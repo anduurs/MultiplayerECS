@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+    <DataDef xsi:type="DefenseTypeData">
+		<nameDef>defense_player</nameDef>
+        <damagedByList>
+            <damageEntry>
+                <damageTypeRef>explosive</damageTypeRef>
+                <damageModInPercent>100</damageModInPercent>
+            </damageEntry>
+            <damageEntry>
+                <damageTypeRef>projectile</damageTypeRef>
+                <damageModInPercent>1</damageModInPercent>
+            </damageEntry>
+            <damageEntry>
+                <damageTypeRef>critical_player_needs</damageTypeRef>
+                <damageModInPercent>1</damageModInPercent>
+            </damageEntry>
+            <damageEntry>
+                <damageTypeRef>zombie_melee</damageTypeRef>
+                <damageModInPercent>100</damageModInPercent>
+            </damageEntry>
+            <damageEntry>
+                <damageTypeRef>cut</damageTypeRef>
+                <damageModInPercent>100</damageModInPercent>
+            </damageEntry>
+        </damagedByList>
+	</DataDef>
+
+    <DataDef xsi:type="DefenseTypeData">
+		<nameDef>defense_structure</nameDef>
+        <damagedByList>
+            <damageEntry>
+                <damageTypeRef>explosive</damageTypeRef>
+                <damageModInPercent>100</damageModInPercent>
+            </damageEntry>
+            <damageEntry>
+                <damageTypeRef>projectile</damageTypeRef>
+                <damageModInPercent>1</damageModInPercent>
+            </damageEntry>
+            <damageEntry>
+                <damageTypeRef>zombie_melee</damageTypeRef>
+                <damageModInPercent>5</damageModInPercent>
+            </damageEntry>
+        </damagedByList>
+	</DataDef>
+
+    <DataDef xsi:type="DefenseTypeData">
+		<nameDef>defense_tree</nameDef>
+        <damagedByList>
+            <damageEntry>
+                <damageTypeRef>explosive</damageTypeRef>
+                <damageModInPercent>100</damageModInPercent>
+            </damageEntry>
+            <damageEntry>
+                <damageTypeRef>cut</damageTypeRef>
+                <damageModInPercent>100</damageModInPercent>
+            </damageEntry>
+        </damagedByList>
+	</DataDef>
+
+    <DataDef xsi:type="DefenseTypeData">
+		<nameDef>defense_rock</nameDef>
+        <damagedByList>
+            <damageEntry>
+                <damageTypeRef>explosive</damageTypeRef>
+                <damageModInPercent>100</damageModInPercent>
+            </damageEntry>
+        </damagedByList>
+	</DataDef>
+
+    <DataDef xsi:type="DefenseTypeData">
+		<nameDef>defense_flesh</nameDef>
+        <damagedByList>
+            <damageEntry>
+                <damageTypeRef>explosive</damageTypeRef>
+                <damageModInPercent>50</damageModInPercent>
+            </damageEntry>
+            <damageEntry>
+                <damageTypeRef>projectile</damageTypeRef>
+                <damageModInPercent>100</damageModInPercent>
+            </damageEntry>
+            <damageEntry>
+                <damageTypeRef>cut</damageTypeRef>
+                <damageModInPercent>100</damageModInPercent>
+            </damageEntry>
+            <damageEntry>
+                <damageTypeRef>zombie_melee</damageTypeRef>
+                <damageModInPercent>100</damageModInPercent>
+            </damageEntry>
+        </damagedByList>
+	</DataDef>
+
+</Defs>

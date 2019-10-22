@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!-- <DataDef entityType="Projectile" xsi:type="FNEEntityData">
+		<nameDef>projectile_bullet_small</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<displayName>projectile_bullet_small</displayName>
+		<components>
+			<IFNEComponentData xsi:type="ProjectileComponentData">
+				<maxDistance>40</maxDistance>
+				<speed>50</speed>
+				<prefabName>projectile_bullet_small</prefabName>
+				<effectRef>effect_small_bullet</effectRef>
+			</IFNEComponentData>
+		</components>
+		<viewManager>ProjectileViewManager</viewManager>
+	</DataDef>
+	<DataDef xsi:type="EffectData">
+        <nameDef>effect_small_bullet</nameDef>
+        <EffectBehaviour xsi:type="Damage_EffectData">
+            <damage>100</damage>
+        </EffectBehaviour>
+    </DataDef> -->
+
+	<DataDef entityType="Projectile" xsi:type="FNEEntityData">
+		<nameDef>grenade_projectile</nameDef>
+		<viewIsGameObject>true</viewIsGameObject>
+		<components>
+			<IFNEComponentData xsi:type="TriggerDelayComponentData">
+				<effectRef>effect_explosion</effectRef>
+				<delayTime>3.0</delayTime>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+</Defs>

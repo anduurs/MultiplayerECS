@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>nail_mine</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>false</blocking>
+		<displayName>Nail Mine</displayName>
+		<description>Ouch!</description>
+		<prefabPath>Prefabs/TileObject/Nail_Mine</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>NAN</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="TrapComponentData">
+				<triggersOnTouch>true</triggersOnTouch>
+				<armingTime>3</armingTime>
+				<delayTime>1</delayTime>
+				<periodTime>1</periodTime>
+				<targetsEnemies>true</targetsEnemies>
+				<targetsPlayers>true</targetsPlayers>
+				<effectRef>nail_explosion</effectRef>
+				<touchTriggerEffectRef>nail_trap_trigger</touchTriggerEffectRef>
+				<destroyOnTrigger>true</destroyOnTrigger>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>nail_ammo_box</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>false</blocking>
+		<displayName>Nail Ammo Box</displayName>
+		<description>Nailver ending stash of nails!</description>
+		<prefabPath>Prefabs/TileObject/Nail_Ammo_Box</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>NAN</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="SimpleInteractionComponentData">
+				<hoverBoxDescription>
+					<![CDATA[<color=#00ff00ff>Use:</color> Restock a nail based weapon with 100 nails!]]>
+				</hoverBoxDescription>
+				<simpleInteractionModules>
+					<ResupplyActiveWeaponModule xsi:type="ResupplyActiveWeaponModule">
+						<assetRef>nails</assetRef>
+						<amount>100</amount>
+					</ResupplyActiveWeaponModule>
+					<UsesModule xsi:type="UsesModule">
+						<useCount>5</useCount>
+					</UsesModule>
+					<PlayEffectModule xsi:type="PlayEffectModule">
+						<effectRef>effect_ammo_box</effectRef>
+					</PlayEffectModule>
+				</simpleInteractionModules>
+			</IFNEComponentData>
+		</components>
+		<uiManager>SimpleInteractionUIManager</uiManager>
+	</DataDef>
+
+</Defs>

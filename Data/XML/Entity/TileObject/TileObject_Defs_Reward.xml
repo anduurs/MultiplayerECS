@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>reward_spawn_active</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Reward Spawn</displayName>
+		<description>adfsdfds</description>
+		<prefabPath>Prefabs/TileObject/Reward_Spawn</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>DevTools</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="RewardComponentData"></IFNEComponentData>
+		</components>
+		<uiManager>SiterewardUIManager</uiManager>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>reward_spawn</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Reward Spawn</displayName>
+		<description>adfsdfds</description>
+		<prefabPath>Prefabs/TileObject/Reward_Spawn</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>DevTools</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="RewardComponentData"></IFNEComponentData>
+		</components>
+	</DataDef>
+	
+</Defs>

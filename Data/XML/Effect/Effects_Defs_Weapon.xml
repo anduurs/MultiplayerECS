@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_tazer</nameDef>
+        <prefabPath>Prefabs/VFX/Weapons/Tazer_Projectile</prefabPath>
+        <EffectBehaviour xsi:type="Damage_EffectData">
+            <damageModifier>1</damageModifier>
+            <damageTypeRef>projectile</damageTypeRef>
+        </EffectBehaviour>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_small_bullet</nameDef>
+        <EffectBehaviour xsi:type="Damage_EffectData">
+            <damageModifier>1.1</damageModifier>
+            <damageTypeRef>projectile</damageTypeRef>
+        </EffectBehaviour>
+    </DataDef>
+
+    <DataDef xsi:type="EffectData">
+        <nameDef>effect_medium_bullet</nameDef>
+        <prefabPath>Prefabs/VFX/Weapons/Nail_Projectile</prefabPath>
+        <EffectBehaviour xsi:type="Damage_EffectData">
+            <damageModifier>1.25</damageModifier>
+            <damageTypeRef>projectile</damageTypeRef>
+        </EffectBehaviour>
+    </DataDef>
+
+</Defs>

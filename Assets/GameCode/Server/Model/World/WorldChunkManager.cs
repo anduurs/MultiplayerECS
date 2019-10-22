@@ -22,7 +22,7 @@ namespace FNZ.Server.Model.World
 		{
 			m_World = world;
 			m_PlayerChunkStates = new Dictionary<NetConnection, PlayerChunkState>();
-			ServerApp.NetConnector.Register(PacketType.REQUEST_WORLD_SPAWN, OnRequestWorldSpawnPacketRecieved);
+			ServerApp.NetConnector.Register(NetMessageType.REQUEST_WORLD_SPAWN, OnRequestWorldSpawnPacketRecieved);
 		}
 
 		public void OnRequestWorldSpawnPacketRecieved(ServerNetworkConnector net, NetIncomingMessage incMsg)
@@ -46,9 +46,9 @@ namespace FNZ.Server.Model.World
 
 		public void OnPlayerEnteringNewChunk(FNEEntity player)
 		{
-			var newChunk = m_World.GetWorldChunk(player.position);
+			var newChunk = m_World.GetWorldChunk(player.Position);
 
-			int2 chunkPos = ServerApp.World.GetChunkIndices(player.position);
+			int2 chunkPos = ServerApp.World.GetChunkIndices(player.Position);
 
 			if (newChunk == null)
 			{
@@ -178,6 +178,17 @@ namespace FNZ.Server.Model.World
 			ServerApp.WorldGen.GenerateChunk(chunk);
 
 			return chunk;
+		}
+
+		public void GetConnectionsWithChunkLoaded(WorldChunk chunk, ref List<NetConnection> conns)
+		{
+			foreach (var conn in m_PlayerChunkStates.Keys)
+			{
+				if (m_PlayerChunkStates[conn].CurrentlyLoadedChunks.Contains(chunk))
+				{
+					if (!conns.Contains(conn)) conns.Add(conn);
+				}
+			}
 		}
 	}
 }

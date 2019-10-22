@@ -1,0 +1,751 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>crafting_bench</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>3</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Crafting Bench</displayName>
+		<description></description>
+		<components>
+			<IFNEComponentData xsi:type="PowerComponentData" />
+			<IFNEComponentData xsi:type="GridInventoryComponentData" />
+			<IFNEComponentData xsi:type="CraftingStationComponentData" />
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>100</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+		<uiManager>CraftingBenchUiManager</uiManager>
+		<editorCategory>Crafting</editorCategory>
+		<prefabPath>Prefabs/TileObject/003_CraftingBench</prefabPath>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>chest_low_value</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Chest Low</displayName>
+		<description>Captain Chest Rug</description>
+		<components>
+			<IFNEComponentData xsi:type="GridInventoryComponentData">
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="LoottableComponentData">
+				<lootTableRef>test_lootTable_low</lootTableRef>
+			</IFNEComponentData>
+		</components>
+		<uiManager>LootUiManager</uiManager>
+		<editorCategory>Loot</editorCategory>
+		<prefabPath>Prefabs/TileObject/000_LootObject_Low</prefabPath>
+	</DataDef>
+
+    <DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>chest_medium_value</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Chest Med</displayName>
+		<description>Captain Chest Rug</description>
+		<components>
+			<IFNEComponentData xsi:type="GridInventoryComponentData">
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="LoottableComponentData">
+				<lootTableRef>test_lootTable_medium</lootTableRef>
+			</IFNEComponentData>
+		</components>
+		<uiManager>LootUiManager</uiManager>
+		<editorCategory>Loot</editorCategory>
+		<prefabPath>Prefabs/TileObject/000_LootObject_Medium</prefabPath>
+	</DataDef>
+
+  <DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>chest_high_value</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Chest High</displayName>
+		<description>Captain Chest Snug</description>
+		<components>
+			<IFNEComponentData xsi:type="GridInventoryComponentData">
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="LoottableComponentData">
+				<lootTableRef>test_lootTable_high</lootTableRef>
+			</IFNEComponentData>
+		</components>
+		<uiManager>LootUiManager</uiManager>
+		<editorCategory>Loot</editorCategory>
+		<prefabPath>Prefabs/TileObject/000_LootObject_High</prefabPath>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>tree</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Tree</displayName>
+		<description>A fucking tree</description>
+		<prefabPath>Prefabs/TileObject/002_Tree</prefabPath>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<onDeathEffectRef>effect_spawn_wood_planks</onDeathEffectRef>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>500</maxHealth>
+				<defenseTypeRef>defense_tree</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>conifer_1</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<smallCollisionBox>true</smallCollisionBox>
+		<displayName>Conifer Tree 1</displayName>
+		<description>A fucking rad tree!</description>
+		<prefabPath>Prefabs/TileObject/Conifer_1</prefabPath>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<onDeathEffectRef>effect_spawn_wood_planks</onDeathEffectRef>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>300</maxHealth>
+				<defenseTypeRef>defense_tree</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>conifer_2</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<smallCollisionBox>true</smallCollisionBox>
+		<displayName>Conifer Tree 2</displayName>
+		<description>A fucking rad tree!</description>
+		<prefabPath>Prefabs/TileObject/Conifer_2</prefabPath>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<onDeathEffectRef>effect_spawn_wood_planks</onDeathEffectRef>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>300</maxHealth>
+				<defenseTypeRef>defense_tree</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>conifer_3</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<smallCollisionBox>true</smallCollisionBox>
+		<displayName>Conifer Tree 3</displayName>
+		<description>A fucking rad tree!</description>
+		<prefabPath>Prefabs/TileObject/Conifer_3</prefabPath>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<onDeathEffectRef>effect_spawn_wood_planks</onDeathEffectRef>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>300</maxHealth>
+				<defenseTypeRef>defense_tree</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>conifer_4</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<smallCollisionBox>true</smallCollisionBox>
+		<displayName>Conifer Tree 4</displayName>
+		<description>A fucking rad tree!</description>
+		<prefabPath>Prefabs/TileObject/Conifer_4</prefabPath>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectRef>effect_spawn_wood_planks</onDeathEffectRef>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>300</maxHealth>
+				<defenseTypeRef>defense_tree</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>rock_1</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Rock 1</displayName>
+		<description>A fucking rock</description>
+		<prefabPath>Prefabs/TileObject/Rock_1</prefabPath>
+		<onDeathEffectRef>effect_spawn_wood_planks</onDeathEffectRef>
+		<onDeathEffectPath>Prefabs/VFX/NatureDeath/RockDeath_VFX</onDeathEffectPath>		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>200</maxHealth>
+				<defenseTypeRef>defense_rock</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>rock_2</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Rock 3</displayName>
+		<description>A fucking rock</description>
+		<prefabPath>Prefabs/TileObject/Rock_3</prefabPath>
+		<onDeathEffectRef>effect_spawn_wood_planks</onDeathEffectRef>
+		<onDeathEffectPath>Prefabs/VFX/NatureDeath/RockDeath_VFX</onDeathEffectPath>		<viewManager>EdgeObjectViewManager</viewManager>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>200</maxHealth>
+				<defenseTypeRef>defense_rock</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>rock_3</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Rock 4</displayName>
+		<description>A fucking rock</description>
+		<prefabPath>Prefabs/TileObject/Rock_4</prefabPath>
+		<onDeathEffectRef>effect_spawn_wood_planks</onDeathEffectRef>
+		<onDeathEffectPath>Prefabs/VFX/NatureDeath/RockDeath_VFX</onDeathEffectPath>		<viewManager>EdgeObjectViewManager</viewManager>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>200</maxHealth>
+				<defenseTypeRef>defense_rock</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>rock_4</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Rock 5</displayName>
+		<description>A fucking rock</description>
+		<prefabPath>Prefabs/TileObject/Rock_5</prefabPath>
+		<onDeathEffectRef>effect_spawn_wood_planks</onDeathEffectRef>
+		<onDeathEffectPath>Prefabs/VFX/NatureDeath/RockDeath_VFX</onDeathEffectPath>		<viewManager>EdgeObjectViewManager</viewManager>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>200</maxHealth>
+				<defenseTypeRef>defense_rock</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>rock_5</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Rock 6</displayName>
+		<description>A fucking rock</description>
+		<prefabPath>Prefabs/TileObject/Rock_6</prefabPath>
+		<onDeathEffectRef>effect_spawn_wood_planks</onDeathEffectRef>
+		<onDeathEffectPath>Prefabs/VFX/NatureDeath/RockDeath_VFX</onDeathEffectPath>		<viewManager>EdgeObjectViewManager</viewManager>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Nature</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>200</maxHealth>
+				<defenseTypeRef>defense_rock</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>low_tech_case</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Tech Case</displayName>
+		<description>A case of tech</description>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<components>
+			<IFNEComponentData xsi:type="GridInventoryComponentData">
+				<destroyWhenEmpty>true</destroyWhenEmpty>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="LoottableComponentData">
+				<lootTableRef>loottable_low_tech_case</lootTableRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>1000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+		<uiManager>LootUiManager</uiManager>
+		<prefabPath>Prefabs/TileObject/012_L_PC</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>medium_tech_case</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Tech Case</displayName>
+		<description>A case of tech</description>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<components>
+			<IFNEComponentData xsi:type="GridInventoryComponentData">
+				<destroyWhenEmpty>true</destroyWhenEmpty>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="LoottableComponentData">
+				<lootTableRef>loottable_medium_tech_case</lootTableRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>1000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+		<uiManager>LootUiManager</uiManager>
+		<prefabPath>Prefabs/TileObject/013_L_Safe</prefabPath>
+	</DataDef>
+	
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>invisible_path_blocker</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Path Blocker</displayName>
+		<description>Dev tools, can't walk here, nu-uh.</description>
+		<prefabPath>Prefabs/TileObject/Invisible_Blocker</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>DevTools</editorCategory>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>invisible_path_blocker_destructible</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Path Blocker (D)</displayName>
+		<description>Dev tools, can't walk here, nu-uh.</description>
+		<prefabPath>Prefabs/TileObject/Invisible_Blocker</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>DevTools</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>500</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+        <nameDef>explosive_Tank</nameDef>
+        <viewIsGameObject>false</viewIsGameObject>
+        <pathingCost>255</pathingCost>
+        <seeThrough>false</seeThrough>
+        <blocking>true</blocking>
+        <displayName>Explosive fuel tank</displayName>
+        <description>EXPLOSIONS! MORE EXPLOSIONS!</description>
+        <prefabPath>Prefabs/TileObject/Explosive_Tank</prefabPath>
+        <onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+        <onDeathEffectRef>effect_explosion</onDeathEffectRef>
+		<viewManager>EdgeObjectViewManager</viewManager>
+        <editorCategory>Props</editorCategory>
+        <components>
+            <IFNEComponentData xsi:type="HealthComponentData">
+                <maxHealth>5</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+            </IFNEComponentData>
+        </components>
+    </DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>fuel_pump</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Fuel Pump</displayName>
+		<description>So you can get fuel for your cars!</description>
+		<prefabPath>Prefabs/TileObject/Gas_Pump</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>25</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>spark_trap_to_part</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>false</blocking>
+		<displayName>Spark Trap 1</displayName>
+		<description>Electrifying!</description>
+		<prefabPath>Prefabs/TileObject/Spark_Trap</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Traps</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="TrapComponentData">
+				<triggersOnTouch>false</triggersOnTouch>
+				<delayTime>0</delayTime>
+				<periodTime>4</periodTime>
+				<targetsEnemies>false</targetsEnemies>
+				<targetsPlayers>true</targetsPlayers>
+				<effectRef>spark_trap_3x3</effectRef>
+				<destroyOnTrigger>false</destroyOnTrigger>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>spark_trap_to_part_2</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>false</blocking>
+		<displayName>Spark Trap 2</displayName>
+		<description>Electrifying!</description>
+		<prefabPath>Prefabs/TileObject/Spark_Trap</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Traps</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="TrapComponentData">
+				<triggersOnTouch>false</triggersOnTouch>
+				<delayTime>2</delayTime>
+				<periodTime>4</periodTime>
+				<targetsEnemies>false</targetsEnemies>
+				<targetsPlayers>true</targetsPlayers>
+				<effectRef>spark_trap_3x3</effectRef>
+				<destroyOnTrigger>false</destroyOnTrigger>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>port_with_barrel</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>250</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Large Port (5)(closed w/ barrel)</displayName>
+		<description>Explosives! Don't forget to add extra walls!</description>
+		<prefabPath>Prefabs/TileObject/Port_5_Closed</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<onDeathEffectRef>effect_explosion_port_with_barrel</onDeathEffectRef>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Large Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>5</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>pillar</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Pillar</displayName>
+		<description>Holds up roofs</description>
+		<prefabPath>Prefabs/TileObject/001_Pillar</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>5000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>drawers</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Drawers</displayName>
+		<description>Stores clothes</description>
+		<prefabPath>Prefabs/TileObject/007_L_Drawer</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>60</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>gas_tubes</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Gas Tubes</displayName>
+		<description>Stores gas</description>
+		<prefabPath>Prefabs/TileObject/008_L_GasTubes</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>60</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>kitchen_drawers</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Kitchen Drawers</displayName>
+		<description>Stores kitchenware</description>
+		<prefabPath>Prefabs/TileObject/009_L_Kitchen</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>60</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>kitchen_drawers_extended</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Kitchen Drawers (+)</displayName>
+		<description>Stores kitchenware, rank 2!</description>
+		<prefabPath>Prefabs/TileObject/010_L_Kitchen_w_Overhead</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>60</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>market_shelves</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Market Shelves</displayName>
+		<description>For all your shopping needs!</description>
+		<prefabPath>Prefabs/TileObject/011_L_MarketShelf</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>60</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>pc_to</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>true</blocking>
+		<displayName>PC Desk</displayName>
+		<description>"CS, Dota, HL2, spela vad du vill easy, hard, välj nivå!"</description>
+		<prefabPath>Prefabs/TileObject/012_L_PC</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>60</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>shower_to</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Shower</displayName>
+		<description>Zombies hates hygiene</description>
+		<prefabPath>Prefabs/TileObject/015_L_Shower</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>60</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>tv_to</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>true</blocking>
+		<displayName>TV Desk</displayName>
+		<description>GoT S8 hype!</description>
+		<prefabPath>Prefabs/TileObject/016_L_TV</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>60</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>battery_station</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Battery Station</displayName>
+		<description>Electrifying</description>
+		<prefabPath>Prefabs/TileObject/036_BatteryStation</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>60</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>server_to</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Server Station</displayName>
+		<description>Storing all your dataz!</description>
+		<prefabPath>Prefabs/TileObject/037_Server</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>60</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>siren_to</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Siren Pole</displayName>
+		<description>"WAAAAAAAAAAAAAAHHH!!"</description>
+		<prefabPath>Prefabs/TileObject/034_Siren</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>60</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="TileObject" xsi:type="FNEEntityData">
+		<nameDef>radio_tower_to</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>false</seeThrough>
+		<blocking>true</blocking>
+		<displayName>Radio Tower</displayName>
+		<description>It's about sending a message.</description>
+		<prefabPath>Prefabs/TileObject/031_Radio_Tower</prefabPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<editorCategory>Large Props</editorCategory>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>1000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+</Defs>

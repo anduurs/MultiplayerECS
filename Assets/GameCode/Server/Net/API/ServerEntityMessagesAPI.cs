@@ -8,16 +8,16 @@ using UnityEngine;
 
 namespace FNZ.Server.Net.API
 {
-	internal class EntityNetAPI
+	internal class ServerEntityMessagesAPI
 	{
 		private readonly NetServer m_NetServer;
 
-		public EntityNetAPI(NetServer netServer)
+		public ServerEntityMessagesAPI(NetServer netServer)
 		{
             m_NetServer = netServer;
 		}
 
-		public NetOutgoingMessage UpdateComponentsMessage(FNEEntity parent, params FNEComponentData[] components)
+		public NetMessage CreateUpdateComponentMessage(FNEEntity parent, params FNEComponentData[] components)
 		{
 			int componentDataSizeInBytes = 0;
 
@@ -26,9 +26,9 @@ namespace FNZ.Server.Net.API
 
 			var sendBuffer = m_NetServer.CreateMessage(1 + 1 + 4 + componentDataSizeInBytes);
 
-			sendBuffer.Write((byte)PacketType.UPDATE_COMPONENT);
+			sendBuffer.Write((byte)NetMessageType.UPDATE_COMPONENT);
 			sendBuffer.Write((byte)components.Length);
-			sendBuffer.Write(parent.entityNetId);
+			sendBuffer.Write(parent.NetId);
 
 			foreach (var component in components)
 			{
@@ -36,7 +36,13 @@ namespace FNZ.Server.Net.API
 				component.Serialize(sendBuffer);
 			}
 
-            return sendBuffer;
+            return new NetMessage 
+			{ 
+				Buffer = sendBuffer,
+				Type = NetMessageType.UPDATE_COMPONENT,
+				DeliveryMethod = NetDeliveryMethod.ReliableOrdered,
+				Channel = SequenceChannel.ENTITY_STATE,
+			};
 		}
 	}
 }

@@ -10,17 +10,17 @@ namespace FNZ.Server.Net
 	public class ServerNetworkConnector 
 	{
 		private NetEntityList m_NetEntities;
-		private Dictionary<PacketType, Action<ServerNetworkConnector, NetIncomingMessage>> m_PacketListenFuncTable;
+		private Dictionary<NetMessageType, Action<ServerNetworkConnector, NetIncomingMessage>> m_PacketListenFuncTable;
 		private Dictionary<FNEEntity, NetConnection> m_ConnectedClients;
 
 		public ServerNetworkConnector()
 		{
 			m_NetEntities = new NetEntityList(1000);
-			m_PacketListenFuncTable = new Dictionary<PacketType, Action<ServerNetworkConnector, NetIncomingMessage>>();
+			m_PacketListenFuncTable = new Dictionary<NetMessageType, Action<ServerNetworkConnector, NetIncomingMessage>>();
 			m_ConnectedClients = new Dictionary<FNEEntity, NetConnection>();
 		}
 
-		public void Register(PacketType packetType, Action<ServerNetworkConnector, NetIncomingMessage> listenerFunc)
+		public void Register(NetMessageType packetType, Action<ServerNetworkConnector, NetIncomingMessage> listenerFunc)
 		{
 			if (m_PacketListenFuncTable.ContainsKey(packetType))
 			{
@@ -31,7 +31,7 @@ namespace FNZ.Server.Net
 			m_PacketListenFuncTable.Add(packetType, listenerFunc);
 		}
 
-		public void Dispatch(PacketType packetType, NetIncomingMessage incMsg)
+		public void Dispatch(NetMessageType packetType, NetIncomingMessage incMsg)
 		{
 			if (m_PacketListenFuncTable.ContainsKey(packetType))
 			{
@@ -72,7 +72,7 @@ namespace FNZ.Server.Net
 
 		public void UnsyncEntity(FNEEntity entity)
 		{
-			m_NetEntities.Remove(entity.entityNetId);
+			m_NetEntities.Remove(entity.NetId);
 		}
 
 		public FNEEntity GetEntity(int netId)

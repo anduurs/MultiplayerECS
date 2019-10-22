@@ -7,11 +7,11 @@ using UnityEngine;
 
 namespace FNZ.Client.Net.API
 {
-	internal class EntityNetAPI
+	internal class ClientEntityMessagesAPI
 	{
 		private readonly NetClient m_NetClient;
 
-		public EntityNetAPI(NetClient netClient)
+		public ClientEntityMessagesAPI(NetClient netClient)
 		{
 			m_NetClient = netClient;
 		}

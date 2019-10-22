@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<DataDef xsi:type="BuildingBlueprint">
+		<nameDef>scrap_box_blueprint</nameDef>
+		<productRef>scrap_box</productRef>
+		<requiredMaterials>
+			<MaterialDef>
+				<nameRef>scrap_pile</nameRef>
+				<amount>1</amount>
+			</MaterialDef>
+		</requiredMaterials>
+		<listPriority>1</listPriority>
+		<category>scrap_tech</category>
+		<displayName>Scrap Box</displayName>
+		<description>A box filled with "useful" junk!</description>
+		<iconSpriteName>Icon_Build_Chest</iconSpriteName>
+		<requiresOwnedSite>true</requiresOwnedSite>
+		<unlockedByNameRef>resupply_unit_blueprint</unlockedByNameRef>
+		<validTiles>
+			<tileRef>wood_tile</tileRef>
+		</validTiles>
+	</DataDef>
+
+	<DataDef xsi:type="BuildingBlueprint">
+		<nameDef>stone_furnace_blueprint</nameDef>
+		<productRef>stone_furnace</productRef>
+		<requiredMaterials>
+			<MaterialDef>
+				<nameRef>rock</nameRef>
+				<amount>10</amount>
+			</MaterialDef>
+		</requiredMaterials>
+		<listPriority>1</listPriority>
+		<category>scrap_tech</category>
+		<displayName>Stone Furnace</displayName>
+		<description>Used in order to process items and create warmth!</description>
+		<iconSpriteName>Icon_Build_Generator_Fuel</iconSpriteName>
+		<validTiles>
+			<tileRef>wood_tile</tileRef>
+		</validTiles>
+	</DataDef>
+
+</Defs>

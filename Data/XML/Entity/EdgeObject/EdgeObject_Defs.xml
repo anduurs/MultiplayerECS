@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Defs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<DataDef entityType="EdgeObject" xsi:type="FNEEntityData">
+		<nameDef>wall</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>250</pathingCost>
+		<heatTransferFactor>0.5</heatTransferFactor>
+		<seeThrough>false</seeThrough>
+		<displayName>Wall</displayName>
+		<editorCategory>Walls</editorCategory>
+		<description></description>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<prefabPath>Prefabs/EdgeObject/500_Wall</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>10000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="EdgeObject" xsi:type="FNEEntityData">
+		<nameDef>wall_window</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>200</pathingCost>
+		<seeThrough>false</seeThrough>
+		<displayName>Wall with Window</displayName>
+		<editorCategory>Walls</editorCategory>
+		<description></description>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<prefabPath>Prefabs/EdgeObject/502_Wall_Window</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>5000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+	
+	<DataDef entityType="EdgeObject" xsi:type="FNEEntityData">
+		<nameDef>wall_door</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Wall with Door</displayName>
+		<editorCategory>Walls</editorCategory>
+		<description></description>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<prefabPath>Prefabs/EdgeObject/501_Wall_Door</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>1000</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+			<IFNEComponentData xsi:type="SimpleInteractionComponentData">¨
+				<hoverBoxDescription>
+					<![CDATA[<color=#ff0000ff>Warning:</color> The pod is still secured!]]>
+				</hoverBoxDescription>
+				<simpleInteractionModules>
+					<ReplaceStaticEntityModule xsi:type="ReplaceStaticEntityModule">
+						<objectRef>rusty_pod_opened</objectRef>
+					</ReplaceStaticEntityModule>
+				</simpleInteractionModules>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="EdgeObject" xsi:type="FNEEntityData">
+		<nameDef>invisible_wall</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>255</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Path Block Wall</displayName>
+		<editorCategory>DevTools</editorCategory>
+		<description></description>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<prefabPath>Prefabs/EdgeObject/Invisible_Wall</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<components>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="EdgeObject" xsi:type="FNEEntityData">
+		<nameDef>invisible_wall_destructible</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>250</pathingCost>
+		<seeThrough>false</seeThrough>
+		<displayName>Path Block Wall (D)</displayName>
+		<editorCategory>DevTools</editorCategory>
+		<description></description>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<prefabPath>Prefabs/EdgeObject/Invisible_Wall</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>500</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="EdgeObject" xsi:type="FNEEntityData">
+		<nameDef>metal_wire_fence_wall</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>10</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Metal Fence</displayName>
+		<editorCategory>Walls</editorCategory>
+		<description></description>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<prefabPath>Prefabs/EdgeObject/Metal_Fence</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<components>
+			<IFNEComponentData xsi:type="HealthComponentData">
+				<maxHealth>70</maxHealth>
+				<defenseTypeRef>defense_structure</defenseTypeRef>
+			</IFNEComponentData>
+		</components>
+	</DataDef>
+
+	<DataDef entityType="EdgeObject" xsi:type="FNEEntityData">
+		<nameDef>sidewalk_border</nameDef>
+		<viewIsGameObject>false</viewIsGameObject>
+		<pathingCost>0</pathingCost>
+		<seeThrough>true</seeThrough>
+		<displayName>Sidewalk Edge</displayName>
+		<editorCategory>Walls</editorCategory>
+		<description></description>
+		<onHitEffectPath>Prefabs/VFX/HitEffects/ZombieHitEffect</onHitEffectPath>
+		<onDeathEffectPath>Prefabs/VFX/StructureDeath/WallDeath</onDeathEffectPath>
+		<prefabPath>Prefabs/EdgeObject/Sidewalk_Edge</prefabPath>
+		<viewManager>EdgeObjectViewManager</viewManager>
+		<components>
+		</components>
+	</DataDef>
+
+</Defs>
