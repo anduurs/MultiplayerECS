@@ -36,6 +36,25 @@ namespace FNZ.Server.Net.API
 				Channel = SequenceChannel.WORLD_SETUP,
 			};
 		}
+
+		public NetMessage CreateLoadChunkMessage(byte chunkX, byte chunkY, byte[] data)
+		{
+			var sendBuffer = m_NetServer.CreateMessage(data.Length + 7);
+
+			sendBuffer.Write((byte)NetMessageType.LOAD_CHUNK);
+			sendBuffer.Write(chunkX);
+			sendBuffer.Write(chunkY);
+			sendBuffer.Write(data.Length);
+			sendBuffer.Write(data, 0, data.Length);
+
+			return new NetMessage
+			{
+				Buffer = sendBuffer,
+				Type = NetMessageType.LOAD_CHUNK,
+				DeliveryMethod = NetDeliveryMethod.ReliableOrdered,
+				Channel = SequenceChannel.WORLD_STATE,
+			};
+		}
 	}
 }
 
